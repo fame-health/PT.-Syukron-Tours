@@ -21,7 +21,7 @@
     <meta name="revisit-after" content="7 days">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://syukrontours.com/">
+    <link rel="canonical" href="https://syukrontour.com/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -29,26 +29,26 @@
     <meta property="og:title" content="Syukron Tours - Paket Umroh Terpercaya & Amanah | 15+ Tahun Pengalaman">
     <meta property="og:description"
         content="Wujudkan impian ibadah umroh Anda bersama Syukron Tours. 500+ jamaah puas, pelayanan terpercaya, amanah dan penuh berkah. Konsultasi gratis sekarang!">
-    <meta property="og:image" content="https://syukrontours.com/assets/images/logo.png">
+    <meta property="og:image" content="https://syukrontour.com/assets/images/logo.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Syukron Tours - Paket Umroh Terpercaya">
-    <meta property="og:url" content="https://syukrontours.com/">
+    <meta property="og:url" content="https://syukrontour.com/">
     <meta property="og:locale" content="id_ID">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@mudarismandiriwisata">
-    <meta name="twitter:creator" content="@mudarismandiriwisata">
+    <meta name="twitter:site" content="@syukrontour">
+    <meta name="twitter:creator" content="@syukrontour">
     <meta name="twitter:title" content="Syukron Tours - Paket Umroh Terpercaya & Amanah">
     <meta name="twitter:description"
         content="Wujudkan impian ibadah umroh Anda bersama Syukron Tours. 500+ jamaah puas, pelayanan terpercaya, amanah dan penuh berkah.">
-    <meta name="twitter:image" content="https://syukrontours.com/assets/images/logo.png">
+    <meta name="twitter:image" content="https://syukrontour.com/assets/images/logo.png">
     <meta name="twitter:image:alt" content="Syukron Tours - Paket Umroh Terpercaya">
 
     <!-- Additional Social Media Meta -->
     <meta property="fb:app_id" content="YOUR_FACEBOOK_APP_ID">
-    <meta name="instagram:site" content="@mudarismandiriwisata">
+    <meta name="instagram:site" content="@syukrontour">
 
     <!-- FAVICON SECTION untuk Laravel -->
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
@@ -80,8 +80,8 @@
     <link rel="preload" href="{{ asset('assets/images/logo.png') }}" as="image">
 
     <!-- Prefetch for Key Pages -->
-    <link rel="prefetch" href="https://syukrontours.com/paket" as="document">
-    <link rel="prefetch" href="https://syukrontours.com/kontak" as="document">
+    <link rel="prefetch" href="https://syukrontour.com/paket" as="document">
+    <link rel="prefetch" href="https://syukrontour.com/kontak" as="document">
 
     <!-- Security Headers - Enhanced CSP -->
     <meta http-equiv="Content-Security-Policy"
@@ -92,9 +92,9 @@
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
     <!-- Hreflang for International SEO -->
-    <link rel="alternate" href="https://syukrontours.com/" hreflang="id">
-    <link rel="alternate" href="https://syukrontours.com/en/" hreflang="en">
-    <link rel="alternate" href="https://syukrontours.com/" hreflang="x-default">
+    <link rel="alternate" href="https://syukrontour.com/" hreflang="id">
+    <link rel="alternate" href="https://syukrontour.com/en/" hreflang="en">
+    <link rel="alternate" href="https://syukrontour.com/" hreflang="x-default">
 
     <!-- Additional Meta for Better SEO -->
     <meta name="coverage" content="Worldwide">
@@ -116,11 +116,11 @@
     "name": "Syukron Tours",
     "alternateName": "Syukron Tours Indonesia",
     "description": "Agen travel umroh terpercaya dengan 15+ tahun pengalaman, melayani paket umroh untuk seluruh Indonesia",
-    "url": "https://syukrontours.com/",
-    "logo": "https://syukrontours.com/assets/images/logo.png",
-    "image": "https://syukrontours.com/assets/images/logo.png",
+    "url": "https://syukrontour.com/",
+    "logo": "https://syukrontour.com/assets/images/logo.png",
+    "image": "https://syukrontour.com/assets/images/logo.png",
     "telephone": "+6285211451111",
-    "email": "info@syukrontours.com",
+    "email": "info@syukrontour.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Jl. Kubang Raya Km. 1.5 simpang empat panam, tuah karya, kec. Tampan",
@@ -140,7 +140,7 @@
     ],
     "sameAs": [
       "https://web.facebook.com/mmw.umrahdanhaji",
-      "https://www.instagram.com/mudarismandiriwisata_mmw/",
+      "https://www.instagram.com/syukrontour_mmw/",
       "https://www.youtube.com/@mudariswisata",
       "https://www.tiktok.com/@mmw_mudariswisata"
     ],
@@ -198,19 +198,19 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Beranda",
-        "item": "https://syukrontours.com/"
+        "item": "https://syukrontour.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Paket Umroh",
-        "item": "https://syukrontours.com/paket"
+        "item": "https://syukrontour.com/paket"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Kontak",
-        "item": "https://syukrontours.com/kontak"
+        "item": "https://syukrontour.com/kontak"
       }
     ]
   }
@@ -223,7 +223,7 @@
     "@type": "LocalBusiness",
     "name": "Syukron Tours",
     "description": "Agen travel umroh terpercaya dan amanah",
-    "url": "https://syukrontours.com/",
+    "url": "https://syukrontour.com/",
     "telephone": "+6285211451111",
     "address": {
       "@type": "PostalAddress",
@@ -255,8 +255,8 @@
     "@type": "Organization",
     "name": "Syukron Tours",
     "legalName": "PT. Syukron Tours Indonesia",
-    "url": "https://syukrontours.com/",
-    "logo": "https://syukrontours.com/images/logo.png",
+    "url": "https://syukrontour.com/",
+    "logo": "https://syukrontour.com/images/logo.png",
     "foundingDate": "2012",
     "founders": [
       {
@@ -276,12 +276,12 @@
       "@type": "ContactPoint",
       "contactType": "Customer Service",
       "telephone": "+6285211451111",
-      "email": "cs@syukrontours.com",
+      "email": "cs@syukrontour.com",
       "availableLanguage": "Indonesian"
     },
     "sameAs": [
       "https://web.facebook.com/mmw.umrahdanhaji",
-      "https://www.instagram.com/mudarismandiriwisata_mmw/",
+      "https://www.instagram.com/syukrontour_mmw/",
       "https://www.youtube.com/@mudariswisata",
       "https://www.tiktok.com/@mmw_mudariswisata"
     ]
@@ -393,7 +393,7 @@
     <link rel="alternate" type="application/rss+xml" title="Syukron Tours RSS Feed" href="/feed.xml">
 
     <!-- Optional AMP Link (Remove if not needed) -->
-    <link rel="amphtml" href="https://syukrontours.com/amp/">
+    <link rel="amphtml" href="https://syukrontour.com/amp/">
 
     <!-- Font Awesome 6 (Latest) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -1772,11 +1772,11 @@ Mohon informasi lebih lanjut, terima kasih.`;
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-center">
                             <i class="fas fa-phone mr-2"></i>
-                            +62 852-1145-1111
+                            +6281-8569-111
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-2"></i>
-                            mudariswisata@gmail.com
+                            syukrontour@gmail.com
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-map-marker-alt mr-2"></i>

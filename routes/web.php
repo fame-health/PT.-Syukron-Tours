@@ -12,15 +12,15 @@ Route::get('/', [TestimonialController::class, 'homepage'])->name('home');
 Route::get('/faq', function () {
     PageVisitor::incrementVisit('FAQ Page');
 
-    SEOTools::setTitle('FAQ - Mudaris Mandiri Wisata', false);
-    SEOTools::setDescription('Temukan jawaban atas pertanyaan umum tentang paket umroh kami di Mudaris Mandiri Wisata. Informasi lengkap untuk perjalanan ibadah Anda.');
-    SEOTools::opengraph()->setUrl('https://mudarismandiriwisata.com/faq');
-    SEOTools::opengraph()->setTitle('FAQ - Mudaris Mandiri Wisata');
-    SEOTools::opengraph()->setDescription('Temukan jawaban atas pertanyaan umum tentang paket umroh kami di Mudaris Mandiri Wisata.');
-    SEOTools::twitter()->setTitle('FAQ - Mudaris Mandiri Wisata');
+    SEOTools::setTitle('FAQ - Syukron Tour', false);
+    SEOTools::setDescription('Temukan jawaban atas pertanyaan umum tentang paket umroh kami di Syukron Tour. Informasi lengkap untuk perjalanan ibadah Anda.');
+    SEOTools::opengraph()->setUrl('https://syukrontour.com/faq');
+    SEOTools::opengraph()->setTitle('FAQ - Syukron Tour');
+    SEOTools::opengraph()->setDescription('Temukan jawaban atas pertanyaan umum tentang paket umroh kami di Syukron Tour.');
+    SEOTools::twitter()->setTitle('FAQ - Syukron Tour');
     SEOTools::twitter()->setDescription('Temukan jawaban atas pertanyaan umum tentang paket umroh kami.');
-    SEOTools::jsonLd()->setTitle('FAQ - Mudaris Mandiri Wisata');
-    SEOTools::jsonLd()->setDescription('Temukan jawaban atas pertanyaan umum tentang paket umroh kami di Mudaris Mandiri Wisata.');
+    SEOTools::jsonLd()->setTitle('FAQ - Syukron Tour');
+    SEOTools::jsonLd()->setDescription('Temukan jawaban atas pertanyaan umum tentang paket umroh kami di Syukron Tour.');
     SEOTools::jsonLd()->setType('WebPage');
 
     return view('faq.index');
@@ -30,15 +30,15 @@ Route::get('/faq', function () {
 Route::get('/kebijakan-privasi', function () {
     PageVisitor::incrementVisit('Kebijakan Privasi');
 
-    SEOTools::setTitle('Kebijakan Privasi - Mudaris Mandiri Wisata', false);
-    SEOTools::setDescription('Baca kebijakan privasi Mudaris Mandiri Wisata untuk memahami bagaimana kami melindungi data pribadi Anda selama proses pendaftaran umroh.');
-    SEOTools::opengraph()->setUrl('https://mudarismandiriwisata.com/kebijakan-privasi');
-    SEOTools::opengraph()->setTitle('Kebijakan Privasi - Mudaris Mandiri Wisata');
-    SEOTools::opengraph()->setDescription('Baca kebijakan privasi Mudaris Mandiri Wisata untuk perlindungan data Anda.');
-    SEOTools::twitter()->setTitle('Kebijakan Privasi - Mudaris Mandiri Wisata');
-    SEOTools::twitter()->setDescription('Baca kebijakan privasi Mudaris Mandiri Wisata.');
-    SEOTools::jsonLd()->setTitle('Kebijakan Privasi - Mudaris Mandiri Wisata');
-    SEOTools::jsonLd()->setDescription('Baca kebijakan privasi Mudaris Mandiri Wisata untuk perlindungan data Anda.');
+    SEOTools::setTitle('Kebijakan Privasi - Syukron Tour', false);
+    SEOTools::setDescription('Baca kebijakan privasi Syukron Tour untuk memahami bagaimana kami melindungi data pribadi Anda selama proses pendaftaran umroh.');
+    SEOTools::opengraph()->setUrl('https://syukrontour.com/kebijakan-privasi');
+    SEOTools::opengraph()->setTitle('Kebijakan Privasi - Syukron Tour');
+    SEOTools::opengraph()->setDescription('Baca kebijakan privasi Syukron Tour untuk perlindungan data Anda.');
+    SEOTools::twitter()->setTitle('Kebijakan Privasi - Syukron Tour');
+    SEOTools::twitter()->setDescription('Baca kebijakan privasi Syukron Tour.');
+    SEOTools::jsonLd()->setTitle('Kebijakan Privasi - Syukron Tour');
+    SEOTools::jsonLd()->setDescription('Baca kebijakan privasi Syukron Tour untuk perlindungan data Anda.');
     SEOTools::jsonLd()->setType('WebPage');
 
     return view('kebijakan_privasi.index');
@@ -48,15 +48,15 @@ Route::get('/kebijakan-privasi', function () {
 Route::get('/syarat-ketentuan', function () {
     PageVisitor::incrementVisit('Syarat & Ketentuan');
 
-    SEOTools::setTitle('Syarat & Ketentuan - Mudaris Mandiri Wisata', false);
-    SEOTools::setDescription('Pelajari syarat dan ketentuan layanan umroh dari Mudaris Mandiri Wisata untuk memastikan perjalanan ibadah Anda berjalan lancar.');
-    SEOTools::opengraph()->setUrl('https://mudarismandiriwisata.com/syarat-ketentuan');
-    SEOTools::opengraph()->setTitle('Syarat & Ketentuan - Mudaris Mandiri Wisata');
-    SEOTools::opengraph()->setDescription('Pelajari syarat dan ketentuan layanan umroh dari Mudaris Mandiri Wisata.');
-    SEOTools::twitter()->setTitle('Syarat & Ketentuan - Mudaris Mandiri Wisata');
+    SEOTools::setTitle('Syarat & Ketentuan - Syukron Tour', false);
+    SEOTools::setDescription('Pelajari syarat dan ketentuan layanan umroh dari Syukron Tour untuk memastikan perjalanan ibadah Anda berjalan lancar.');
+    SEOTools::opengraph()->setUrl('https://syukrontour.com/syarat-ketentuan');
+    SEOTools::opengraph()->setTitle('Syarat & Ketentuan - Syukron Tour');
+    SEOTools::opengraph()->setDescription('Pelajari syarat dan ketentuan layanan umroh dari Syukron Tour.');
+    SEOTools::twitter()->setTitle('Syarat & Ketentuan - Syukron Tour');
     SEOTools::twitter()->setDescription('Pelajari syarat dan ketentuan layanan umroh kami.');
-    SEOTools::jsonLd()->setTitle('Syarat & Ketentuan - Mudaris Mandiri Wisata');
-    SEOTools::jsonLd()->setDescription('Pelajari syarat dan ketentuan layanan umroh dari Mudaris Mandiri Wisata.');
+    SEOTools::jsonLd()->setTitle('Syarat & Ketentuan - Syukron Tour');
+    SEOTools::jsonLd()->setDescription('Pelajari syarat dan ketentuan layanan umroh dari Syukron Tour.');
     SEOTools::jsonLd()->setType('WebPage');
 
     return view('syarat_ketentuan.index');
@@ -82,15 +82,15 @@ Route::get('/hotel/{slug}', [HotelController::class, 'show'])->name('hotel.show'
 Route::get('/tentang-kami', function () {
     PageVisitor::incrementVisit('Tentang Kami');
 
-    SEOTools::setTitle('Tentang Kami - Mudaris Mandiri Wisata', false);
-    SEOTools::setDescription('Ketahui lebih lanjut tentang Mudaris Mandiri Wisata, agen umroh terpercaya dengan pengalaman lebih dari 15 tahun melayani jamaah.');
-    SEOTools::opengraph()->setUrl('https://mudarismandiriwisata.com/tentang-kami');
-    SEOTools::opengraph()->setTitle('Tentang Kami - Mudaris Mandiri Wisata');
-    SEOTools::opengraph()->setDescription('Ketahui lebih lanjut tentang Mudaris Mandiri Wisata, agen umroh terpercaya.');
-    SEOTools::twitter()->setTitle('Tentang Kami - Mudaris Mandiri Wisata');
-    SEOTools::twitter()->setDescription('Ketahui lebih lanjut tentang Mudaris Mandiri Wisata.');
-    SEOTools::jsonLd()->setTitle('Tentang Kami - Mudaris Mandiri Wisata');
-    SEOTools::jsonLd()->setDescription('Ketahui lebih lanjut tentang Mudaris Mandiri Wisata, agen umroh terpercaya.');
+    SEOTools::setTitle('Tentang Kami - Syukron Tour', false);
+    SEOTools::setDescription('Ketahui lebih lanjut tentang Syukron Tour, agen umroh terpercaya dengan pengalaman lebih dari 15 tahun melayani jamaah.');
+    SEOTools::opengraph()->setUrl('https://syukrontour.com/tentang-kami');
+    SEOTools::opengraph()->setTitle('Tentang Kami - Syukron Tour');
+    SEOTools::opengraph()->setDescription('Ketahui lebih lanjut tentang Syukron Tour, agen umroh terpercaya.');
+    SEOTools::twitter()->setTitle('Tentang Kami - Syukron Tour');
+    SEOTools::twitter()->setDescription('Ketahui lebih lanjut tentang Syukron Tour.');
+    SEOTools::jsonLd()->setTitle('Tentang Kami - Syukron Tour');
+    SEOTools::jsonLd()->setDescription('Ketahui lebih lanjut tentang Syukron Tour, agen umroh terpercaya.');
     SEOTools::jsonLd()->setType('WebPage');
 
     return view('tentang_kami.index');

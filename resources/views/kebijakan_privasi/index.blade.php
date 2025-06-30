@@ -11,34 +11,34 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Primary Meta Tags -->
-    <title>Kebijakan Privasi - Mudaris Mandiri Wisata</title>
-    <meta name="title" content="Kebijakan Privasi | Mudaris Mandiri Wisata">
+    <title>Kebijakan Privasi - Syukron Tour</title>
+    <meta name="title" content="Kebijakan Privasi | Syukron Tour">
     <meta name="description"
-        content="Pelajari bagaimana Mudaris Mandiri Wisata melindungi privasi dan keamanan data pribadi Anda dengan kebijakan privasi kami yang transparan.">
-    <meta name="keywords" content="kebijakan privasi, privasi umroh, perlindungan data, Mudaris Mandiri Wisata">
-    <meta name="author" content="Mudaris Mandiri Wisata">
+        content="Pelajari bagaimana Syukron Tour melindungi privasi dan keamanan data pribadi Anda dengan kebijakan privasi kami yang transparan.">
+    <meta name="keywords" content="kebijakan privasi, privasi umroh, perlindungan data, Syukron Tour">
+    <meta name="author" content="Syukron Tour">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://mudarismandiriwisata.com/kebijakan-privasi">
+    <link rel="canonical" href="https://syukrontour.com/kebijakan-privasi">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Mudaris Mandiri Wisata">
-    <meta property="og:title" content="Kebijakan Privasi | Mudaris Mandiri Wisata">
+    <meta property="og:site_name" content="Syukron Tour">
+    <meta property="og:title" content="Kebijakan Privasi | Syukron Tour">
     <meta property="og:description"
-        content="Pelajari bagaimana Mudaris Mandiri Wisata melindungi privasi dan keamanan data pribadi Anda dengan kebijakan privasi kami yang transparan.">
-    <meta property="og:image" content="https://mudarismandiriwisata.com/images/privacy-policy.jpg">
-    <meta property="og:url" content="https://mudarismandiriwisata.com/kebijakan-privasi">
+        content="Pelajari bagaimana Syukron Tour melindungi privasi dan keamanan data pribadi Anda dengan kebijakan privasi kami yang transparan.">
+    <meta property="og:image" content="https://syukrontour.com/images/privacy-policy.jpg">
+    <meta property="og:url" content="https://syukrontour.com/kebijakan-privasi">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@mudarismandiriwisata">
-    <meta name="twitter:creator" content="@mudarismandiriwisata">
-    <meta name="twitter:title" content="Kebijakan Privasi | Mudaris Mandiri Wisata">
+    <meta name="twitter:site" content="@syukrontour">
+    <meta name="twitter:creator" content="@syukrontour">
+    <meta name="twitter:title" content="Kebijakan Privasi | Syukron Tour">
     <meta name="twitter:description"
-        content="Pelajari bagaimana Mudaris Mandiri Wisata melindungi privasi dan keamanan data pribadi Anda.">
-    <meta name="twitter:image" content="https://mudarismandiriwisata.com/images/privacy-policy.jpg">
+        content="Pelajari bagaimana Syukron Tour melindungi privasi dan keamanan data pribadi Anda.">
+    <meta name="twitter:image" content="https://syukrontour.com/images/privacy-policy.jpg">
 
     <!-- WebPage Schema -->
     <script type="application/ld+json">
@@ -46,14 +46,14 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Kebijakan Privasi",
-    "description": "Kebijakan privasi Mudaris Mandiri Wisata menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi data pribadi jamaah.",
-    "url": "https://mudarismandiriwisata.com/kebijakan-privasi",
+    "description": "Kebijakan privasi Syukron Tour menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi data pribadi jamaah.",
+    "url": "https://syukrontour.com/kebijakan-privasi",
     "publisher": {
       "@type": "Organization",
-      "name": "Mudaris Mandiri Wisata",
+      "name": "Syukron Tour",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://mudarismandiriwisata.com/assets/images/logo.png"
+        "url": "https://syukrontour.com/assets/images/logo.png"
       }
     },
     "dateModified": "2025-06-10"
@@ -390,7 +390,7 @@
                             </div>
                             <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
                                 <p class="text-gray-700 leading-relaxed">
-                                    Mudaris Mandiri Wisata ("kami", "perusahaan") berkomitmen untuk melindungi dan
+                                    Syukron Tour ("kami", "perusahaan") berkomitmen untuk melindungi dan
                                     menghormati privasi Anda.
                                     Kebijakan privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan
                                     melindungi informasi pribadi
@@ -722,7 +722,7 @@
                                             <i class="fas fa-envelope text-white"></i>
                                         </div>
                                         <h5 class="font-semibold mb-1">Email</h5>
-                                        <p class="text-blue-100 text-sm">privacy@mudarismandiriwisata.com</p>
+                                        <p class="text-blue-100 text-sm">privacy@syukrontour.com</p>
                                     </div>
 
                                     <div>
@@ -818,7 +818,7 @@
                                 class="w-40 h-26 object-contain" />
                         </div>
                     </div>
-                    <p class="text-gray-400 mb-6">Melayani perjalanan umroh dengan penuh amanah dan berkah sejak 2010.
+                    <p class="text-gray-400 mb-6">Melayani perjalanan umroh dengan penuh amanah dan berkah sejak 2012.
                     </p>
                     <div class="flex space-x-4">
                         <a href="#"
@@ -839,10 +839,10 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Layanan</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Umroh Reguler</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Umroh VIP</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Umroh Keluarga</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Konsultasi</a></li>
+                        <li><a href="#paket" class="hover:text-white transition-colors">Umroh Reguler</a></li>
+                        <li><a href="#paket" class="hover:text-white transition-colors">Umroh VIP</a></li>
+                        <li><a href="#paket" class="hover:text-white transition-colors">Umroh Keluarga</a></li>
+                        <li><a href="#kontak" class="hover:text-white transition-colors">Konsultasi</a></li>
                     </ul>
                 </div>
 
@@ -863,11 +863,11 @@
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-center">
                             <i class="fas fa-phone mr-2"></i>
-                            +62 821-8480-8256
+                            +6281-8569-111
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-2"></i>
-                            mudariswisata@gmail.com
+                            syukrontour@gmail.com
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-map-marker-alt mr-2"></i>
@@ -878,7 +878,7 @@
             </div>
 
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2012 - Mundaris Mandiri Wisata ❤️ for jamaah Indonesia.</p>
+                <p>&copy; 2012 - Syukron Tours ❤️ for jamaah Indonesia.</p>
             </div>
         </div>
     </footer>

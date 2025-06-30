@@ -11,55 +11,55 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Primary Meta Tags -->
-    <title>Syarat dan Ketentuan - Mudaris Mandiri Wisata</title>
-    <meta name="title" content="Syarat dan Ketentuan | Mudaris Mandiri Wisata">
+    <title>Syarat dan Ketentuan - Syukron Tour</title>
+    <meta name="title" content="Syarat dan Ketentuan | Syukron Tour">
     <meta name="description"
-        content="Pelajari syarat dan ketentuan layanan umroh dari Mudaris Mandiri Wisata untuk memastikan perjalanan ibadah Anda berjalan lancar.">
+        content="Pelajari syarat dan ketentuan layanan umroh dari Syukron Tour untuk memastikan perjalanan ibadah Anda berjalan lancar.">
     <meta name="keywords"
-        content="syarat umroh, ketentuan umroh, travel umroh, Mudaris Mandiri Wisata, biaya umroh, pendaftaran umroh, kebijakan pembatalan umroh">
-    <meta name="author" content="Mudaris Mandiri Wisata">
+        content="syarat umroh, ketentuan umroh, travel umroh, Syukron Tour, biaya umroh, pendaftaran umroh, kebijakan pembatalan umroh">
+    <meta name="author" content="Syukron Tour">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://mudarismandiriwisata.com/syarat-ketentuan">
+    <link rel="canonical" href="https://syukrontour.com/syarat-ketentuan">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Mudaris Mandiri Wisata">
-    <meta property="og:title" content="Syarat dan Ketentuan - Mudaris Mandiri Wisata">
+    <meta property="og:site_name" content="Syukron Tour">
+    <meta property="og:title" content="Syarat dan Ketentuan - Syukron Tour">
     <meta property="og:description"
-        content="Pelajari syarat dan ketentuan layanan umroh dari Mudaris Mandiri Wisata untuk memastikan perjalanan ibadah Anda berjalan lancar.">
-    <meta property="og:image" content="https://mudarismandiriwisata.com/images/og-image-syarat-ketentuan.jpg">
-    <meta property="og:url" content="https://mudarismandiriwisata.com/syarat-ketentuan">
+        content="Pelajari syarat dan ketentuan layanan umroh dari Syukron Tour untuk memastikan perjalanan ibadah Anda berjalan lancar.">
+    <meta property="og:image" content="https://syukrontour.com/images/og-image-syarat-ketentuan.jpg">
+    <meta property="og:url" content="https://syukrontour.com/syarat-ketentuan">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@mudarismandiriwisata">
-    <meta name="twitter:creator" content="@mudarismandiriwisata">
-    <meta name="twitter:title" content="Syarat dan Ketentuan - Mudaris Mandiri Wisata">
-    <meta name="twitter:description" content="Pelajari syarat dan ketentuan layanan umroh dari Mudaris Mandiri Wisata.">
-    <meta name="twitter:image" content="https://mudarismandiriwisata.com/images/twitter-card-syarat-ketentuan.jpg">
+    <meta name="twitter:site" content="@syukrontour">
+    <meta name="twitter:creator" content="@syukrontour">
+    <meta name="twitter:title" content="Syarat dan Ketentuan - Syukron Tour">
+    <meta name="twitter:description" content="Pelajari syarat dan ketentuan layanan umroh dari Syukron Tour.">
+    <meta name="twitter:image" content="https://syukrontour.com/images/twitter-card-syarat-ketentuan.jpg">
 
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Syarat dan Ketentuan - Mudaris Mandiri Wisata",
-    "description": "Pelajari syarat dan ketentuan layanan umroh dari Mudaris Mandiri Wisata untuk memastikan perjalanan ibadah Anda berjalan lancar.",
-    "url": "https://mudarismandiriwisata.com/syarat-ketentuan",
+    "name": "Syarat dan Ketentuan - Syukron Tour",
+    "description": "Pelajari syarat dan ketentuan layanan umroh dari Syukron Tour untuk memastikan perjalanan ibadah Anda berjalan lancar.",
+    "url": "https://syukrontour.com/syarat-ketentuan",
     "publisher": {
       "@type": "Organization",
-      "name": "Mudaris Mandiri Wisata",
+      "name": "Syukron Tour",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://mudarismandiriwisata.com/assets/images/logo.png"
+        "url": "https://syukrontour.com/assets/images/logo.png"
       }
     },
     "mainEntity": {
       "@type": "CreativeWork",
       "name": "Syarat dan Ketentuan",
-      "text": "Dokumen ini berisi ketentuan umum, syarat pendaftaran, ketentuan pembayaran, kebijakan pembatalan, tanggung jawab, dan ketentuan lain-lain untuk layanan umroh Mudaris Mandiri Wisata."
+      "text": "Dokumen ini berisi ketentuan umum, syarat pendaftaran, ketentuan pembayaran, kebijakan pembatalan, tanggung jawab, dan ketentuan lain-lain untuk layanan umroh Syukron Tour."
     }
   }
   </script>
@@ -292,7 +292,7 @@
                     Syarat dan ketentuan
                 </h1>
                 <p class="text-xl md:text-2xl text-blue-700 mb-8 max-w-3xl mx-auto">
-                    Ketentuan yang mengatur penggunaan layanan umoroh Mudaris Mandiri Wisata
+                    Ketentuan yang mengatur penggunaan layanan umoroh Syukron Tour
                 </p>
             </div>
         </div>
@@ -374,7 +374,7 @@
                     <div class="space-y-4 text-gray-600">
                         <div class="flex items-start space-x-3">
                             <i class="fas fa-check-circle text-green-500 mt-1"></i>
-                            <p>Mudaris Mandiri Wisata adalah Penyelenggara Perjalanan Ibadah Umroh (PPIU) yang telah
+                            <p>Syukron Tour adalah Penyelenggara Perjalanan Ibadah Umroh (PPIU) yang telah
                                 memiliki izin resmi dari Kementerian Agama Republik Indonesia.</p>
                         </div>
                         <div class="flex items-start space-x-3">
@@ -750,7 +750,7 @@
                                 class="w-40 h-26 object-contain" />
                         </div>
                     </div>
-                    <p class="text-gray-400 mb-6">Melayani perjalanan umroh dengan penuh amanah dan berkah sejak 2010.
+                    <p class="text-gray-400 mb-6">Melayani perjalanan umroh dengan penuh amanah dan berkah sejak 2012.
                     </p>
                     <div class="flex space-x-4">
                         <a href="#"
@@ -771,10 +771,10 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Layanan</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Umroh Reguler</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Umroh VIP</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Umroh Keluarga</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Konsultasi</a></li>
+                        <li><a href="#paket" class="hover:text-white transition-colors">Umroh Reguler</a></li>
+                        <li><a href="#paket" class="hover:text-white transition-colors">Umroh VIP</a></li>
+                        <li><a href="#paket" class="hover:text-white transition-colors">Umroh Keluarga</a></li>
+                        <li><a href="#kontak" class="hover:text-white transition-colors">Konsultasi</a></li>
                     </ul>
                 </div>
 
@@ -795,11 +795,11 @@
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-center">
                             <i class="fas fa-phone mr-2"></i>
-                            +62 821-8480-8256
+                            +6281-8569-111
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-2"></i>
-                            mudariswisata@gmail.com
+                            syukrontour@gmail.com
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-map-marker-alt mr-2"></i>
@@ -810,7 +810,7 @@
             </div>
 
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2012 - Mundaris Mandiri Wisata ❤️ for jamaah Indonesia.</p>
+                <p>&copy; 2012 - Syukron Tours ❤️ for jamaah Indonesia.</p>
             </div>
         </div>
     </footer>

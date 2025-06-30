@@ -13,35 +13,35 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Primary Meta Tags -->
-    <title>FAQ - Mudaris Mandiri Wisata</title>
-    <meta name="title" content="FAQ - Mudaris Mandiri Wisata">
+    <title>FAQ - Syukron Tour</title>
+    <meta name="title" content="FAQ - Syukron Tour">
     <meta name="description"
-        content="Temukan jawaban untuk pertanyaan umum seputar paket umroh Mudaris Mandiri Wisata, termasuk syarat, biaya, dan prosedur keberangkatan umroh.">
+        content="Temukan jawaban untuk pertanyaan umum seputar paket umroh Syukron Tour, termasuk syarat, biaya, dan prosedur keberangkatan umroh.">
     <meta name="keywords"
-        content="FAQ umroh, pertanyaan umroh, syarat umroh, biaya umroh, prosedur umroh, Mudaris Mandiri Wisata">
-    <meta name="author" content="Mudaris Mandiri Wisata">
+        content="FAQ umroh, pertanyaan umroh, syarat umroh, biaya umroh, prosedur umroh, Syukron Tour">
+    <meta name="author" content="Syukron Tour">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://mudarismandiriwisata.com/faq">
+    <link rel="canonical" href="https://syukrontour.com/faq">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Mudaris Mandiri Wisata">
-    <meta property="og:title" content="FAQ - Pertanyaan yang Sering Diajukan | Mudaris Mandiri Wisata">
+    <meta property="og:site_name" content="Syukron Tour">
+    <meta property="og:title" content="FAQ - Pertanyaan yang Sering Diajukan | Syukron Tour">
     <meta property="og:description"
-        content="Temukan jawaban untuk pertanyaan umum seputar paket umroh Mudaris Mandiri Wisata, termasuk syarat, biaya, dan prosedur keberangkatan umroh.">
-    <meta property="og:image" content="https://mudarismandiriwisata.com/images/og-image-faq.jpg">
-    <meta property="og:url" content="https://mudarismandiriwisata.com/faq">
+        content="Temukan jawaban untuk pertanyaan umum seputar paket umroh Syukron Tour, termasuk syarat, biaya, dan prosedur keberangkatan umroh.">
+    <meta property="og:image" content="https://syukrontour.com/images/og-image-faq.jpg">
+    <meta property="og:url" content="https://syukrontour.com/faq">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@mudarismandiriwisata">
-    <meta name="twitter:creator" content="@mudarismandiriwisata">
-    <meta name="twitter:title" content="FAQ - Pertanyaan yang Sering Diajukan | Mudaris Mandiri Wisata">
+    <meta name="twitter:site" content="@syukrontour">
+    <meta name="twitter:creator" content="@syukrontour">
+    <meta name="twitter:title" content="FAQ - Pertanyaan yang Sering Diajukan | Syukron Tour">
     <meta name="twitter:description"
-        content="Temukan jawaban untuk pertanyaan umum seputar paket umroh Mudaris Mandiri Wisata.">
-    <meta name="twitter:image" content="https://mudarismandiriwisata.com/images/twitter-card-faq.jpg">
+        content="Temukan jawaban untuk pertanyaan umum seputar paket umroh Syukron Tour.">
+    <meta name="twitter:image" content="https://syukrontour.com/images/twitter-card-faq.jpg">
 
     <!-- FAQ Schema -->
     <script type="application/ld+json">
@@ -51,10 +51,10 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Apakah Mudaris Mandiri Wisata sudah berizin resmi?",
+        "name": "Apakah Syukron Tour sudah berizin resmi?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ya, Mudaris Mandiri Wisata telah berizin resmi dan berpengalaman lebih dari 15 tahun dalam melayani jamaah umroh dengan sertifikat dari Kementerian Agama RI."
+          "text": "Ya, Syukron Tour telah berizin resmi dan berpengalaman lebih dari 15 tahun dalam melayani jamaah umroh dengan sertifikat dari Kementerian Agama RI."
         }
       },
       {
@@ -375,7 +375,7 @@
                     Pertanyaan yang Sering Diajukan
                 </p>
                 <p class="text-lg text-blue-600 max-w-2xl mx-auto">
-                    Temukan jawaban untuk pertanyaan umum seputar paket umroh dan layanan Mudaris Mandiri Wisata
+                    Temukan jawaban untuk pertanyaan umum seputar paket umroh dan layanan Syukron Tour
                 </p>
             </div>
         </div>
@@ -428,13 +428,13 @@
                 <div class="faq-item bg-white rounded-2xl shadow-lg overflow-hidden card-hover" data-category="umum">
                     <button
                         class="faq-header w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
-                        <h3 class="text-lg font-semibold text-gray-800 pr-4">Apakah Mudaris Mandiri Wisata sudah
+                        <h3 class="text-lg font-semibold text-gray-800 pr-4">Apakah Syukron Tour sudah
                             berizin resmi?</h3>
                         <i class="fas fa-chevron-down faq-toggle text-yellow-600 text-lg"></i>
                     </button>
                     <div class="faq-content px-8 pb-6">
                         <p class="text-gray-600 leading-relaxed">
-                            Ya, Mudaris Mandiri Wisata telah berizin resmi dan berpengalaman lebih dari 15 tahun dalam
+                            Ya, Syukron Tour telah berizin resmi dan berpengalaman lebih dari 15 tahun dalam
                             melayani jamaah umroh.
                             Kami memiliki sertifikat dari Kementerian Agama RI dan berbagai penghargaan sebagai bukti
                             komitmen kami
@@ -729,7 +729,7 @@
                                 class="w-40 h-26 object-contain" />
                         </div>
                     </div>
-                    <p class="text-gray-400 mb-6">Melayani perjalanan umroh dengan penuh amanah dan berkah sejak 2010.
+                    <p class="text-gray-400 mb-6">Melayani perjalanan umroh dengan penuh amanah dan berkah sejak 2012.
                     </p>
                     <div class="flex space-x-4">
                         <a href="#"
@@ -750,10 +750,10 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Layanan</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Umroh Reguler</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Umroh VIP</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Umroh Keluarga</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Konsultasi</a></li>
+                        <li><a href="#paket" class="hover:text-white transition-colors">Umroh Reguler</a></li>
+                        <li><a href="#paket" class="hover:text-white transition-colors">Umroh VIP</a></li>
+                        <li><a href="#paket" class="hover:text-white transition-colors">Umroh Keluarga</a></li>
+                        <li><a href="#kontak" class="hover:text-white transition-colors">Konsultasi</a></li>
                     </ul>
                 </div>
 
@@ -774,11 +774,11 @@
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-center">
                             <i class="fas fa-phone mr-2"></i>
-                            +62 821-8480-8256
+                            +6281-8569-111
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-2"></i>
-                            mudariswisata@gmail.com
+                            syukrontour@gmail.com
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-map-marker-alt mr-2"></i>
@@ -789,7 +789,7 @@
             </div>
 
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2012 - Mundaris Mandiri Wisata ❤️ for jamaah Indonesia.</p>
+                <p>&copy; 2012 - Syukron Tours ❤️ for jamaah Indonesia.</p>
             </div>
         </div>
     </footer>
@@ -806,5 +806,4 @@
     <script src="/build/assets/app-C6t145CM.js" defer></script>
 
 </body>
-
 </html>

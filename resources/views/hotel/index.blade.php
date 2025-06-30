@@ -15,25 +15,25 @@
   <meta name="robots" content="index, follow">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://mudarismandiriwisata.id/tentang-kami">
+  <link rel="canonical" href="https://syukrontour.com/tentang-kami">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Syukron Tours">
   <meta property="og:title" content="Hotel | Syukron Tours">
   <meta property="og:description" content="Pelajari sejarah, visi, misi, dan komitmen Syukron Tours dalam melayani jamaah umroh dengan penuh amanah sejak 2008.">
-  <meta property="og:image" content="https://mudarismandiriwisata.id/images/tentang-kami-umroh.jpg">
+  <meta property="og:image" content="https://syukrontour.com/images/tentang-kami-umroh.jpg">
   <meta property="og:image:alt" content="Masjidil Haram - Syukron Tours">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:url" content="https://mudarismandiriwisata.id/tentang-kami">
+  <meta property="og:url" content="https://syukrontour.com/tentang-kami">
   <meta property="og:locale" content="id_ID">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Hotel | Syukron Tours">
   <meta name="twitter:description" content="Pelajari sejarah, visi, misi, dan komitmen Syukron Tours dalam melayani jamaah umroh dengan penuh amanah sejak 2008.">
-  <meta name="twitter:image" content="https://mudarismandiriwisata.id/images/tentang-kami-umroh.jpg">
+  <meta name="twitter:image" content="https://syukrontour.com/images/tentang-kami-umroh.jpg">
   <meta name="twitter:image:alt" content="Masjidil Haram - Syukron Tours">
   <meta name="twitter:site" content="@MudarisWisata">
   <meta name="twitter:creator" content="@MudarisWisata">
@@ -60,8 +60,8 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Syukron Tours",
-    "url": "https://mudarismandiriwisata.id",
-    "logo": "https://mudarismandiriwisata.id/assets/images/logo.png",
+    "url": "https://syukrontour.com",
+    "logo": "https://syukrontour.com/assets/images/logo.png",
     "description": "Syukron Tours adalah travel umroh terpercaya sejak 2008, berizin resmi dari Kementerian Agama RI, melayani jamaah dengan penuh amanah.",
     "address": {
       "@type": "PostalAddress",
@@ -332,7 +332,7 @@
 
   <section class="py-24 bg-gray-50 relative overflow-hidden" id="hotels">
     <!-- Subtle Background Pattern -->
-    <div class="absolute inset-0 bg-[url('https://mudarismandiriwisata.id/images/pattern-bg.png')] bg-cover bg-center opacity-10"></div>
+    <div class="absolute inset-0 bg-[url('https://syukrontour.com/images/pattern-bg.png')] bg-cover bg-center opacity-10"></div>
     <div class="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-white/30"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -488,73 +488,80 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div>
-          <div class="flex-shrink-0 flex items-center space-x-3">
-            <div class="items-center justify-center">
-              <img src="{{ asset('assets/images/logo.png') }}" alt="Logo" class="w-40 h-26 object-contain" />
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex-shrink-0 flex items-center space-x-3">
+                        <div class=" items-center justify-center">
+                            <img src="{{ asset('assets/images/logo.png') }}" alt="Logo"
+                                class="w-40 h-26 object-contain" />
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">Melayani perjalanan umroh dengan penuh amanah dan berkah sejak 2012.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center text-gray-300 hover:bg-yellow-600 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center text-gray-300 hover:bg-yellow-600 hover:text-white transition-colors">
+                            <i class="fab fa-whatsapp text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center text-gray-300 hover:bg-yellow-600 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Layanan</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#paket" class="hover:text-white transition-colors">Umroh Reguler</a></li>
+                        <li><a href="#paket" class="hover:text-white transition-colors">Umroh VIP</a></li>
+                        <li><a href="#paket" class="hover:text-white transition-colors">Umroh Keluarga</a></li>
+                        <li><a href="#kontak" class="hover:text-white transition-colors">Konsultasi</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Informasi</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/tentang-kami" class="hover:text-white transition-colors">Tentang Kami</a></li>
+                        <li><a href="/syarat-ketentuan" class="hover:text-white transition-colors">Syarat &
+                                Ketentuan</a></li>
+                        <li><a href="/kebijakan-privasi" class="hover:text-white transition-colors">Kebijakan
+                                Privasi</a></li>
+                        <li><a href="/faq" class="hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            +6281-8569-111
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            syukrontour@gmail.com
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Pekanbaru, Riau
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <p class="text-gray-400 mb-6">Melayani perjalanan umroh dengan penuh amanah dan berkah sejak 2010.</p>
-          <div class="flex space-x-4">
-            <a href="#" class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center text-gray-300 hover:bg-yellow-600 hover:text-white transition-colors">
-              <i class="fab fa-facebook-f text-sm"></i>
-            </a>
-            <a href="#" class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center text-gray-300 hover:bg-yellow-600 hover:text-white transition-colors">
-              <i class="fab fa-whatsapp text-sm"></i>
-            </a>
-            <a href="#" class="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center text-gray-300 hover:bg-yellow-600 hover:text-white transition-colors">
-              <i class="fab fa-instagram text-sm"></i>
-            </a>
-          </div>
-        </div>
 
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Layanan</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li><a href="#" class="hover:text-white transition-colors">Umroh Reguler</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Umroh VIP</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Umroh Keluarga</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">Konsultasi</a></li>
-          </ul>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2012 - Syukron Tours ❤️ for jamaah Indonesia.</p>
+            </div>
         </div>
-
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Informasi</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li><a href="/tentang-kami" class="hover:text-white transition-colors">Hotel</a></li>
-            <li><a href="/syarat-ketentuan" class="hover:text-white transition-colors">Syarat & Ketentuan</a></li>
-            <li><a href="/kebijakan-privasi" class="hover:text-white transition-colors">Kebijakan Privasi</a></li>
-            <li><a href="/faq" class="hover:text-white transition-colors">FAQ</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Kontak</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li class="flex items-center">
-              <i class="fas fa-phone mr-2"></i>
-              +62 821-8480-8256
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-envelope mr-2"></i>
-              mudariswisata@gmail.com
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-map-marker-alt mr-2"></i>
-              Pekanbaru, Riau
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-        <p>© 2012 - Mundaris Mandiri Wisata ❤️ for jamaah Indonesia.</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
   <!-- Floating WhatsApp Button -->
     <div class="fixed bottom-6 right-6 z-50">
