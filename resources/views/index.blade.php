@@ -9,8 +9,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Primary Meta Tags -->
-    <title>Syukron Tours - Paket Umroh Terpercaya & Amanah | 15+ Tahun Pengalaman</title>
-    <meta name="title" content="Syukron Tours - Paket Umroh Terpercaya & Amanah | 15+ Tahun Pengalaman">
+    <title>Syukron Tours - Paket Umroh Terpercaya & Amanah | Umroh Nyaman Sesuai Sunnah</title>
+    <meta name="title" content="Syukron Tours - Paket Umroh Terpercaya & Amanah | Umroh Nyaman Sesuai Sunnah">
     <meta name="description"
         content="Syukron Tours menyediakan paket umroh terpercaya dengan 15+ tahun pengalaman. 500+ jamaah puas, pelayanan 24/7, dan harga terjangkau. Daftar sekarang!">
     <meta name="keywords"
@@ -26,7 +26,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Syukron Tours">
-    <meta property="og:title" content="Syukron Tours - Paket Umroh Terpercaya & Amanah | 15+ Tahun Pengalaman">
+    <meta property="og:title" content="Syukron Tours - Paket Umroh Terpercaya & Amanah | Umroh Nyaman Sesuai Sunnah">
     <meta property="og:description"
         content="Wujudkan impian ibadah umroh Anda bersama Syukron Tours. 500+ jamaah puas, pelayanan terpercaya, amanah dan penuh berkah. Konsultasi gratis sekarang!">
     <meta property="og:image" content="https://syukrontour.com/assets/images/logo.png">
@@ -900,7 +900,7 @@
     <script>
         function sendWhatsApp(packageName, price, duration, hotelRating, category) {
             // Nomor WhatsApp tujuan
-            const phoneNumber = '6285211451111'; // Format internasional Indonesia
+            const phoneNumber = '62818569111'; // Format internasional Indonesia
 
             // Template pesan yang akan dikirim
             const message = `🕌 *INQUIRY PAKET UMROH* 🕌
