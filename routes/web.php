@@ -63,7 +63,14 @@ Route::get('/syarat-ketentuan', function () {
 })->name('terms');
 
 
+use App\Http\Controllers\BookingController;
 
+Route::prefix('bookings')->name('bookings.')->group(function () {
+    Route::get('/create/{kamar_id}', [BookingController::class, 'create'])->name('create');
+    Route::post('/', [BookingController::class, 'store'])->name('store');
+    Route::get('/', [BookingController::class, 'index'])->name('index');
+    Route::get('/{booking}', [BookingController::class, 'show'])->name('show');
+});
 
 
 use App\Http\Controllers\HotelController;

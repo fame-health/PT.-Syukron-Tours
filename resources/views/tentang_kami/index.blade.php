@@ -204,71 +204,77 @@
 <body class="bg-gray-50 text-gray-800 overflow-x-hidden">
 
   <!-- Navbar -->
-  <nav class="glass-morphism fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-20 items-center">
-            <!-- Logo -->
-            <div class="flex-shrink-0 flex items-center space-x-3">
-                <div class="flex items-center justify-center">
-                    <img src="{{ asset('assets/images/logo.png') }}" alt="Logo"
-                         class="w-32 h-16 sm:w-40 sm:h-20 object-contain rounded-lg" />
-                </div>
-            </div>
-
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-8" id="desktopMenu">
-          <a href="/" class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
-            Beranda
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="/kebijakan-privasi" class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
-            Kebijakan dan Privasi
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="/faq" class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
-            FAQ
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="/tentang-kami" class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
-            Tentang Kami
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="/syarat-ketentuan" class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
-            Syarat dan Ketentuan
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-        </div>
-
-        <!-- CTA Desktop -->
-        <div class="hidden md:flex">
-          <button class="gradient-bg text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-            Konsultasi Gratis
-          </button>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-          <button id="menu-btn" class="text-gray-700 hover:text-yellow-600 transition-colors">
-            <i class="fas fa-bars text-2xl"></i>
-          </button>
+<nav class="glass-morphism fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-20 items-center">
+      <!-- Logo -->
+      <div class="flex-shrink-0 flex items-center space-x-3">
+        <div class="flex items-center justify-center">
+          <img src="{{ asset('assets/images/logo.png') }}" alt="Logo"
+               class="w-32 h-16 sm:w-40 sm:h-20 object-contain rounded-lg" />
         </div>
       </div>
-    </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden glass-morphism absolute top-20 left-0 right-0 w-full z-50">
-      <div class="px-4 pt-2 pb-6 space-y-4 bg-white shadow-md rounded-b-xl">
-        <a href="/" class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Beranda</a>
-        <a href="/faq" class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">FAQ</a>
-        <a href="/tentang-kami" class="block py-3 px-4 text-yellow-600 font-semibold bg-yellow-50 rounded-lg">Tentang Kami</a>
-        <a href="/kebijakan-privasi" class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg">Kebijakan dan Privasi</a>
-        <a href="/syarat-ketentuan" class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg">Syarat dan Ketentuan</a>
-        <button class="w-full gradient-bg text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8" id="desktopMenu">
+        <a href="/" class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
+          Beranda
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="/hotel" class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
+          Hotel
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="/kebijakan-privasi" class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
+          Kebijakan dan Privasi
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="/faq" class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
+          FAQ
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="/tentang-kami" class="nav-link relative text-yellow-600 font-semibold transition-colors duration-300 group">
+          Tentang Kami
+          <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-yellow-600 transition-all duration-300"></span>
+        </a>
+        <a href="/syarat-ketentuan" class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
+          Syarat dan Ketentuan
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </div>
+
+      <!-- CTA Desktop -->
+      <div class="hidden md:flex">
+        <button class="gradient-bg text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
           Konsultasi Gratis
         </button>
       </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-gray-700 hover:text-yellow-600 transition-colors">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
     </div>
-  </nav>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden glass-morphism absolute top-20 left-0 right-0 w-full z-50">
+    <div class="px-4 pt-2 pb-6 space-y-4 bg-white shadow-md rounded-b-xl">
+      <a href="/" class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Beranda</a>
+      <a href="/hotel" class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Hotel</a>
+      <a href="/faq" class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg">FAQ</a>
+      <a href="/tentang-kami" class="block py-3 px-4 text-yellow-600 font-semibold bg-yellow-50 rounded-lg">Tentang Kami</a>
+      <a href="/kebijakan-privasi" class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg">Kebijakan dan Privasi</a>
+      <a href="/syarat-ketentuan" class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg">Syarat dan Ketentuan</a>
+      <button class="w-full gradient-bg text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+        Konsultasi Gratis
+      </button>
+    </div>
+  </div>
+</nav>
+
 
   <!-- Hero Section -->
   <section class="pt-32 pb-20 hero-gradient relative overflow-hidden">
@@ -592,11 +598,11 @@
           Tim customer service kami siap membantu Anda 24/7 untuk menjawab semua pertanyaan seputar umroh
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="https://wa.me/6285211451111" target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
+          <a href="https://wa.me/62818569111" target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
             <i class="fab fa-whatsapp mr-2 text-xl"></i>
             Chat WhatsApp
           </a>
-          <a href="tel:+6285211451111" class="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-gray-100 text-blue-600 font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
+          <a href="tel:+62818569111" class="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-gray-100 text-blue-600 font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
             <i class="fas fa-phone mr-2"></i>
             Telepon Sekarang
           </a>
@@ -678,11 +684,12 @@
   </footer>
 
   <!-- Floating WhatsApp Button -->
-  <div class="fixed bottom-6 right-6 z-50">
-    <a href="https://wa.me/6285211451111" target="_blank" class="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 floating-animation">
-      <i class="fab fa-whatsapp text-2xl"></i>
-    </a>
-  </div>
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/62818569111" target="_blank"
+            class="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 floating-animation">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
 
  <script src="/build/assets/app-C6t145CM.js" defer></script>
 

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -8,11 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <!-- Primary Meta Tags -->
-  <title>Tentang Kami - Mudaris Mandiri Wisata</title>
-  <meta name="title" content="Tentang Kami | Mudaris Mandiri Wisata">
-  <meta name="description" content="Ketahui lebih lanjut tentang Mudaris Mandiri Wisata, travel umroh terpercaya sejak 2008. Kami menawarkan pelayanan amanah dengan izin resmi Kemenag RI.">
-  <meta name="keywords" content="tentang kami, travel umroh, umroh terpercaya, Mudaris Mandiri Wisata, izin resmi umroh, pelayanan umroh, sejarah travel umroh">
-  <meta name="author" content="Mudaris Mandiri Wisata">
+  <title>Hotel - Syukron Tours</title>
+  <meta name="title" content="Hotel | Syukron Tours">
+  <meta name="description" content="Ketahui lebih lanjut tentang Syukron Tours, travel umroh terpercaya sejak 2008. Kami menawarkan pelayanan amanah dengan izin resmi Kemenag RI.">
+  <meta name="keywords" content="Hotel, travel umroh, umroh terpercaya, Syukron Tours, izin resmi umroh, pelayanan umroh, sejarah travel umroh">
+  <meta name="author" content="Syukron Tours">
   <meta name="robots" content="index, follow">
 
   <!-- Canonical URL -->
@@ -20,11 +19,11 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Mudaris Mandiri Wisata">
-  <meta property="og:title" content="Tentang Kami | Mudaris Mandiri Wisata">
-  <meta property="og:description" content="Pelajari sejarah, visi, misi, dan komitmen Mudaris Mandiri Wisata dalam melayani jamaah umroh dengan penuh amanah sejak 2008.">
+  <meta property="og:site_name" content="Syukron Tours">
+  <meta property="og:title" content="Hotel | Syukron Tours">
+  <meta property="og:description" content="Pelajari sejarah, visi, misi, dan komitmen Syukron Tours dalam melayani jamaah umroh dengan penuh amanah sejak 2008.">
   <meta property="og:image" content="https://mudarismandiriwisata.id/images/tentang-kami-umroh.jpg">
-  <meta property="og:image:alt" content="Masjidil Haram - Mudaris Mandiri Wisata">
+  <meta property="og:image:alt" content="Masjidil Haram - Syukron Tours">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://mudarismandiriwisata.id/tentang-kami">
@@ -32,10 +31,10 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tentang Kami | Mudaris Mandiri Wisata">
-  <meta name="twitter:description" content="Pelajari sejarah, visi, misi, dan komitmen Mudaris Mandiri Wisata dalam melayani jamaah umroh dengan penuh amanah sejak 2008.">
+  <meta name="twitter:title" content="Hotel | Syukron Tours">
+  <meta name="twitter:description" content="Pelajari sejarah, visi, misi, dan komitmen Syukron Tours dalam melayani jamaah umroh dengan penuh amanah sejak 2008.">
   <meta name="twitter:image" content="https://mudarismandiriwisata.id/images/tentang-kami-umroh.jpg">
-  <meta name="twitter:image:alt" content="Masjidil Haram - Mudaris Mandiri Wisata">
+  <meta name="twitter:image:alt" content="Masjidil Haram - Syukron Tours">
   <meta name="twitter:site" content="@MudarisWisata">
   <meta name="twitter:creator" content="@MudarisWisata">
 
@@ -60,10 +59,10 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Mudaris Mandiri Wisata",
+    "name": "Syukron Tours",
     "url": "https://mudarismandiriwisata.id",
     "logo": "https://mudarismandiriwisata.id/assets/images/logo.png",
-    "description": "Mudaris Mandiri Wisata adalah travel umroh terpercaya sejak 2008, berizin resmi dari Kementerian Agama RI, melayani jamaah dengan penuh amanah.",
+    "description": "Syukron Tours adalah travel umroh terpercaya sejak 2008, berizin resmi dari Kementerian Agama RI, melayani jamaah dengan penuh amanah.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Pekanbaru",
@@ -190,86 +189,92 @@
       transform: translateY(-2px);
     }
 
-    /* Mobile menu animation */
-    #mobile-menu {
-      transition: all 0.3s ease;
-      max-height: 0;
-      overflow: hidden;
-    }
-
-    #mobile-menu.active {
-      max-height: 500px;
-    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 overflow-x-hidden">
 
   <!-- Navbar -->
-  <nav class="glass-morphism fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-20 items-center">
-            <!-- Logo -->
-            <div class="flex-shrink-0 flex items-center space-x-3">
-                <div class="flex items-center justify-center">
-                    <img src="{{ asset('assets/images/logo.png') }}" alt="Logo"
-                         class="w-32 h-16 sm:w-40 sm:h-20 object-contain rounded-lg" />
-                </div>
-            </div>
-
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-8" id="desktopMenu">
-          <a href="/" class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
-            Beranda
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="/kebijakan-privasi" class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
-            Kebijakan dan Privasi
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="/faq" class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
-            FAQ
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="/tentang-kami" class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
-            Tentang Kami
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="/syarat-ketentuan" class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
-            Syarat dan Ketentuan
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-        </div>
-
-        <!-- CTA Desktop -->
-        <div class="hidden md:flex">
-          <button class="gradient-bg text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-            Konsultasi Gratis
-          </button>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-          <button id="menu-btn" class="text-gray-700 hover:text-yellow-600 transition-colors">
-            <i class="fas fa-bars text-2xl"></i>
-          </button>
+<nav class="glass-morphism fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-20 items-center">
+      <!-- Logo -->
+      <div class="flex-shrink-0 flex items-center space-x-3">
+        <div class="flex items-center justify-center">
+          <img src="{{ asset('assets/images/logo.png') }}" alt="Logo"
+            class="w-32 h-16 sm:w-40 sm:h-20 object-contain rounded-lg" />
         </div>
       </div>
-    </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden glass-morphism absolute top-20 left-0 right-0 w-full z-50">
-      <div class="px-4 pt-2 pb-6 space-y-4 bg-white shadow-md rounded-b-xl">
-        <a href="/" class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Beranda</a>
-        <a href="/faq" class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">FAQ</a>
-        <a href="/tentang-kami" class="block py-3 px-4 text-yellow-600 font-semibold bg-yellow-50 rounded-lg">Tentang Kami</a>
-        <a href="/kebijakan-privasi" class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg">Kebijakan dan Privasi</a>
-        <a href="/syarat-ketentuan" class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg">Syarat dan Ketentuan</a>
-        <button class="w-full gradient-bg text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8" id="desktopMenu">
+        <a href="/" class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
+          Beranda
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="/hotel" class="nav-link relative text-yellow-600 font-semibold transition-colors duration-300 group">
+          Hotel
+          <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-yellow-600 transition-all duration-300"></span>
+        </a>
+        <a href="/kebijakan-privasi"
+          class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
+          Kebijakan dan Privasi
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="/faq"
+          class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
+          FAQ
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="/tentang-kami"
+          class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
+          Tentang Kami
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="/syarat-ketentuan"
+          class="nav-link relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
+          Syarat dan Ketentuan
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </div>
+
+      <!-- CTA Desktop -->
+      <div class="hidden md:flex">
+        <button
+          class="gradient-bg text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
           Konsultasi Gratis
         </button>
       </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-gray-700 hover:text-yellow-600 transition-colors">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
     </div>
-  </nav>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden glass-morphism absolute top-20 left-0 right-0 w-full z-50">
+    <div class="px-4 pt-2 pb-6 space-y-4 bg-white shadow-md rounded-b-xl">
+      <a href="/" class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Beranda</a>
+      <a href="/hotel"
+        class="block py-3 px-4 text-yellow-600 font-semibold bg-yellow-50 rounded-lg">Hotel</a>
+      <a href="/faq" class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">FAQ</a>
+      <a href="/tentang-kami"
+        class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Tentang Kami</a>
+      <a href="/kebijakan-privasi"
+        class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Kebijakan dan Privasi</a>
+      <a href="/syarat-ketentuan"
+        class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Syarat dan Ketentuan</a>
+      <button
+        class="w-full gradient-bg text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+        Konsultasi Gratis
+      </button>
+    </div>
+  </div>
+</nav>
+
 
   <!-- Hero Section -->
   <section class="pt-32 pb-20 hero-gradient relative overflow-hidden">
@@ -277,7 +282,7 @@
     <div class="max-w-6xl mx-auto px-4 relative z-10">
       <div class="text-center fade-in">
         <div class="inline-flex items-center justify-center w-20 h-20 gradient-bg rounded-full mb-6">
-           <i class="fas fa-hotel text-2xl text-white"></i>
+          <i class="fas fa-hotel text-2xl text-white"></i>
         </div>
         <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
           Daftar Vendor Hotel
@@ -289,159 +294,169 @@
     </div>
   </section>
 
- <!-- Search & Filter Section -->
-<section class="py-12 bg-white">
-  <div class="max-w-4xl mx-auto px-4">
-    <div class="flex flex-col md:flex-row gap-6 items-center justify-between">
-      <!-- Search Box -->
-      <div class="search-box w-full md:w-2/3">
-        <div class="relative">
-          <input
-            type="text"
-            id="searchHotel"
-            placeholder="Cari nama hotel..."
-            class="w-full px-6 py-4 pl-12 text-lg border-0 focus:ring-2 focus:ring-yellow-500 focus:outline-none"
-          >
-          <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg"></i>
+  <!-- Search & Filter Section -->
+  <section class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row gap-6 items-center justify-between">
+        <!-- Search Box -->
+        <div class="search-box w-full md:w-2/3">
+          <div class="relative">
+            <input
+              type="text"
+              id="searchHotel"
+              placeholder="Cari nama hotel..."
+              class="w-full px-6 py-4 pl-12 text-lg border-0 focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+            >
+            <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg"></i>
+          </div>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="flex flex-wrap gap-2 w-full md:w-1/3 justify-center md:justify-end">
+          <button class="filter-btn px-5 py-2 bg-blue-600 text-white border border-gray-200 rounded-full transition-all duration-300 font-medium text-sm active" data-filter="all">
+            Semua
+          </button>
+          <button class="filter-btn px-5 py-2 bg-white text-gray-700 border border-gray-200 rounded-full transition-all duration-300 font-medium text-sm" data-filter="5-star">
+            5 Bintang
+          </button>
+          <button class="filter-btn px-5 py-2 bg-white text-gray-700 border border-gray-200 rounded-full transition-all duration-300 font-medium text-sm" data-filter="4-star">
+            4 Bintang
+          </button>
+          <button class="filter-btn px-5 py-2 bg-white text-gray-700 border border-gray-200 rounded-full transition-all duration-300 font-medium text-sm" data-filter="3-star">
+            3 Bintang
+          </button>
         </div>
       </div>
-
-      <!-- Category Filter -->
-      <div class="flex flex-wrap gap-2 w-full md:w-1/3 justify-center md:justify-end">
-        <button class="filter-btn px-5 py-2 bg-blue-600 text-white border border-gray-200 rounded-full transition-all duration-300 font-medium text-sm active" data-filter="all">
-          Semua
-        </button>
-        <button class="filter-btn px-5 py-2 bg-white text-gray-700 border border-gray-200 rounded-full transition-all duration-300 font-medium text-sm" data-filter="5-star">
-          5 Bintang
-        </button>
-        <button class="filter-btn px-5 py-2 bg-white text-gray-700 border border-gray-200 rounded-full transition-all duration-300 font-medium text-sm" data-filter="4-star">
-          4 Bintang
-        </button>
-        <button class="filter-btn px-5 py-2 bg-white text-gray-700 border border-gray-200 rounded-full transition-all duration-300 font-medium text-sm" data-filter="3-star">
-          3 Bintang
-        </button>
-      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="py-24 bg-gray-50 relative overflow-hidden" id="hotels">
-  <!-- Subtle Background Pattern -->
-  <div class="absolute inset-0 bg-[url('https://mudarismandiriwisata.id/images/pattern-bg.png')] bg-cover bg-center opacity-10"></div>
-  <div class="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-white/30"></div>
+  <section class="py-24 bg-gray-50 relative overflow-hidden" id="hotels">
+    <!-- Subtle Background Pattern -->
+    <div class="absolute inset-0 bg-[url('https://mudarismandiriwisata.id/images/pattern-bg.png')] bg-cover bg-center opacity-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-white/30"></div>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <!-- Hotel Cards -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="hotelList">
-      @foreach ($hotels as $hotel)
-        <div class="card-hover bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transform transition-all duration-500 hover:-translate-y-2 hotel-item" data-bintang="{{ $hotel->bintang }}" data-nama="{{ strtolower($hotel->nama_hotel) }}">
-          <!-- Image Container -->
-          <div class="relative overflow-hidden rounded-xl mb-5">
-            <img src="{{ asset('storage/' . $hotel->logo) }}" alt="{{ $hotel->nama_hotel }}" class="w-full h-56 object-cover rounded-xl transition-transform duration-500 hover:scale-105" loading="lazy">
-            <div class="absolute top-3 left-3 bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">
-              <i class="fas fa-star mr-1"></i>{{ $hotel->bintang }} Bintang
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Hotel Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="hotelList">
+        @foreach ($hotels as $hotel)
+          <div class="card-hover bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transform transition-all duration-500 hover:-translate-y-2 hotel-item" data-bintang="{{ $hotel->bintang }}" data-nama="{{ strtolower($hotel->nama_hotel) }}">
+            <!-- Image Container -->
+            <div class="relative overflow-hidden rounded-xl mb-5">
+              <img src="{{ asset('storage/' . $hotel->logo) }}" alt="{{ $hotel->nama_hotel }}" class="w-full h-56 object-cover rounded-xl transition-transform duration-500 hover:scale-105" loading="lazy">
+              <div class="absolute top-3 left-3 bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">
+                <i class="fas fa-star mr-1"></i>{{ $hotel->bintang }} Bintang
+              </div>
+              <div class="absolute bottom-3 right-3 bg-blue-600/80 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                Mulai Rp {{ number_format($hotel->harga_minimum ?? 1000000, 0, ',', '.') }}
+              </div>
             </div>
-            <div class="absolute bottom-3 right-3 bg-blue-600/80 text-white px-3 py-1 rounded-full text-xs font-semibold">
-              Mulai Rp {{ number_format($hotel->harga_minimum ?? 1000000, 0, ',', '.') }}
+
+            <!-- Content -->
+            <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 line-clamp-1">{{ $hotel->nama_hotel }}</h3>
+            <p class="text-gray-600 text-sm mb-4 line-clamp-2 leading-relaxed">{{ $hotel->deskripsi }}</p>
+            <div class="flex items-center text-gray-500 text-sm mb-4">
+              <i class="fas fa-map-marker-alt mr-2"></i>
+              <span class="line-clamp-1">{{ $hotel->alamat }}</span>
             </div>
-          </div>
 
-          <!-- Content -->
-          <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 line-clamp-1">{{ $hotel->nama_hotel }}</h3>
-          <p class="text-gray-600 text-sm mb-4 line-clamp-2 leading-relaxed">{{ $hotel->deskripsi }}</p>
-          <div class="flex items-center text-gray-500 text-sm mb-4">
-            <i class="fas fa-map-marker-alt mr-2"></i>
-            <span class="line-clamp-1">{{ $hotel->alamat }}</span>
-          </div>
-
-          <!-- Features -->
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full flex items-center">
-              <i class="fas fa-wifi mr-1"></i> Wi-Fi Gratis
-            </span>
-            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full flex items-center">
-              <i class="fas fa-utensils mr-1"></i> Sarapan
-            </span>
-            @if ($hotel->bintang >= 4)
+            <!-- Features -->
+            <div class="flex flex-wrap gap-2 mb-4">
               <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full flex items-center">
-                <i class="fas fa-swimming-pool mr-1"></i> Kolam Renang
+                <i class="fas fa-wifi mr-1"></i> Wi-Fi Gratis
               </span>
-            @endif
+              <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full flex items-center">
+                <i class="fas fa-utensils mr-1"></i> Sarapan
+              </span>
+              @if ($hotel->bintang >= 4)
+                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full flex items-center">
+                  <i class="fas fa-swimming-pool mr-1"></i> Kolam Renang
+                </span>
+              @endif
+            </div>
+
+            <!-- CTA -->
+            <a href="{{ route('hotel.show', $hotel->slug) }}" class="inline-flex items-center px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-medium text-sm hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+              Lihat Kamar
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
           </div>
+        @endforeach
+      </div>
 
-          <!-- CTA -->
-          <a href="{{ route('hotel.show', $hotel->slug) }}" class="inline-flex items-center px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-medium text-sm hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
-            Lihat Kamar
-            <i class="fas fa-arrow-right ml-2"></i>
-          </a>
-        </div>
-      @endforeach
+      <!-- No Results Message -->
+      <div class="hidden text-center text-gray-600 mt-8" id="noResults">
+        <p class="text-lg">Tidak ada hotel yang sesuai dengan pencarian ini.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- No Results Message -->
-    <div class="hidden text-center text-gray-600 mt-8" id="noResults">
-      <p class="text-lg">Tidak ada hotel yang sesuai dengan pencarian ini.</p>
-    </div>
-  </div>
-</section>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Get DOM elements
+      const searchInput = document.getElementById('searchHotel');
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const hotelItems = document.querySelectorAll('.hotel-item');
+      const noResults = document.getElementById('noResults');
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Get DOM elements
-  const searchInput = document.getElementById('searchHotel');
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const hotelItems = document.querySelectorAll('.hotel-item');
-  const noResults = document.getElementById('noResults');
+      // Mobile menu toggle
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        menuBtn.classList.toggle('text-yellow-600'); // Feedback visual
+      });
 
-  // Filter hotels based on search and star rating
-  function filterHotels() {
-    const searchTerm = searchInput.value.toLowerCase();
-    const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+      // Close mobile menu when clicking outside or on a link
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+          mobileMenu.classList.remove('active');
+          menuBtn.classList.remove('text-yellow-600');
+        }
+      });
 
-    let visibleCount = 0;
+      // Filter hotels based on search and star rating
+      function filterHotels() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
 
-    hotelItems.forEach(item => {
-      const hotelName = item.dataset.nama;
-      const bintang = parseInt(item.dataset.bintang);
+        let visibleCount = 0;
 
-      // Check if matches search term and filter
-      const matchesSearch = hotelName.includes(searchTerm);
-      const matchesFilter = activeFilter === 'all' ||
-                         (activeFilter === '5-star' && bintang === 5) ||
-                         (activeFilter === '4-star' && bintang === 4) ||
-                         (activeFilter === '3-star' && bintang === 3);
+        hotelItems.forEach(item => {
+          const hotelName = item.dataset.nama;
+          const bintang = parseInt(item.dataset.bintang);
 
-      if (matchesSearch && matchesFilter) {
-        item.style.display = 'block';
-        visibleCount++;
-      } else {
-        item.style.display = 'none';
+          const matchesSearch = hotelName.includes(searchTerm);
+          const matchesFilter = activeFilter === 'all' ||
+                             (activeFilter === '5-star' && bintang === 5) ||
+                             (activeFilter === '4-star' && bintang === 4) ||
+                             (activeFilter === '3-star' && bintang === 3);
+
+          if (matchesSearch && matchesFilter) {
+            item.style.display = 'block';
+            visibleCount++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        noResults.classList.toggle('hidden', visibleCount > 0);
       }
-    });
 
-    // Show/hide no results message
-    noResults.classList.toggle('hidden', visibleCount > 0);
-  }
+      // Event listeners
+      searchInput.addEventListener('input', filterHotels);
 
-  // Event listeners
-  searchInput.addEventListener('input', filterHotels);
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach(btn => btn.classList.remove('active', 'bg-blue-600', 'text-white'));
+          button.classList.add('active', 'bg-blue-600', 'text-white');
+          filterHotels();
+        });
+      });
 
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      // Update active button
-      filterButtons.forEach(btn => btn.classList.remove('active', 'bg-blue-600', 'text-white'));
-      button.classList.add('active', 'bg-blue-600', 'text-white');
-
-      // Filter hotels
+      // Initial filter
       filterHotels();
     });
-  });
-
-  // Initial filter
-  filterHotels();
-});
-</script>
-
+  </script>
 
   <!-- CTA Section -->
   <section class="py-20 gradient-bg">
@@ -454,11 +469,11 @@ document.addEventListener('DOMContentLoaded', () => {
           Tim customer service kami siap membantu Anda 24/7 untuk menjawab semua pertanyaan seputar umroh
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="https://wa.me/6285211451111" target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
+          <a href="https://wa.me/62818569111" target="_blank" class="inline-flex items-center justify-center px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
             <i class="fab fa-whatsapp mr-2 text-xl"></i>
             Chat WhatsApp
           </a>
-          <a href="tel:+6285211451111" class="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-gray-100 text-blue-600 font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
+          <a href="tel:+62818569111" class="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-gray-100 text-blue-600 font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
             <i class="fas fa-phone mr-2"></i>
             Telepon Sekarang
           </a>
@@ -466,6 +481,8 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
   </section>
+
+
 
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -507,7 +524,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div>
           <h4 class="text-lg font-semibold mb-4">Informasi</h4>
           <ul class="space-y-2 text-gray-400">
-            <li><a href="/tentang-kami" class="hover:text-white transition-colors">Tentang Kami</a></li>
+            <li><a href="/tentang-kami" class="hover:text-white transition-colors">Hotel</a></li>
             <li><a href="/syarat-ketentuan" class="hover:text-white transition-colors">Syarat & Ketentuan</a></li>
             <li><a href="/kebijakan-privasi" class="hover:text-white transition-colors">Kebijakan Privasi</a></li>
             <li><a href="/faq" class="hover:text-white transition-colors">FAQ</a></li>
@@ -540,13 +557,18 @@ document.addEventListener('DOMContentLoaded', () => {
   </footer>
 
   <!-- Floating WhatsApp Button -->
-  <div class="fixed bottom-6 right-6 z-50">
-    <a href="https://wa.me/6285211451111" target="_blank" class="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 floating-animation">
-      <i class="fab fa-whatsapp text-2xl"></i>
-    </a>
-  </div>
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/62818569111" target="_blank"
+            class="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 floating-animation">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
 
  <script src="/build/assets/app-C6t145CM.js" defer></script>
 
 </body>
 </html>
+
+
+
+

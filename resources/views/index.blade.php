@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Primary Meta Tags -->
     <title>Syukron Tours - Paket Umroh Terpercaya & Amanah | 15+ Tahun Pengalaman</title>
@@ -28,7 +29,7 @@
     <meta property="og:title" content="Syukron Tours - Paket Umroh Terpercaya & Amanah | 15+ Tahun Pengalaman">
     <meta property="og:description"
         content="Wujudkan impian ibadah umroh Anda bersama Syukron Tours. 500+ jamaah puas, pelayanan terpercaya, amanah dan penuh berkah. Konsultasi gratis sekarang!">
-    <meta property="og:image" content="https://syukrontours.com/images/og-image-syukron.jpg">
+    <meta property="og:image" content="https://syukrontours.com/assets/images/logo.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Syukron Tours - Paket Umroh Terpercaya">
@@ -37,17 +38,17 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@syukrontours">
-    <meta name="twitter:creator" content="@syukrontours">
+    <meta name="twitter:site" content="@mudarismandiriwisata">
+    <meta name="twitter:creator" content="@mudarismandiriwisata">
     <meta name="twitter:title" content="Syukron Tours - Paket Umroh Terpercaya & Amanah">
     <meta name="twitter:description"
         content="Wujudkan impian ibadah umroh Anda bersama Syukron Tours. 500+ jamaah puas, pelayanan terpercaya, amanah dan penuh berkah.">
-    <meta name="twitter:image" content="https://syukrontours.com/images/twitter-card-syukron.jpg">
+    <meta name="twitter:image" content="https://syukrontours.com/assets/images/logo.png">
     <meta name="twitter:image:alt" content="Syukron Tours - Paket Umroh Terpercaya">
 
     <!-- Additional Social Media Meta -->
     <meta property="fb:app_id" content="YOUR_FACEBOOK_APP_ID">
-    <meta name="instagram:site" content="@syukrontours">
+    <meta name="instagram:site" content="@mudarismandiriwisata">
 
     <!-- FAVICON SECTION untuk Laravel -->
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
@@ -58,15 +59,29 @@
     <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('android-chrome-512x512.png') }}">
     <link rel="manifest" href="{{ asset('site.webmanifest') }}">
 
-    <!-- Manifest for PWA -->
+    <!-- Manifest for PWA (Updated) -->
     <meta name="theme-color" content="#f59e0b">
     <meta name="msapplication-TileColor" content="#f59e0b">
+    <link rel="manifest" href="{{ asset('site.webmanifest') }}" crossorigin="use-credentials">
+    <meta name="start_url" content="/?utm_source=pwa">
+    <meta name="display" content="standalone">
 
     <!-- DNS Prefetch & Preconnect -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload" href="{{ asset('assets/images/logo.png') }}" as="image">
+
+    <!-- Prefetch for Key Pages -->
+    <link rel="prefetch" href="https://syukrontours.com/paket" as="document">
+    <link rel="prefetch" href="https://syukrontours.com/kontak" as="document">
 
     <!-- Security Headers - Enhanced CSP -->
     <meta http-equiv="Content-Security-Policy"
@@ -170,6 +185,34 @@
       "@type": "Person",
       "name": "Founder Syukron Tours"
     }
+  }
+  </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Beranda",
+        "item": "https://syukrontours.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Paket Umroh",
+        "item": "https://syukrontours.com/paket"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Kontak",
+        "item": "https://syukrontours.com/kontak"
+      }
+    ]
   }
   </script>
 
@@ -311,8 +354,7 @@
                 j = d.createElement(s),
                 dl = l != 'dataLayer' ? '&l=' + l : '';
             j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-XXXXXXX');
     </script>
@@ -331,12 +373,12 @@
             n.version = '2.0';
             n.queue = [];
             t = b.createElement(e);
-            t.async = true;
+            t.async = !0;
             t.src = v;
             s = b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', 'YOUR_PIXEL_ID');
         fbq('track', 'PageView');
     </script>
@@ -350,29 +392,30 @@
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <link rel="alternate" type="application/rss+xml" title="Syukron Tours RSS Feed" href="/feed.xml">
 
+    <!-- Optional AMP Link (Remove if not needed) -->
+    <link rel="amphtml" href="https://syukrontours.com/amp/">
 
     <!-- Font Awesome 6 (Latest) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-<style>
+
+    <!-- Inline CSS (Existing Styles) -->
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
         * {
             font-family: 'Poppins', sans-serif;
         }
 
-        /* Warna utama biru (gradient identik biru) */
         .gradient-bg {
             background: linear-gradient(135deg, #0052CC 0%, #0ea5e9 50%, #6366f1 100%);
         }
 
-        /* Hero section biru muda */
         .hero-gradient {
             background: linear-gradient(135deg, #dbeafe 0%, #93c5fd 50%, #60a5fa 100%);
         }
 
-        /* Hover effect card */
         .card-hover {
             transition: all 0.3s ease;
         }
@@ -382,7 +425,6 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
 
-        /* Floating animation */
         .floating-animation {
             animation: float 3s ease-in-out infinite;
         }
@@ -399,7 +441,6 @@
             }
         }
 
-        /* Fade-in animation */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -411,19 +452,16 @@
             transform: translateY(0);
         }
 
-        /* Glassmorphism effect */
         .glass-morphism {
             background: rgba(255, 255, 255, 0.25);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.18);
         }
 
-        /* Text shadow ringan */
         .text-shadow {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        /* Blob morphing effect */
         .blob {
             border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
             animation: blob 7s ease-in-out infinite;
@@ -449,7 +487,6 @@
             }
         }
 
-        /* Mobile menu animation */
         #mobile-menu {
             transition: all 0.3s ease;
             max-height: 0;
@@ -460,7 +497,6 @@
             max-height: 500px;
         }
 
-        /* Icon rotation for mobile */
         .mobile-menu-icon {
             transition: transform 0.3s ease;
         }
@@ -469,7 +505,6 @@
             transform: rotate(90deg);
         }
 
-        /* Keyframe untuk transisi masuk & keluar */
         @keyframes slideShow {
 
             0%,
@@ -484,7 +519,6 @@
             }
         }
 
-        /* Animasi dengan delay untuk masing-masing slide */
         .absolute.inset-0.bg-cover:nth-child(2) {
             animation: slideShow 12s infinite;
         }
@@ -501,93 +535,102 @@
     </style>
 </head>
 
+
+
 <body class="bg-gray-50 text-gray-800 overflow-x-hidden">
 
     <!-- Navbar -->
-<nav class="glass-morphism fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-20 items-center">
-            <!-- Logo -->
-            <div class="flex-shrink-0 flex items-center space-x-3">
-                <div class="flex items-center justify-center">
-                    <img src="{{ asset('assets/images/logo.png') }}" alt="Logo"
-                         class="w-32 h-16 sm:w-40 sm:h-20 object-contain rounded-lg" />
+    <nav class="glass-morphism fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center space-x-3">
+                    <div class="flex items-center justify-center">
+                        <img src="{{ asset('assets/images/logo.png') }}" alt="Logo"
+                            class="w-32 h-16 sm:w-40 sm:h-20 object-contain rounded-lg" />
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home"
+                        class="relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
+                        Beranda
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#paket"
+                        class="relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
+                        Paket Umroh
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#galeri"
+                        class="relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
+                        Galeri
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="hotel"
+                        class="relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
+                        Hotel
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#testimoni"
+                        class="relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
+                        Testimoni
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#kontak"
+                        class="relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
+                        Kontak
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+
+                <!-- CTA Desktop -->
+                <div class="hidden md:flex">
+                    <button
+                        class="gradient-bg text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        Konsultasi Gratis
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 hover:text-yellow-600 transition-colors">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
                 </div>
             </div>
+        </div>
 
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-8">
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden glass-morphism absolute top-20 left-0 right-0 w-full z-50">
+            <div class="px-4 pt-2 pb-6 space-y-4 bg-white shadow-md rounded-b-xl">
                 <a href="#home"
-                   class="relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
-                    Beranda
-                    <span
-                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                    class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Beranda</a>
                 <a href="#paket"
-                   class="relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
-                    Paket Umroh
-                    <span
-                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                    class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Paket
+                    Umroh</a>
                 <a href="#galeri"
-                   class="relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
-                    Galeri
-                    <span
-                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                    class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Galeri</a>
+                <a href="hotel"
+                    class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Hotel</a>
                 <a href="#testimoni"
-                   class="relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
-                    Testimoni
-                    <span
-                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                    class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Testimoni</a>
                 <a href="#kontak"
-                   class="relative text-gray-700 hover:text-yellow-600 transition-colors duration-300 group">
-                    Kontak
-                    <span
-                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-            </div>
-
-            <!-- CTA Desktop -->
-            <div class="hidden md:flex">
+                    class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Kontak</a>
                 <button
-                    class="gradient-bg text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                    class="w-full gradient-bg text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
                     Konsultasi Gratis
                 </button>
             </div>
-
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="menu-btn" class="text-gray-700 hover:text-yellow-600 transition-colors">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
         </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden glass-morphism absolute top-20 left-0 right-0 w-full z-50">
-        <div class="px-4 pt-2 pb-6 space-y-4 bg-white shadow-md rounded-b-xl">
-            <a href="#home"
-               class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Beranda</a>
-            <a href="#paket"
-               class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Paket Umroh</a>
-            <a href="#galeri"
-               class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Galeri</a>
-            <a href="#testimoni"
-               class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Testimoni</a>
-            <a href="#kontak"
-               class="block py-3 px-4 text-gray-700 hover:bg-yellow-50 rounded-lg transition-colors">Kontak</a>
-            <button
-                class="w-full gradient-bg text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
-                Konsultasi Gratis
-            </button>
-        </div>
-    </div>
-</nav>
-
-
+    </nav>
 
     <!-- Hero Section -->
     <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -600,28 +643,22 @@
                 <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100"
                     style="background-image: url('https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')">
                 </div>
-
                 <!-- Slide 2 - Ka'bah di Mekkah saat senja -->
                 <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0"
                     style="background-image: url('https://images.pexels.com/photos/18274181/pexels-photo-18274181.jpeg')">
                 </div>
-
-
             </div>
         </div>
-
-
         <!-- Decorative Blobs -->
         <div class="absolute top-20 right-20 w-64 h-64 bg-blue-300 opacity-20 blob"></div>
         <div class="absolute bottom-20 left-20 w-48 h-48 bg-blue-400 opacity-20 blob" style="animation-delay: -2s;">
         </div>
-
         <div class="relative z-10 text-center px-4 max-w-6xl mx-auto">
             <div class="fade-in">
                 <h1 class="text-5xl md:text-7xl font-bold mb-6 text-shadow">
                     <span
                         class="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent">
-                        Syukron Tours
+                        Syukron Tours Umroh Nyaman Sesuai Sunnah
                     </span>
                 </h1>
                 <p class="text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto leading-relaxed">
@@ -675,202 +712,190 @@
     </section>
 
     <!-- Paket Umroh -->
-    <!-- Paket Umroh -->
-    <section id="paket" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16 fade-in">
-                <h2
-                    class="text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent">
-                    Paket Umroh Pilihan
-                </h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Pilih paket yang sesuai dengan kebutuhan dan budget Anda
-                </p>
-            </div>
+<section id="paket" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent">
+                Paket Umroh Pilihan
+            </h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Pilih paket yang sesuai dengan kebutuhan dan budget Anda
+            </p>
+        </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                @foreach (App\Models\Paket::active()->get() as $paket)
-                    @php
-                        // Default gradient colors if not an array
-                        $gradientColors = is_array($paket->gradient_colors)
-                            ? $paket->gradient_colors
-                            : ['from' => 'blue-500', 'to' => 'purple-500'];
-                        // Default features if not an array
-                        $features = is_array($paket->features) ? $paket->features : [];
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            @foreach (App\Models\Paket::active()->get() as $paket)
+                @php
+                    // Default gradient colors if not an array
+                    $gradientColors = is_array($paket->gradient_colors)
+                        ? $paket->gradient_colors
+                        : ['from' => 'blue-500', 'to' => 'purple-500'];
+                    // Default features if not an array
+                    $features = is_array($paket->features) ? $paket->features : [];
 
-                        // Define category-based colors
-                        $categoryColors = match ($paket->category) {
-                            'vip' => [
-                                'gradient' => ['from' => 'yellow-400', 'to' => 'orange-500'],
-                                'border' => 'border-yellow-200',
-                                'bg_accent' => 'bg-yellow-50',
-                                'text_accent' => 'text-yellow-600',
-                                'icon_color' => 'text-yellow-500',
-                                'button_bg' => 'bg-gradient-to-r from-yellow-400 to-orange-500',
-                                'price_color' => 'text-yellow-600',
-                                'tag_bg' => 'bg-yellow-500',
-                                'category_name' => 'VIP',
-                            ],
-                            'family' => [
-                                'gradient' => ['from' => 'green-400', 'to' => 'blue-500'],
-                                'border' => 'border-green-200',
-                                'bg_accent' => 'bg-green-50',
-                                'text_accent' => 'text-green-600',
-                                'icon_color' => 'text-green-500',
-                                'button_bg' => 'bg-gradient-to-r from-green-400 to-blue-500',
-                                'price_color' => 'text-green-600',
-                                'tag_bg' => 'bg-green-500',
-                                'category_name' => 'FAMILY',
-                            ],
-                            default => [
-                                'gradient' => ['from' => 'blue-400', 'to' => 'purple-500'],
-                                'border' => 'border-blue-200',
-                                'bg_accent' => 'bg-blue-50',
-                                'text_accent' => 'text-blue-600',
-                                'icon_color' => 'text-blue-500',
-                                'button_bg' => 'bg-gradient-to-r from-blue-400 to-purple-500',
-                                'price_color' => 'text-blue-600',
-                                'tag_bg' => 'bg-blue-500',
-                                'category_name' => 'REGULAR',
-                            ],
-                        };
+                    // Define category-based colors
+                    $categoryColors = match ($paket->category) {
+                        'vip' => [
+                            'gradient' => ['from' => 'yellow-400', 'to' => 'orange-500'],
+                            'border' => 'border-yellow-200',
+                            'bg_accent' => 'bg-yellow-50',
+                            'text_accent' => 'text-yellow-600',
+                            'icon_color' => 'text-yellow-500',
+                            'button_bg' => 'bg-gradient-to-r from-yellow-400 to-orange-500',
+                            'price_color' => 'text-yellow-600',
+                            'tag_bg' => 'bg-yellow-500',
+                            'category_name' => 'VIP',
+                        ],
+                        'family' => [
+                            'gradient' => ['from' => 'green-400', 'to' => 'blue-500'],
+                            'border' => 'border-green-200',
+                            'bg_accent' => 'bg-green-50',
+                            'text_accent' => 'text-green-600',
+                            'icon_color' => 'text-green-500',
+                            'button_bg' => 'bg-gradient-to-r from-green-400 to-blue-500',
+                            'price_color' => 'text-green-600',
+                            'tag_bg' => 'bg-green-500',
+                            'category_name' => 'FAMILY',
+                        ],
+                        default => [
+                            'gradient' => ['from' => 'blue-400', 'to' => 'purple-500'],
+                            'border' => 'border-blue-200',
+                            'bg_accent' => 'bg-blue-50',
+                            'text_accent' => 'text-blue-600',
+                            'icon_color' => 'text-blue-500',
+                            'button_bg' => 'bg-gradient-to-r from-blue-400 to-purple-500',
+                            'price_color' => 'text-blue-600',
+                            'tag_bg' => 'bg-blue-500',
+                            'category_name' => 'REGULAR',
+                        ],
+                    };
 
-                        // Safely handle departure date to fix PHP0406 error
-                        $departureDate = null;
-                        if ($paket->departure_date instanceof \DateTimeInterface) {
-                            $departureDate = $paket->departure_date;
-                        } elseif (
-                            is_string($paket->departure_date) ||
-                            is_int($paket->departure_date) ||
-                            is_float($paket->departure_date)
-                        ) {
-                            try {
-                                $departureDate = \Carbon\Carbon::parse($paket->departure_date);
-                            } catch (\Exception $e) {
-                                $departureDate = null; // Fallback if parsing fails
-                            }
+                    // Safely handle departure date to fix PHP0406 error
+                    $departureDate = null;
+                    if ($paket->departure_date instanceof \DateTimeInterface) {
+                        $departureDate = $paket->departure_date;
+                    } elseif (
+                        is_string($paket->departure_date) ||
+                        is_int($paket->departure_date) ||
+                        is_float($paket->departure_date)
+                    ) {
+                        try {
+                            $departureDate = \Carbon\Carbon::parse($paket->departure_date);
+                        } catch (\Exception $e) {
+                            $departureDate = null; // Fallback if parsing fails
                         }
-                        $formattedDepartureDate = $departureDate ? $departureDate->format('d M Y') : 'TBA';
+                    }
+                    $formattedDepartureDate = $departureDate ? $departureDate->format('d M Y') : 'TBA';
 
-                        // Current date and time for reference (if needed)
-                        $currentDateTime = \Carbon\Carbon::now('Asia/Jakarta'); // 11:25 AM WIB, June 27, 2025
-                    @endphp
+                    // Current date and time for reference (if needed)
+                    $currentDateTime = \Carbon\Carbon::now('Asia/Jakarta'); // 11:24 PM WIB, June 29, 2025
+                @endphp
 
-                    <div
-                        class="card-hover bg-white rounded-3xl p-6 shadow-lg relative overflow-hidden fade-in border-2
-          {{ $paket->is_featured ? 'transform scale-105 border-yellow-400' : $categoryColors['border'] }}">
+                <div class="card-hover bg-white rounded-3xl p-6 shadow-lg relative overflow-hidden fade-in border-2
+                    {{ $paket->is_featured ? 'transform scale-105 border-yellow-400' : $categoryColors['border'] }}
+                    flex flex-col h-full">
 
-                        <!-- Category Badge -->
-                        <div
-                            class="absolute top-4 left-4 {{ $categoryColors['tag_bg'] }} text-white px-3 py-1 rounded-full text-xs font-bold">
-                            {{ $categoryColors['category_name'] }}
+                    <!-- Category Badge -->
+                    <div class="absolute top-4 left-4 {{ $categoryColors['tag_bg'] }} text-white px-3 py-1 rounded-full text-xs font-bold">
+                        {{ $categoryColors['category_name'] }}
+                    </div>
+
+                    @if ($paket->is_featured)
+                        <div class="absolute top-0 right-0 bg-yellow-400 text-white px-4 py-2 rounded-bl-2xl font-semibold">
+                            POPULER
+                        </div>
+                    @else
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-{{ $categoryColors['gradient']['from'] }} to-{{ $categoryColors['gradient']['to'] }} rounded-bl-3xl">
+                        </div>
+                    @endif
+
+                    <div class="relative flex flex-col flex-grow">
+                        <!-- Image Container -->
+                        <div class="max-w-[1587px] w-full aspect-[1587/2245] mx-auto rounded-xl overflow-hidden mt-6 border shadow">
+                            <img src="{{ asset($paket->main_image) }}"
+                                 alt="{{ htmlspecialchars($paket->name, ENT_QUOTES) }}"
+                                 class="w-full h-full object-cover">
                         </div>
 
-                        @if ($paket->is_featured)
-                            <div
-                                class="absolute top-0 right-0 bg-yellow-400 text-white px-4 py-2 rounded-bl-2xl font-semibold">
-                                POPULER
+                        <div class="w-16 h-16 bg-gradient-to-br from-{{ $categoryColors['gradient']['from'] }} to-{{ $categoryColors['gradient']['to'] }} rounded-2xl flex items-center justify-center mb-4 absolute -top-8 left-6 shadow-md">
+                            <i class="fas fa-{{ $paket->icon }} text-white text-2xl"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">
+                            {{ htmlspecialchars($paket->name, ENT_QUOTES) }}</h3>
+                        <p class="text-gray-600 mb-3">{{ htmlspecialchars($paket->description, ENT_QUOTES) }}</p>
+
+                        <!-- Hotel Rating dan Durasi -->
+                        <div class="flex items-center justify-between mb-4 p-3 {{ $categoryColors['bg_accent'] }} rounded-lg border border-opacity-20 {{ $categoryColors['border'] }}">
+                            <div class="flex items-center">
+                                <i class="fas fa-hotel {{ $categoryColors['icon_color'] }} mr-2"></i>
+                                <span class="text-sm text-gray-600 mr-1">Hotel:</span>
+                                <div class="flex items-center">
+                                    @for ($i = 1; $i <= 5; $i++)
+                                        @if ($i <= ($paket->hotel_rating ?? 4))
+                                            <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                        @else
+                                            <i class="far fa-star text-gray-300 text-sm"></i>
+                                        @endif
+                                    @endfor
+                                    <span class="ml-1 text-sm {{ $categoryColors['text_accent'] }} font-semibold">({{ $paket->hotel_rating ?? 4 }})</span>
+                                </div>
                             </div>
-                        @else
-                            <div
-                                class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-{{ $categoryColors['gradient']['from'] }} to-{{ $categoryColors['gradient']['to'] }} rounded-bl-3xl">
+                            <div class="flex items-center">
+                                <i class="fas fa-calendar-alt {{ $categoryColors['icon_color'] }} mr-2"></i>
+                                <span class="text-sm font-semibold {{ $categoryColors['text_accent'] }}">
+                                    {{ $paket->duration_days ?? 14 }} Hari
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Tanggal Keberangkatan -->
+                        @if ($departureDate)
+                            <div class="flex items-center mb-4 p-3 {{ $categoryColors['bg_accent'] }} rounded-lg border border-opacity-20 {{ $categoryColors['border'] }}">
+                                <i class="fas fa-plane-departure {{ $categoryColors['icon_color'] }} mr-2"></i>
+                                <span class="text-sm text-gray-600">Keberangkatan:</span>
+                                <span class="ml-2 text-sm font-semibold {{ $categoryColors['text_accent'] }}">
+                                    {{ $formattedDepartureDate }}
+                                </span>
                             </div>
                         @endif
 
-                        <div class="relative">
-                            <!-- Image Container -->
-                            <div
-                                class="max-w-[1587px] w-full aspect-[1587/2245] mx-auto rounded-xl overflow-hidden mt-6 border shadow">
-                                <img src="{{ asset($paket->main_image) }}"
-                                    alt="{{ htmlspecialchars($paket->name, ENT_QUOTES) }}"
-                                    class="w-full h-full object-cover">
+                        <ul class="space-y-2 mb-6 flex-grow">
+                            @foreach ($features as $feature)
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fas fa-check {{ $categoryColors['icon_color'] }} mr-2"></i>
+                                    {{ is_array($feature) ? implode(', ', $feature) : htmlspecialchars($feature, ENT_QUOTES) }}
+                                </li>
+                            @endforeach
+                        </ul>
+
+                        <!-- Harga -->
+                        <div class="text-center mb-4 p-3 {{ $categoryColors['bg_accent'] }} rounded-lg border border-opacity-20 {{ $categoryColors['border'] }}">
+                            <div class="text-sm text-gray-600 mb-1">Mulai dari</div>
+                            <div class="text-2xl font-bold {{ $categoryColors['price_color'] }}">
+                                {{ htmlspecialchars($paket->formatted_price, ENT_QUOTES) }}
                             </div>
-
-                            <div
-                                class="w-16 h-16 bg-gradient-to-br from-{{ $categoryColors['gradient']['from'] }} to-{{ $categoryColors['gradient']['to'] }} rounded-2xl flex items-center justify-center mb-4 absolute -top-8 left-6 shadow-md">
-                                <i class="fas fa-{{ $paket->icon }} text-white text-2xl"></i>
-                            </div>
-
-                            <h3 class="text-2xl font-bold mb-3 text-gray-800">
-                                {{ htmlspecialchars($paket->name, ENT_QUOTES) }}</h3>
-                            <p class="text-gray-600 mb-3">{{ htmlspecialchars($paket->description, ENT_QUOTES) }}</p>
-
-                            <!-- Hotel Rating dan Durasi -->
-                            <div
-                                class="flex items-center justify-between mb-4 p-3 {{ $categoryColors['bg_accent'] }} rounded-lg border border-opacity-20 {{ $categoryColors['border'] }}">
-                                <div class="flex items-center">
-                                    <i class="fas fa-hotel {{ $categoryColors['icon_color'] }} mr-2"></i>
-                                    <span class="text-sm text-gray-600 mr-1">Hotel:</span>
-                                    <div class="flex items-center">
-                                        @for ($i = 1; $i <= 5; $i++)
-                                            @if ($i <= ($paket->hotel_rating ?? 4))
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                            @else
-                                                <i class="far fa-star text-gray-300 text-sm"></i>
-                                            @endif
-                                        @endfor
-                                        <span
-                                            class="ml-1 text-sm {{ $categoryColors['text_accent'] }} font-semibold">({{ $paket->hotel_rating ?? 4 }})</span>
-                                    </div>
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-calendar-alt {{ $categoryColors['icon_color'] }} mr-2"></i>
-                                    <span class="text-sm font-semibold {{ $categoryColors['text_accent'] }}">
-                                        {{ $paket->duration_days ?? 14 }} Hari
-                                    </span>
-                                </div>
-                            </div>
-
-                            <!-- Tanggal Keberangkatan -->
-                            @if ($departureDate)
-                                <div
-                                    class="flex items-center mb-4 p-3 {{ $categoryColors['bg_accent'] }} rounded-lg border border-opacity-20 {{ $categoryColors['border'] }}">
-                                    <i class="fas fa-plane-departure {{ $categoryColors['icon_color'] }} mr-2"></i>
-                                    <span class="text-sm text-gray-600">Keberangkatan:</span>
-                                    <span class="ml-2 text-sm font-semibold {{ $categoryColors['text_accent'] }}">
-                                        {{ $formattedDepartureDate }}
-                                    </span>
-                                </div>
-                            @endif
-
-                            <ul class="space-y-2 mb-6">
-                                @foreach ($features as $feature)
-                                    <li class="flex items-center text-gray-600">
-                                        <i class="fas fa-check {{ $categoryColors['icon_color'] }} mr-2"></i>
-                                        {{ is_array($feature) ? implode(', ', $feature) : htmlspecialchars($feature, ENT_QUOTES) }}
-                                    </li>
-                                @endforeach
-                            </ul>
-
-                            <!-- Harga -->
-                            <div
-                                class="text-center mb-4 p-3 {{ $categoryColors['bg_accent'] }} rounded-lg border border-opacity-20 {{ $categoryColors['border'] }}">
-                                <div class="text-sm text-gray-600 mb-1">Mulai dari</div>
-                                <div class="text-2xl font-bold {{ $categoryColors['price_color'] }}">
-                                    {{ htmlspecialchars($paket->formatted_price, ENT_QUOTES) }}
-                                </div>
-                                <div class="text-xs text-gray-500">per orang</div>
-                            </div>
-
-                            <!-- Button Full Width -->
-                            <button
-                                onclick="sendWhatsApp('{{ htmlspecialchars($paket->name) }}', '{{ htmlspecialchars($paket->formatted_price) }}', '{{ $paket->duration_days ?? 14 }}', '{{ $paket->hotel_rating ?? 4 }}', '{{ $categoryColors['category_name'] }}')"
-                                class="w-full {{ $categoryColors['button_bg'] }} text-white py-2 px-4 rounded-lg font-semibold hover:shadow-md transition-all duration-300 hover:scale-105 flex items-center justify-center">
-                                <i class="fab fa-whatsapp mr-2 text-lg"></i>
-                                <span>Pilih Paket Ini</span>
-                            </button>
+                            <div class="text-xs text-gray-500">/Per Orang</div>
                         </div>
-                    </div>
-                @endforeach
-            </div>
 
-            @if (App\Models\Paket::active()->count() === 0)
-                <div class="text-center py-12">
-                    <p class="text-gray-500">Tidak ada paket yang tersedia saat ini</p>
+                        <!-- Button Full Width -->
+                        <button onclick="sendWhatsApp('{{ htmlspecialchars($paket->name) }}', '{{ htmlspecialchars($paket->formatted_price) }}', '{{ $paket->duration_days ?? 14 }}', '{{ $paket->hotel_rating ?? 4 }}', '{{ $categoryColors['category_name'] }}')"
+                                class="w-full {{ $categoryColors['button_bg'] }} text-white py-2 px-4 rounded-lg font-semibold hover:shadow-md transition-all duration-300 hover:scale-105 flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-2 text-lg"></i>
+                            <span>Pilih Paket Ini</span>
+                        </button>
+                    </div>
                 </div>
-            @endif
+            @endforeach
         </div>
-    </section>
+
+        @if (App\Models\Paket::active()->count() === 0)
+            <div class="text-center py-12">
+                <p class="text-gray-500">Tidak ada paket yang tersedia saat ini</p>
+            </div>
+        @endif
+    </div>
+</section>
 
     <script>
         function sendWhatsApp(packageName, price, duration, hotelRating, category) {
@@ -900,7 +925,6 @@ Mohon informasi lebih lanjut, terima kasih.`;
             window.open(url, '_blank');
         }
     </script>
-
 
     <!-- Galeri -->
     <section id="galeri" class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
@@ -1142,11 +1166,6 @@ Mohon informasi lebih lanjut, terima kasih.`;
         }
     </script>
 
-
-
-
-
-    <!-- Testimoni -->
     <!-- Testimoni -->
     <section id="testimoni" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-4">
@@ -1206,10 +1225,6 @@ Mohon informasi lebih lanjut, terima kasih.`;
             </div>
         </div>
     </section>
-
-
-
-
 
     <!-- Features Section -->
     <section class="py-20 gradient-bg">
@@ -1350,8 +1365,6 @@ Mohon informasi lebih lanjut, terima kasih.`;
         }
     </script>
 
-
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             loadTestimonials();
@@ -1440,8 +1453,6 @@ Mohon informasi lebih lanjut, terima kasih.`;
             return stars;
         }
     </script>
-
-
 
     <!-- Kontak -->
     <section id="kontak" class="py-20 bg-gradient-to-br from-gray-50 to-white">
@@ -1776,22 +1787,21 @@ Mohon informasi lebih lanjut, terima kasih.`;
             </div>
 
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2012 - Mundaris Mandiri Wisata ❤️ for jamaah Indonesia.</p>
+                <p>&copy; 2012 - Syukron Tours ❤️ for jamaah Indonesia.</p>
             </div>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
     <div class="fixed bottom-6 right-6 z-50">
-        <a href="https://wa.me/6285211451111" target="_blank"
+        <a href="https://wa.me/62818569111" target="_blank"
             class="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 floating-animation">
             <i class="fab fa-whatsapp text-2xl"></i>
         </a>
     </div>
 
-
-   <!-- Tautkan file JavaScript sebelum </body> -->
-  <script src="/build/assets/app-C6t145CM.js" defer></script>
+    <!-- Tautkan file JavaScript sebelum </body> -->
+    <script src="/build/assets/app-C6t145CM.js" defer></script>
 
 
 </body>
