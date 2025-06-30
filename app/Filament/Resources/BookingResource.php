@@ -15,6 +15,7 @@ use Filament\Forms\Components\Section;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Actions\BulkActionGroup;
 use Filament\Tables\Actions\DeleteBulkAction;
+use Filament\Tables\Actions\Action;
 use Illuminate\Database\Eloquent\Builder;
 
 class BookingResource extends Resource
@@ -59,6 +60,16 @@ class BookingResource extends Resource
                             ->searchable()
                             ->preload()
                             ->required(),
+
+                        Forms\Components\TextInput::make('room_quantity')
+                            ->label('Room Quantity')
+                            ->numeric()
+                            ->minValue(1)
+                            ->required()
+                            ->reactive()
+                            ->afterStateUpdated(function (callable $get, callable $set) {
+                                self::calculateTotalPrice($get, $set);
+                            }),
 
                         Forms\Components\DatePicker::make('check_in_date')
                             ->label('Check In Date')
@@ -136,6 +147,12 @@ class BookingResource extends Resource
                     ->sortable()
                     ->searchable(),
 
+                Tables\Columns\TextColumn::make('kamarHotel.hotel.nama_hotel')
+                    ->label('Nama Hotel')
+                    ->sortable()
+                    ->searchable()
+                    ->wrap(),
+
                 Tables\Columns\TextColumn::make('kamarHotel.nama_kamar')
                     ->label('Kamar Hotel')
                     ->sortable()
@@ -163,6 +180,11 @@ class BookingResource extends Resource
                     ->sortable()
                     ->searchable()
                     ->toggleable(isToggledHiddenByDefault: true),
+
+                Tables\Columns\TextColumn::make('room_quantity')
+                    ->label('Room Quantity')
+                    ->sortable()
+                    ->searchable(),
 
                 Tables\Columns\TextColumn::make('check_in_date')
                     ->label('Check In')
@@ -241,6 +263,11 @@ class BookingResource extends Resource
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
+                Action::make('downloadInvoice')
+                    ->label('Download Invoice')
+                    
+                    ->url(fn (Booking $record) => route('booking.invoice.download', $record->id))
+                    ->openUrlInNewTab(),
             ])
             ->bulkActions([
                 BulkActionGroup::make([
@@ -262,7 +289,6 @@ class BookingResource extends Resource
         return [
             'index' => Pages\ListBookings::route('/'),
             'create' => Pages\CreateBooking::route('/create'),
-            
             'edit' => Pages\EditBooking::route('/{record}/edit'),
         ];
     }
@@ -272,8 +298,9 @@ class BookingResource extends Resource
         $checkIn = $get('check_in_date');
         $checkOut = $get('check_out_date');
         $kamarHotelId = $get('kamar_hotel_id');
+        $roomQuantity = $get('room_quantity');
 
-        if ($checkIn && $checkOut && $kamarHotelId) {
+        if ($checkIn && $checkOut && $kamarHotelId && $roomQuantity) {
             $kamarHotel = KamarHotel::find($kamarHotelId);
             if ($kamarHotel) {
                 $checkInDate = new \DateTime($checkIn);
@@ -281,7 +308,7 @@ class BookingResource extends Resource
                 $interval = $checkInDate->diff($checkOutDate);
                 $nights = $interval->days;
 
-                $totalPrice = $nights * $kamarHotel->harga_per_malam;
+                $totalPrice = $nights * $kamarHotel->harga_per_malam * $roomQuantity;
                 $set('total_price', $totalPrice);
             }
         }

@@ -72,6 +72,10 @@ Route::prefix('bookings')->name('bookings.')->group(function () {
     Route::get('/{booking}', [BookingController::class, 'show'])->name('show');
 });
 
+use App\Http\Controllers\BookingInvoiceController;
+
+Route::get('/booking/{id}/invoice', [BookingInvoiceController::class, 'generate'])->name('booking.invoice.download');
+
 
 use App\Http\Controllers\HotelController;
 

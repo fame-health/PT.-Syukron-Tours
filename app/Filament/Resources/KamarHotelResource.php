@@ -66,6 +66,14 @@ class KamarHotelResource extends Resource
                     ->maxLength(255)
                     ->label('Kategori Vendor')
                     ->placeholder('Contoh: Standard, Premium'),
+                TextInput::make('jumlah_kamar') // Ditambahkan
+                    ->numeric()
+                    ->required()
+                    ->minValue(1)
+                    ->maxValue(100)
+                    ->default(1)
+                    ->label('Jumlah Kamar')
+                    ->helperText('Masukkan jumlah kamar yang tersedia untuk tipe ini.'),
             ]);
     }
 
@@ -79,6 +87,7 @@ class KamarHotelResource extends Resource
                 TextColumn::make('bintang')->label('Bintang')->sortable(),
                 TextColumn::make('harga')->money('IDR')->label('Harga')->sortable(),
                 TextColumn::make('vendor_kategori')->label('Kategori Vendor')->sortable(),
+                TextColumn::make('jumlah_kamar')->label('Jumlah Kamar')->sortable(), // Ditambahkan
             ])
             ->filters([
                 //

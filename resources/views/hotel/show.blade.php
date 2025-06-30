@@ -65,7 +65,7 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Syukron Tours",
-        "url": "https://syukrontour.com",
+        "url": "https://mudarismandiriwisata.id",
         "logo": "https://syukrontours.com/assets/images/logo.png",
         "description": "Syukron Tours adalah travel umroh terpercaya sejak 2008, berizin resmi dari Kementerian Agama RI, melayani jamaah dengan penuh amanah.",
         "address": {
@@ -245,6 +245,7 @@
             display: none;
             z-index: 1000;
             align-items: center;
+            animation: slideIn 0.3s ease-out, fadeOut 0.3s ease-in 2.7s forwards;
         }
 
         #successNotification.show {
@@ -255,6 +256,26 @@
             margin-right: 10px;
         }
 
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
         /* Responsive Adjustments */
         @media (max-width: 640px) {
             .search-box {
@@ -263,6 +284,12 @@
 
             .search-box input {
                 font-size: 14px;
+            }
+
+            #successNotification {
+                top: 10px;
+                right: 10px;
+                padding: 10px 20px;
             }
         }
     </style>
@@ -363,8 +390,6 @@
         </div>
     </nav>
 
-    <!-- Navbar (Simplified version - functionality handled by external JS) -->
-
     <section class="pt-32 pb-20 hero-gradient relative overflow-hidden">
         <div class="absolute inset-0 bg-white/10"></div>
         <div class="max-w-6xl mx-auto px-4 relative z-10">
@@ -372,431 +397,289 @@
                 <div class="inline-flex items-center justify-center w-20 h-20 gradient-bg rounded-full mb-6">
                     <i class="fas fa-hotel text-2xl text-white"></i>
                 </div>
-                <h1
-                    class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
                     Daftar Kamar Hotel
                 </h1>
                 <p class="text-xl md:text-2xl text-blue-700 mb-8 max-w-3xl mx-auto">
-                    Nikmati kenyamanan dan kemewahan di hotel-hotel terbaik kami, dirancang untuk memenuhi kebutuhan
-                    jamaah umroh.
+                    Nikmati kenyamanan dan kemewahan di hotel-hotel terbaik kami, dirancang untuk memenuhi kebutuhan jamaah umroh.
                 </p>
             </div>
         </div>
     </section>
 
     <!-- Rooms Section -->
-    <section class="py-12 md:py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-        <!-- Decorative elements -->
-        <div class="absolute top-0 left-0 w-full h-full opacity-10">
-            <div class="absolute top-20 left-10 w-32 h-32 rounded-full bg-blue-400/20 filter blur-3xl"></div>
-            <div class="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-indigo-400/20 filter blur-3xl"></div>
-        </div>
+<section class="py-24 bg-gray-50 relative overflow-hidden" id="hotels">
+    <!-- Subtle Background Pattern -->
+    <div class="absolute inset-0 bg-[url('https://syukrontour.com/images/pattern-bg.png')] bg-cover bg-center opacity-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-white/30"></div>
 
-        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
-            <!-- Search Filter -->
-            <div class="mb-8 relative z-10">
-                <div
-                    class="search-box w-full max-w-xl mx-auto bg-white/90 backdrop-blur-md rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
-                    <div class="flex items-center justify-between px-4 py-2">
-                        <input type="text" id="searchRoom" placeholder="Cari kamar atau fasilitas..."
-                            class="w-full px-4 py-2.5 text-gray-800 focus:outline-none bg-transparent placeholder-gray-500 text-lg font-medium transition-all duration-200"
-                            autocomplete="off">
-                        <button type="button" id="searchButton"
-                            class="text-gray-600 hover:text-blue-600 transition-colors duration-200">
-                            <i class="fas fa-search text-xl"></i>
-                        </button>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Hotel Details (Loop Kamar) -->
+        @foreach ($hotel->kamarHotels as $kamarHotel)
+            <div class="card-hover bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transform transition-all duration-500 hover:-translate-y-2 hotel-item" data-nama="{{ strtolower($hotel->nama_hotel) }}" data-bintang="{{ $hotel->bintang }}">
+                <div class="relative overflow-hidden rounded-xl mb-5">
+                    <img src="{{ asset('storage/' . $hotel->logo) }}" alt="{{ $hotel->nama_hotel }}" class="w-full h-56 object-cover rounded-xl transition-transform duration-500 hover:scale-105" loading="lazy">
+                    <div class="absolute top-3 left-3 bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">
+                        <i class="fas fa-star mr-1"></i>{{ $hotel->bintang }} Bintang
                     </div>
-                    <div
-                        class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-indigo-500 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100">
+                    <div class="absolute bottom-3 right-3 bg-blue-600/80 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                        Mulai Rp {{ number_format($kamarHotel->harga ?? 1000000, 0, ',', '.') }}
                     </div>
                 </div>
-                <p id="roomCount" class="text-center text-gray-600 mt-3 text-sm font-semibold"></p>
-                <p id="noResults" class="text-center text-red-600 mt-2 text-sm font-medium hidden">Tidak ada kamar
-                    yang ditemukan.</p>
+
+                <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 line-clamp-1">{{ $hotel->nama_hotel }}</h3>
+                <p class="text-gray-600 text-sm mb-4 line-clamp-2 leading-relaxed">{{ $hotel->deskripsi }}</p>
+                <div class="flex items-center text-gray-500 text-sm mb-4">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    <span class="line-clamp-1">{{ $hotel->alamat }}</span>
+                </div>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full flex items-center">
+                        <i class="fas fa-wifi mr-1"></i> Wi-Fi Gratis
+                    </span>
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full flex items-center">
+                        <i class="fas fa-utensils mr-1"></i> Sarapan
+                    </span>
+                    @if ($hotel->bintang >= 4)
+                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full flex items-center">
+                            <i class="fas fa-swimming-pool mr-1"></i> Kolam Renang
+                        </span>
+                    @endif
+                </div>
+
+                <button onclick="openBookingModal({{ $kamarHotel->id }}, '{{ $hotel->nama_hotel }}')"
+                    class="inline-flex items-center px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-medium text-sm hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+                    Book Now
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </button>
             </div>
-            <!-- Rooms Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" id="roomList">
-                @foreach ($hotel->kamarHotels as $kamar)
-                    <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 room-item transform hover:-translate-y-1"
-                        data-vendor="{{ $kamar->vendor_kategori }}" data-name="{{ strtolower($kamar->nama_kamar) }}"
-                        data-price="{{ $kamar->harga }}">
+        @endforeach
 
-                        <!-- Image Carousel -->
-                        <div class="carousel relative h-48 sm:h-56 md:h-64 overflow-hidden rounded-t-xl">
-                            <div class="carousel-inner flex transition-transform duration-500 ease-in-out">
-                                @foreach ($kamar->images as $image)
-                                    <div class="carousel-item flex-none w-full">
-                                        <img src="{{ asset('storage/' . $image) }}" alt="{{ $kamar->nama_kamar }}"
-                                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                            loading="lazy">
-                                    </div>
-                                @endforeach
-                            </div>
+        <!-- Booking Modal -->
+        <div id="bookingModal"
+            class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 hidden z-50 transition-opacity duration-300">
+            <div class="bg-white rounded-xl max-w-md w-full mx-auto shadow-xl transform transition-all duration-300 scale-95 opacity-0"
+                id="modalContent">
+                <button onclick="closeBookingModal()"
+                    class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition-colors duration-200">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
 
-                            <!-- Carousel Controls -->
-                            <button
-                                class="carousel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full shadow hover:bg-white text-gray-800 hover:text-blue-600 transition-all duration-200 opacity-0 group-hover:opacity-100">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 19l-7-7 7-7"></path>
-                                </svg>
-                            </button>
-                            <button
-                                class="carousel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 p-2 rounded-full shadow hover:bg-white text-gray-800 hover:text-blue-600 transition-all duration-200 opacity-0 group-hover:opacity-100">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </button>
+                <div class="p-6 md:p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-2 rounded-lg mr-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                </path>
+                            </svg>
                         </div>
-
-                        <!-- Room Details -->
-                        <div class="p-5 md:p-6">
-                            <div class="flex justify-between items-start mb-3">
-                                <h3 class="text-lg md:text-xl font-bold text-gray-900 line-clamp-1">
-                                    {{ $kamar->nama_kamar }}
-                                </h3>
-                                <div
-                                    class="flex items-center bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">
-                                    <svg class="w-3 h-3 mr-1.5" fill="currentColor" viewBox="0 0 20 20"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                    Available
-                                </div>
-                            </div>
-
-                            <p class="text-sm text-gray-600 mb-4 line-clamp-2">
-                                {{ $kamar->deskripsi }}
-                            </p>
-
-                            <!-- Room Features -->
-                            <div class="flex flex-wrap gap-2 mb-5">
-                                <span
-                                    class="text-xs bg-gray-100 text-gray-800 px-3 py-1.5 rounded-full flex items-center">
-                                    <i class="fas fa-bed text-xs mr-1.5"></i>
-                                    {{ $kamar->kapasitas }} Guests
-                                </span>
-                                <span
-                                    class="text-xs bg-gray-100 text-gray-800 px-3 py-1.5 rounded-full flex items-center">
-                                    <i class="fas fa-wifi text-xs mr-1.5"></i> WiFi
-                                </span>
-                            </div>
-
-                            <!-- Price and CTA -->
-                            <div class="flex items-center justify-between border-t pt-4">
-                                <div>
-                                    <span class="text-xl font-bold text-gray-900">Rp
-                                        {{ number_format($kamar->harga, 0, ',', '.') }}</span>
-                                    <span class="text-xs text-gray-500 block">per night, excluding taxes</span>
-                                </div>
-                                <button onclick="openBookingModal({{ $kamar->id }}, '{{ $kamar->nama_kamar }}')"
-                                    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center shadow-sm hover:shadow-md">
-                                    Book Now
-                                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
+                        <h2 id="modalTitle" class="text-xl font-bold text-gray-900">Book Your Stay</h2>
                     </div>
-                @endforeach
-            </div>
 
-            <!-- Booking Modal -->
-            <div id="bookingModal"
-                class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 hidden z-50 transition-opacity duration-300">
-                <div class="bg-white rounded-xl max-w-md w-full mx-auto shadow-xl transform transition-all duration-300 scale-95 opacity-0"
-                    id="modalContent">
-                    <button onclick="closeBookingModal()"
-                        class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition-colors duration-200">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
+                    <div id="errorMessage" class="hidden text-red-600 text-sm mb-4"></div>
 
-                    <div class="p-6 md:p-8">
-                        <div class="flex items-center mb-6">
-                            <div class="bg-blue-100 p-2 rounded-lg mr-4">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                    </path>
-                                </svg>
+                    <form id="bookingForm" method="POST" action="{{ route('bookings.store') }}">
+                        @csrf
+                        <input type="hidden" name="kamar_hotel_id" id="hotel_id"> <!-- Perbaikan di sini -->
+
+                        <div class="space-y-4">
+                            <div>
+                                <label for="guest_name" class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+                                <input type="text" name="guest_name" id="guest_name"
+                                    class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                                    required>
                             </div>
-                            <h2 id="modalTitle" class="text-xl font-bold text-gray-900">Book Your Stay</h2>
-                        </div>
 
-                        <div id="errorMessage" class="hidden text-red-600 text-sm mb-4"></div>
-
-                        <form id="bookingForm" method="POST">
-                            @csrf
-                            <input type="hidden" name="kamar_id" id="kamar_id">
-
-                            <div class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
-                                    <label for="guest_name" class="block text-sm font-medium text-gray-700 mb-1">Full
-                                        Name *</label>
-                                    <input type="text" name="guest_name" id="guest_name"
+                                    <label for="guest_email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                                    <input type="email" name="guest_email" id="guest_email"
                                         class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
                                         required>
                                 </div>
-
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div>
-                                        <label for="guest_email"
-                                            class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
-                                        <input type="email" name="guest_email" id="guest_email"
-                                            class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
-                                            required>
-                                    </div>
-                                    <div>
-                                        <label for="guest_phone"
-                                            class="block text-sm font-medium text-gray-700 mb-1">Phone *</label>
-                                        <input type="text" name="guest_phone" id="guest_phone"
-                                            class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
-                                            required>
-                                    </div>
-                                </div>
-
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div>
-                                        <label for="check_in_date"
-                                            class="block text-sm font-medium text-gray-700 mb-1">Check-in *</label>
-                                        <input type="date" name="check_in_date" id="check_in_date"
-                                            class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
-                                            required>
-                                    </div>
-                                    <div>
-                                        <label for="check_out_date"
-                                            class="block text-sm font-medium text-gray-700 mb-1">Check-out *</label>
-                                        <input type="date" name="check_out_date" id="check_out_date"
-                                            class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
-                                            required>
-                                    </div>
+                                <div>
+                                    <label for="guest_phone" class="block text-sm font-medium text-gray-700 mb-1">Phone *</label>
+                                    <input type="text" name="guest_phone" id="guest_phone"
+                                        class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                                        required>
                                 </div>
                             </div>
 
-                            <div class="mt-8">
-                                <button type="submit" id="submitButton"
-                                    class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center">
-                                    Complete Booking
-                                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 12h14M12 5l7 7-7 7"></path>
-                                    </svg>
-                                </button>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="check_in_date" class="block text-sm font-medium text-gray-700 mb-1">Check-in *</label>
+                                    <input type="date" name="check_in_date" id="check_in_date"
+                                        class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                                        required>
+                                </div>
+                                <div>
+                                    <label for="check_out_date" class="block text-sm font-medium text-gray-700 mb-1">Check-out *</label>
+                                    <input type="date" name="check_out_date" id="check_out_date"
+                                        class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                                        required>
+                                </div>
                             </div>
-                        </form>
-                    </div>
+
+                            <div>
+                                <label for="room_quantity" class="block text-sm font-medium text-gray-700 mb-1">Jumlah Kamar *</label>
+                                <input type="number" name="room_quantity" id="room_quantity"
+                                    class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                                    min="1" value="1" required>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <button type="submit" id="submitButton"
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center">
+                                Complete Booking
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 12h14M12 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
 
             <!-- Success Notification -->
-            <div id="successNotification" class="hidden">
-                <span class="icon"><i class="fas fa-check-circle"></i></span>
-                <span>Pemesanan berhasil dibuat!</span>
+            <div id="successNotification" class="hidden fixed top-20 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center z-50 transition-all duration-300">
+                <span class="icon"><i class="fas fa-check-circle mr-2"></i></span>
+                <span>Pemesanan berhasil! Anda akan diarahkan dalam 3 detik...</span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- JavaScript (Removed mobile menu toggle since it's handled by external JS) -->
-    <script>
-        // Enhanced Modal Functions
-        function openBookingModal(kamarId, kamarName) {
-            const modal = document.getElementById('bookingModal');
-            const modalContent = document.getElementById('modalContent');
-            const errorMessage = document.getElementById('errorMessage');
+<script>
+    // Enhanced Modal Functions
+    function openBookingModal(kamarHotelId, hotelName) {
+        const modal = document.getElementById('bookingModal');
+        const modalContent = document.getElementById('modalContent');
+        const errorMessage = document.getElementById('errorMessage');
 
-            document.getElementById('kamar_id').value = kamarId;
-            document.getElementById('modalTitle').textContent = `Book Room: ${kamarName}`;
-            errorMessage.classList.add('hidden');
+        document.getElementById('hotel_id').value = kamarHotelId;
+        document.getElementById('modalTitle').textContent = `Book Hotel: ${hotelName}`;
+        errorMessage.classList.add('hidden');
 
-            // Set min dates based on current date (June 29, 2025, 04:50 PM WIB)
-            const today = new Date('2025-06-29T16:50:00+07:00').toISOString().split('T')[0];
-            document.getElementById('check_in_date').min = today;
-            document.getElementById('check_out_date').min = today;
+        // Set min dates based on current date (11:08 PM WIB, 30 June 2025)
+        const today = new Date('2025-06-30T23:08:00+07:00').toISOString().split('T')[0];
+        document.getElementById('check_in_date').min = today;
+        document.getElementById('check_out_date').min = today;
 
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modalContent.classList.remove('opacity-0', 'scale-95');
-                modalContent.classList.add('opacity-100', 'scale-100');
-            }, 10);
+        // Reset room quantity to 1
+        document.getElementById('room_quantity').value = 1;
+
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modalContent.classList.remove('opacity-0', 'scale-95');
+            modalContent.classList.add('opacity-100', 'scale-100');
+        }, 10);
+    }
+
+    function closeBookingModal() {
+        const modal = document.getElementById('bookingModal');
+        const modalContent = document.getElementById('modalContent');
+
+        modalContent.classList.remove('opacity-100', 'scale-100');
+        modalContent.classList.add('opacity-0', 'scale-95');
+
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 300);
+    }
+
+    // Form Submission with AJAX and Success Notification
+    document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const submitButton = document.getElementById('submitButton');
+        const errorMessage = document.getElementById('errorMessage');
+        const successNotification = document.getElementById('successNotification');
+        const roomQuantity = parseInt(document.getElementById('room_quantity').value) || 1;
+
+        submitButton.disabled = true;
+        submitButton.innerHTML = 'Processing... <i class="fas fa-spinner fa-spin ml-2"></i>';
+
+        const checkIn = new Date(document.getElementById('check_in_date').value);
+        const checkOut = new Date(document.getElementById('check_out_date').value);
+        const today = new Date('2025-06-30T23:08:00+07:00');
+
+        if (checkIn < today.setHours(0, 0, 0, 0) || checkOut <= checkIn || roomQuantity < 1) {
+            errorMessage.textContent = 'Check-in harus hari ini atau setelahnya, check-out harus setelah check-in, dan jumlah kamar minimal 1.';
+            errorMessage.classList.remove('hidden');
+            submitButton.disabled = false;
+            submitButton.innerHTML = 'Complete Booking <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>';
+            return;
         }
 
-        function closeBookingModal() {
-            const modal = document.getElementById('bookingModal');
-            const modalContent = document.getElementById('modalContent');
+        const formData = new FormData(this);
+        formData.append('room_quantity', roomQuantity);
 
-            modalContent.classList.remove('opacity-100', 'scale-100');
-            modalContent.classList.add('opacity-0', 'scale-95');
+        try {
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+                    'Accept': 'application/json'
+                }
+            });
 
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
+            const result = await response.json();
+            console.log('Server Response:', result);
+
+            if (response.ok && result.success) {
+                successNotification.classList.remove('hidden');
+                successNotification.classList.add('show');
+                setTimeout(() => {
+                    successNotification.classList.remove('show');
+                    closeBookingModal();
+                    window.location.href = '{{ route('hotel.show', $hotel->slug) }}';
+                }, 3000);
+            } else {
+                errorMessage.textContent = result.message || 'Terjadi kesalahan saat memproses pemesanan.';
+                errorMessage.classList.remove('hidden');
+            }
+        } catch (error) {
+            console.error('Network Error:', error);
+            errorMessage.textContent = 'Terjadi kesalahan jaringan. Silakan coba lagi.';
+            errorMessage.classList.remove('hidden');
+        } finally {
+            submitButton.disabled = false;
+            submitButton.innerHTML = 'Complete Booking <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>';
         }
+    });
 
-        // Form Submission with AJAX and Success Notification
-        document.getElementById('bookingForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const submitButton = document.getElementById('submitButton');
-            const errorMessage = document.getElementById('errorMessage');
-            const successNotification = document.getElementById('successNotification');
+    // Update check-out min date when check-in changes
+    document.getElementById('check_in_date').addEventListener('change', function() {
+        document.getElementById('check_out_date').min = this.value;
+    });
 
-            submitButton.disabled = true;
-            submitButton.innerHTML = 'Processing... <i class="fas fa-spinner fa-spin ml-2"></i>';
+    // Close modal when clicking outside
+    document.getElementById('bookingModal').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('bookingModal')) {
+            closeBookingModal();
+        }
+    });
 
-            const checkIn = new Date(document.getElementById('check_in_date').value);
-            const checkOut = new Date(document.getElementById('check_out_date').value);
-            const today = new Date('2025-06-29T16:50:00+07:00');
-
-            if (checkIn < today.setHours(0, 0, 0, 0) || checkOut <= checkIn) {
-                errorMessage.textContent =
-                    'Check-in harus hari ini atau setelahnya, dan check-out harus setelah check-in.';
-                errorMessage.classList.remove('hidden');
-                submitButton.disabled = false;
-                submitButton.innerHTML =
-                    'Complete Booking <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>';
-                return;
-            }
-
-            const formData = new FormData(this);
-
-            try {
-                const response = await fetch('{{ route('bookings.store') }}', {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
-                        'Accept': 'application/json'
-                    }
-                });
-
-                const result = await response.json();
-                console.log('Server Response:', result); // Debugging
-
-                if (response.ok && result.success) {
-                    successNotification.classList.add('show');
-                    setTimeout(() => {
-                        successNotification.classList.remove('show');
-                        closeBookingModal();
-                        window.location.href = '{{ route('hotel.show', $hotel->slug) }}';
-                    }, 3000); // Show for 3 seconds before redirecting
-                } else {
-                    errorMessage.textContent = result.message || 'Terjadi kesalahan saat memproses pemesanan.';
-                    errorMessage.classList.remove('hidden');
-                }
-            } catch (error) {
-                console.error('Network Error:', error);
-                errorMessage.textContent = 'Terjadi kesalahan jaringan. Silakan coba lagi.';
-                errorMessage.classList.remove('hidden');
-            } finally {
-                submitButton.disabled = false;
-                submitButton.innerHTML =
-                    'Complete Booking <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>';
-            }
+    // Fade-in effect for initial load
+    document.addEventListener('DOMContentLoaded', () => {
+        const fadeElements = document.querySelectorAll('.fade-in');
+        fadeElements.forEach((el, index) => {
+            setTimeout(() => {
+                el.classList.add('visible');
+            }, index * 200);
         });
-
-        // Update check-out min date when check-in changes
-        document.getElementById('check_in_date').addEventListener('change', function() {
-            document.getElementById('check_out_date').min = this.value;
-        });
-
-        // Close modal when clicking outside
-        document.getElementById('bookingModal').addEventListener('click', (e) => {
-            if (e.target === document.getElementById('bookingModal')) {
-                closeBookingModal();
-            }
-        });
-
-        // Carousel functionality
-        document.querySelectorAll('.carousel').forEach(carousel => {
-            const inner = carousel.querySelector('.carousel-inner');
-            const items = carousel.querySelectorAll('.carousel-item');
-            const prev = carousel.querySelector('.carousel-prev');
-            const next = carousel.querySelector('.carousel-next');
-            let currentIndex = 0;
-
-            function updateCarousel() {
-                inner.style.transform = `translateX(-${currentIndex * 100}%)`;
-            }
-
-            prev.addEventListener('click', () => {
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
-                updateCarousel();
-            });
-
-            next.addEventListener('click', () => {
-                currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
-                updateCarousel();
-            });
-
-            // Auto-rotate every 5 seconds
-            setInterval(() => {
-                currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
-                updateCarousel();
-            }, 5000);
-        });
-
-        // Room filtering and search functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('searchRoom');
-            const searchButton = document.getElementById('searchButton');
-            const roomItems = document.querySelectorAll('.room-item');
-            const noResults = document.getElementById('noResults');
-            const roomCount = document.getElementById('roomCount');
-
-            function updateRoomDisplay() {
-                const searchTerm = searchInput.value.toLowerCase().trim();
-
-                let visibleCount = 0;
-
-                roomItems.forEach(room => {
-                    const roomName = room.dataset.name;
-
-                    const matchesSearch = roomName.includes(searchTerm);
-
-                    if (matchesSearch) {
-                        room.style.display = 'block';
-                        room.classList.remove('hidden');
-                        visibleCount++;
-                    } else {
-                        room.style.display = 'none';
-                        room.classList.add('hidden');
-                    }
-                });
-
-                if (roomCount) {
-                    roomCount.textContent = `Menampilkan ${visibleCount} kamar tersedia`;
-                }
-
-                if (noResults) {
-                    noResults.classList.toggle('hidden', visibleCount !== 0);
-                }
-            }
-
-            if (searchInput) {
-                searchInput.addEventListener('input', updateRoomDisplay);
-            }
-
-            if (searchButton) {
-                searchButton.addEventListener('click', updateRoomDisplay);
-            }
-
-            // Initial display
-            updateRoomDisplay();
-        });
-    </script>
+    });
+</script>
 
     <!-- CTA Section -->
     <section class="py-20 gradient-bg">
@@ -895,7 +778,7 @@
             </div>
 
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2012 - Syukron Tours ❤️ for jamaah Indonesia.</p>
+                <p>© 2012 - Syukron Tours ❤️ for jamaah Indonesia.</p>
             </div>
         </div>
     </footer>
@@ -909,7 +792,5 @@
     </div>
 
     <script src="/build/assets/app-C6t145CM.js" defer></script>
-
 </body>
-
 </html>

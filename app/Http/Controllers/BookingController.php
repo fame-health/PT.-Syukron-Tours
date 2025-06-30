@@ -3,34 +3,54 @@
 namespace App\Http\Controllers;
 
 use App\Models\Booking;
+use App\Models\Hotel;
 use App\Models\KamarHotel;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\DB;
 
 class BookingController
 {
-    public function create($kamar_id)
+    /**
+     * Show the form for creating a new booking for a specific hotel.
+     *
+     * @param int $hotel_id
+     * @return \Illuminate\View\View
+     */
+    public function create($hotel_id)
     {
-        $kamar = KamarHotel::with('hotel')->findOrFail($kamar_id);
-        return view('bookings.create', compact('kamar'));
+        $hotel = Hotel::with('kamarHotels')->findOrFail($hotel_id);
+        $kamarHotels = $hotel->kamarHotels; // Pass available rooms for selection
+        return view('bookings.create', compact('hotel', 'kamarHotels'));
     }
 
+    /**
+     * Store a newly created booking in storage.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     */
     public function store(Request $request)
     {
-        // Validate request
+        Log::info('Received booking data: ', $request->all());
+
+        // Validation rules aligned with Booking model
         $validator = Validator::make($request->all(), [
-            'kamar_id' => 'required|exists:kamar_hotels,id',
-            'check_in_date' => 'required|date|after_or_equal:today',
+            'kamar_hotel_id' => 'required|exists:kamar_hotels,id',
+            'check_in_date' => 'required|date|after_or_equal:' . Carbon::today()->toDateString(),
             'check_out_date' => 'required|date|after:check_in_date',
+            'room_quantity' => 'required|integer|min:1',
             'guest_name' => 'required|string|max:255',
             'guest_email' => 'required|email|max:255',
             'guest_phone' => 'required|string|max:20',
         ]);
 
         if ($validator->fails()) {
+            Log::info('Validation failed: ', $validator->errors()->toArray());
             if ($request->expectsJson()) {
                 return response()->json([
                     'success' => false,
@@ -43,12 +63,14 @@ class BookingController
                 ->withInput();
         }
 
-        $kamar = KamarHotel::with('hotel')->findOrFail($request->kamar_id);
+        // Retrieve kamarHotel and check availability
+        $kamarHotel = KamarHotel::findOrFail($request->kamar_hotel_id);
+        $checkIn = Carbon::parse($request->check_in_date)->setTimezone('Asia/Jakarta');
+        $checkOut = Carbon::parse($request->check_out_date)->setTimezone('Asia/Jakarta');
+        $roomQuantity = (int) $request->room_quantity;
 
-        $checkIn = Carbon::parse($request->check_in_date);
-        $checkOut = Carbon::parse($request->check_out_date);
+        // Calculate total price based on KamarHotel's harga field
         $days = $checkIn->diffInDays($checkOut);
-
         if ($days <= 0) {
             if ($request->expectsJson()) {
                 return response()->json([
@@ -61,10 +83,12 @@ class BookingController
                 ->withInput();
         }
 
-        // Check room availability, excluding completed or cancelled bookings
-        $inactiveStatuses = ['completed', 'cancelled']; // Tambahkan status lain yang relevan di sini
-        $existingBookings = Booking::where('kamar_hotel_id', $kamar->id)
-            ->whereNotIn('status', $inactiveStatuses) // Hanya hitung booking aktif
+        $totalPrice = $kamarHotel->harga * $days * $roomQuantity;
+
+        // Check room availability
+        $inactiveStatuses = ['checked_out', 'cancelled'];
+        $bookedRooms = Booking::where('kamar_hotel_id', $kamarHotel->id)
+            ->whereNotIn('status', $inactiveStatuses)
             ->where(function ($query) use ($checkIn, $checkOut) {
                 $query->whereBetween('check_in_date', [$checkIn, $checkOut])
                     ->orWhereBetween('check_out_date', [$checkIn, $checkOut])
@@ -74,28 +98,31 @@ class BookingController
                     });
             })
             ->where('check_out_date', '>=', now())
-            ->count();
+            ->sum('room_quantity');
 
-        if ($existingBookings > 0) {
+        $availableRooms = $kamarHotel->jumlah_kamar - $bookedRooms;
+
+        if ($availableRooms < $roomQuantity) {
             if ($request->expectsJson()) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Kamar tidak tersedia untuk tanggal yang dipilih'
+                    'message' => 'Tidak cukup kamar tersedia untuk tanggal dan jumlah yang dipilih'
                 ], 422);
             }
             return redirect()->back()
-                ->with('error', 'Kamar tidak tersedia untuk tanggal yang dipilih')
+                ->with('error', 'Tidak cukup kamar tersedia untuk tanggal dan jumlah yang dipilih')
                 ->withInput();
         }
 
         try {
-            $totalPrice = $kamar->harga * $days;
+            DB::beginTransaction();
 
             $booking = Booking::create([
-                'kamar_hotel_id' => $kamar->id,
+                'kamar_hotel_id' => $kamarHotel->id,
                 'user_id' => Auth::check() ? Auth::id() : null,
                 'check_in_date' => $checkIn,
                 'check_out_date' => $checkOut,
+                'room_quantity' => $roomQuantity,
                 'total_price' => $totalPrice,
                 'status' => 'pending',
                 'guest_name' => $request->guest_name,
@@ -103,17 +130,23 @@ class BookingController
                 'guest_phone' => $request->guest_phone,
             ]);
 
+            DB::commit();
+
+            Log::info('Booking created with ID: ' . $booking->id);
+
             if ($request->expectsJson()) {
                 return response()->json([
                     'success' => true,
                     'message' => 'Pemesanan berhasil dibuat',
-                    'booking_id' => $booking->id
+                    'booking_id' => $booking->id,
+                    'total_price' => $totalPrice,
                 ], 200);
             }
 
-            return redirect()->route('hotel.show', $kamar->hotel->slug)
+            return redirect()->route('hotel.show', $kamarHotel->hotel->slug)
                 ->with('success', 'Pemesanan berhasil dibuat');
         } catch (\Exception $e) {
+            DB::rollBack();
             Log::error('Booking creation failed: ' . $e->getMessage());
             if ($request->expectsJson()) {
                 return response()->json([
@@ -127,9 +160,14 @@ class BookingController
         }
     }
 
+    /**
+     * Display the specified booking.
+     *
+     * @param \App\Models\Booking $booking
+     * @return \Illuminate\View\View
+     */
     public function show(Booking $booking)
     {
-        // Authorization check
         if (Auth::check() && $booking->user_id !== null && Auth::id() !== $booking->user_id) {
             abort(403, 'Unauthorized');
         }
@@ -140,15 +178,21 @@ class BookingController
         return view('bookings.show', compact('booking'));
     }
 
-    public function index()
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function index(): \Illuminate\View\View
     {
         $email = request('email');
+
         if (!$email) {
-            return redirect()->back()->with('error', 'Email diperlukan untuk melihat pemesanan.');
+            return view('bookings.index', ['error' => 'Email diperlukan untuk melihat pemesanan.']);
         }
 
         $bookings = Booking::where('guest_email', $email)
-            ->with('kamarHotel')
+            ->with(['kamarHotel.hotel', 'user'])
             ->latest()
             ->paginate(10);
 

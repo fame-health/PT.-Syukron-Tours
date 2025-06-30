@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Booking extends Model
 {
@@ -14,6 +15,7 @@ class Booking extends Model
         'user_id',
         'check_in_date',
         'check_out_date',
+        'room_quantity',
         'total_price',
         'status',
         'guest_name',
@@ -21,12 +23,24 @@ class Booking extends Model
         'guest_phone',
     ];
 
-    public function kamarHotel()
+    protected $casts = [
+        'check_in_date' => 'date',    // Konversi ke Carbon
+        'check_out_date' => 'date',   // Konversi ke Carbon
+        'total_price' => 'decimal:2', // Opsional untuk harga
+    ];
+
+    /**
+     * Get the kamar hotel that owns this booking.
+     */
+    public function kamarHotel(): BelongsTo
     {
         return $this->belongsTo(KamarHotel::class);
     }
 
-    public function user()
+    /**
+     * Get the user that owns this booking.
+     */
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }

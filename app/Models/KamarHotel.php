@@ -15,6 +15,7 @@ class KamarHotel extends Model
         'bintang',
         'harga',
         'vendor_kategori',
+        'jumlah_kamar',
     ];
 
     protected $casts = [
