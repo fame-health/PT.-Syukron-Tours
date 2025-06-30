@@ -9,7 +9,7 @@
 
     <!-- Primary Meta Tags -->
     <title>Kamar Hotel - Syukron Tours</title>
-    <meta name="title" content="Tentang Kami | Syukron Tours">
+    <meta name="title" content="Hotel | Syukron Tours">
     <meta name="description"
         content="Ketahui lebih lanjut tentang Syukron Tours, travel umroh terpercaya sejak 2008. Kami menawarkan pelayanan amanah dengan izin resmi Kemenag RI.">
     <meta name="keywords"
@@ -398,7 +398,7 @@
                     <i class="fas fa-hotel text-2xl text-white"></i>
                 </div>
                 <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
-                    Daftar Kamar Hotel
+                    Lihat ditail Hotel
                 </h1>
                 <p class="text-xl md:text-2xl text-blue-700 mb-8 max-w-3xl mx-auto">
                     Nikmati kenyamanan dan kemewahan di hotel-hotel terbaik kami, dirancang untuk memenuhi kebutuhan jamaah umroh.

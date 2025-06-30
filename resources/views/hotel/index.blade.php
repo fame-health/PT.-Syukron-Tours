@@ -285,7 +285,7 @@
           <i class="fas fa-hotel text-2xl text-white"></i>
         </div>
         <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
-          Daftar Vendor Hotel
+          Daftar Hotel
         </h1>
         <p class="text-xl md:text-2xl text-blue-700 mb-8 max-w-3xl mx-auto">
           Nikmati kenyamanan dan kemewahan di hotel-hotel terbaik kami, dirancang untuk memenuhi kebutuhan jamaah umroh.
@@ -347,7 +347,6 @@
                 <i class="fas fa-star mr-1"></i>{{ $hotel->bintang }} Bintang
               </div>
               <div class="absolute bottom-3 right-3 bg-blue-600/80 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                Mulai Rp {{ number_format($hotel->harga_minimum ?? 1000000, 0, ',', '.') }}
               </div>
             </div>
 
