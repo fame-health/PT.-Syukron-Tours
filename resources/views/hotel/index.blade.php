@@ -375,7 +375,7 @@
 
             <!-- CTA -->
             <a href="{{ route('hotel.show', $hotel->slug) }}" class="inline-flex items-center px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-medium text-sm hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
-              Lihat Kamar
+              Lihat ditail
               <i class="fas fa-arrow-right ml-2"></i>
             </a>
           </div>
