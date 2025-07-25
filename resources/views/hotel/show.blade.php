@@ -72,7 +72,7 @@
             "@type": "ContactPoint",
             "telephone": "+6282184808256",
             "contactType": "Customer Service",
-            "email": "syukrontours@gmail.com",
+            "email": "info@syukrontour.com",
             "availableLanguage": ["Indonesian"]
         },
         "sameAs": [
@@ -621,7 +621,7 @@
                     <h4 class="text-lg font-semibold mb-4">Kontak</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-center"><i class="fas fa-phone mr-2"></i> +6281-8569-111</li>
-                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> syukrontours@gmail.com</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i>info@syukrontour.com</li>
                         <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> Pekanbaru, Riau</li>
                     </ul>
                 </div>

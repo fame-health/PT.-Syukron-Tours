@@ -778,7 +778,7 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-2"></i>
-                            syukrontour@gmail.com
+                            info@syukrontour.com
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-map-marker-alt mr-2"></i>

@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Primary Meta Tags -->
-    <title>Syukron Tours - Paket Umroh Terpercaya & Amanah | Umroh Nyaman Sesuai Sunnah</title>
+    <title>Syukron Tour - Paket Umroh Terpercaya & Amanah | Umroh Nyaman Sesuai Sunnah</title>
     <meta name="title" content="Syukron Tour - Paket Umroh Terpercaya & Amanah | Umroh Nyaman Sesuai Sunnah">
     <meta name="description"
         content="Syukron Tours menyediakan paket umroh terpercaya dengan 15+ tahun pengalaman. 500+ jamaah puas, pelayanan 24/7, dan harga terjangkau. Daftar sekarang!">
