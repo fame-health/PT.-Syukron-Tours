@@ -674,7 +674,7 @@
             <a href="{{ url('/buku') }}"
                 class="border-2 border-blue-500 text-blue-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-500 hover:text-white transition-all duration-300 bg-white bg-opacity-20 hover:bg-opacity-100">
                 <i class="fas fa-phone mr-2"></i>
-                Hubungi Kami
+                Buku Panduan
             </a>
         </div>
     </div>
