@@ -108,3 +108,22 @@ Route::get('/contact/thank-you', [ContactFormController::class, 'thankYou'])->na
 // API untuk testimoni (untuk AJAX jika diperlukan)
 Route::get('/api/testimoni', [TestimonialController::class, 'api'])->name('testimoni.api');
 Route::get('/testimonials/debug', [TestimonialController::class, 'debug']);
+
+
+// Buku
+Route::get('/buku', function () {
+    PageVisitor::incrementVisit('Buku');
+
+    SEOTools::setTitle('Daftar Buku - SyukronTour', false);
+    SEOTools::setDescription('Lihat daftar buku dan referensi terkait layanan SyukronTour.');
+    SEOTools::opengraph()->setUrl('https://mudarismandiriwisata.com/buku');
+    SEOTools::opengraph()->setTitle('Daftar Buku - SyukronTour');
+    SEOTools::opengraph()->setDescription('Lihat daftar buku dan referensi terkait layanan SyukronTour.');
+    SEOTools::twitter()->setTitle('Daftar Buku - SyukronTour');
+    SEOTools::twitter()->setDescription('Lihat daftar buku dan referensi kami.');
+    SEOTools::jsonLd()->setTitle('Daftar Buku - SyukronTour');
+    SEOTools::jsonLd()->setDescription('Lihat daftar buku dan referensi terkait layanan SyukronTour.');
+    SEOTools::jsonLd()->setType('WebPage');
+
+    return view('buku.index');
+})->name('buku.index');

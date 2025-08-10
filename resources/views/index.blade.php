@@ -653,31 +653,33 @@
         <div class="absolute top-20 right-20 w-64 h-64 bg-blue-300 opacity-20 blob"></div>
         <div class="absolute bottom-20 left-20 w-48 h-48 bg-blue-400 opacity-20 blob" style="animation-delay: -2s;">
         </div>
-        <div class="relative z-10 text-center px-4 max-w-6xl mx-auto">
-            <div class="fade-in">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-shadow">
-                    <span
-                        class="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent">
-                        Syukron Tours Umroh Nyaman Sesuai Sunnah
-                    </span>
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto leading-relaxed">
-                    Wujudkan impian ibadah Umroh Anda bersama kami. Pelayanan terpercaya, amanah, dan penuh berkah.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <button
-                        class="gradient-bg text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 floating-animation">
-                        <i class="fas fa-plane mr-2"></i>
-                        Lihat Paket Umroh
-                    </button>
-                    <button
-                        class="border-2 border-blue-500 text-blue-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-500 hover:text-white transition-all duration-300 bg-white bg-opacity-20 hover:bg-opacity-100">
-                        <i class="fas fa-phone mr-2"></i>
-                        Hubungi Kami
-                    </button>
-                </div>
-            </div>
+<div class="relative z-10 text-center px-4 max-w-6xl mx-auto">
+    <div class="fade-in">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-shadow">
+            <span
+                class="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+                Syukron Tours Umroh Nyaman Sesuai Sunnah
+            </span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto leading-relaxed">
+            Wujudkan impian ibadah Umroh Anda bersama kami. Pelayanan terpercaya, amanah, dan penuh berkah.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button
+                class="gradient-bg text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 floating-animation">
+                <i class="fas fa-plane mr-2"></i>
+                Lihat Paket Umroh
+            </button>
+
+            <a href="{{ url('/buku') }}"
+                class="border-2 border-blue-500 text-blue-500 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-500 hover:text-white transition-all duration-300 bg-white bg-opacity-20 hover:bg-opacity-100">
+                <i class="fas fa-phone mr-2"></i>
+                Hubungi Kami
+            </a>
         </div>
+    </div>
+</div>
+
 
         <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
