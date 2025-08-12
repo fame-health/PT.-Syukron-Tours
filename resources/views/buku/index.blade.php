@@ -343,334 +343,650 @@
         </div>
     </section>
 
-    <!-- Consolidated Guide Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="section-item bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 card-hover">
-                <h2 class="text-4xl font-bold text-blue-800 mb-8 text-center">PANDUAN LENGKAP SAYEMBARA VIDEO</h2>
+<!-- Syarat dan Ketentuan Section -->
+<section class="py-20 bg-white" id="syarat-ketentuan">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16 section-item">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
+                📋 Syarat & Ketentuan Lomba
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Baca dengan teliti syarat dan ketentuan berikut sebelum berpartisipasi
+            </p>
+        </div>
 
-                <!-- I. Nama Sayembara -->
-                <div class="mb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Peserta -->
+            <div class="section-item">
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover border-l-4 border-blue-500">
                     <div class="flex items-center mb-6">
-                        <div class="section-number">I</div>
-                        <h3 class="text-2xl font-bold text-blue-700">Nama Sayembara</h3>
+                        <div class="section-number">1</div>
+                        <h3 class="text-2xl font-bold text-gray-800">Peserta</h3>
                     </div>
-                    <div class="bg-gradient-to-r from-orange-100 to-yellow-100 border-l-4 border-orange-500 p-6 rounded-lg text-center">
-                        <p class="text-xl font-bold text-orange-700">"HAJI EKSPRES: Capture the Luxury with Syukron Tours!"</p>
-                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-users text-blue-500 mt-1 mr-3"></i>
+                            Terbuka untuk umum
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fab fa-instagram text-pink-500 mt-1 mr-3"></i>
+                            Wajib follow Instagram: <strong>@syukron_tours</strong>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fab fa-tiktok text-black mt-1 mr-3"></i>
+                            Wajib follow TikTok: <strong>@syukrontours</strong>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-link text-blue-500 mt-1 mr-3"></i>
+                            Daftar di: <a href="https://bit.ly/lombavidio-syukrontour" class="text-blue-600 hover:underline font-medium" target="_blank">bit.ly/lombavidio-syukrontour</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-cloud-upload-alt text-purple-500 mt-1 mr-3"></i>
+                            Upload video di: <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLjCovaAEEzygVV1-yjKAscpyzB_A4wS-Zrb9FpCPo7Azwvw/viewform" class="text-purple-600 hover:underline font-medium" target="_blank">Form Upload Video</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-user-friends text-green-500 mt-1 mr-3"></i>
+                            Boleh individu atau tim
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-video text-red-500 mt-1 mr-3"></i>
+                            Maksimal 1 video per peserta
+                        </li>
+                    </ul>
                 </div>
+            </div>
 
-                <!-- II. Fokus Promosi -->
-                <div class="mb-12">
+            <!-- Tema Lomba -->
+            <div class="section-item">
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover border-l-4 border-green-500">
                     <div class="flex items-center mb-6">
-                        <div class="section-number">II</div>
-                        <h3 class="text-2xl font-bold text-blue-700">Fokus Promosi</h3>
+                        <div class="section-number">2</div>
+                        <h3 class="text-2xl font-bold text-gray-800">Tema Lomba</h3>
                     </div>
-                    <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg mb-6">
-                        <p class="text-lg font-semibold text-red-700">
-                            <strong>Syarat wajib:</strong> Video harus menyoroti minimal 1 dari 3 keunggulan Haji Express Syukron Tours
+                    <div class="text-center p-6 bg-gradient-to-r from-green-50 to-blue-50 rounded-xl mb-4">
+                        <h4 class="text-xl font-bold text-green-700 mb-2">
+                            "Pengertian Haji dan Umroh"
+                        </h4>
+                        <p class="text-gray-600">
+                            Video harus sesuai dengan tema yang telah ditentukan
                         </p>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-green-500">
-                            <div class="text-center mb-4">
-                                <div class="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                                    <i class="fas fa-bolt text-2xl text-green-600"></i>
-                                </div>
-                                <h4 class="text-xl font-bold text-green-700">1. ⚡ Kecepatan</h4>
-                            </div>
-                            <p class="text-gray-600 text-center">Proses administrasi < 3 bulan</p>
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-4 warning-pulse">
+                        <div class="flex items-center">
+                            <i class="fas fa-exclamation-triangle text-red-500 mr-2"></i>
+                            <span class="text-red-700 font-semibold">Video yang tidak sesuai tema otomatis gugur!</span>
                         </div>
-                        <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-purple-500">
-                            <div class="text-center mb-4">
-                                <div class="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                                    <i class="fas fa-hotel text-2xl text-purple-600"></i>
-                                </div>
-                                <h4 class="text-xl font-bold text-purple-700">2. 🏨 Fasilitas Eksklusif</h4>
-                            </div>
-                            <p class="text-gray-600 text-center">Akomodasi bintang 5, transportasi VIP</p>
-                        </div>
-                        <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-blue-500">
-                            <div class="text-center mb-4">
-                                <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                                    <i class="fas fa-check-circle text-2xl text-blue-600"></i>
-                                </div>
-                                <h4 class="text-xl font-bold text-blue-700">3. ✅ Jaminan Kuota Pasti</h4>
-                            </div>
-                            <p class="text-gray-600 text-center">Kepastian keberangkatan terjamin</p>
-                        </div>
-                    </div>
-                    <div class="mt-6 text-center">
-                        <p class="text-lg font-semibold text-red-600 bg-red-50 p-4 rounded-lg">
-                            Peserta wajib menyebut minimal 1 poin di video
-                        </p>
                     </div>
                 </div>
+            </div>
 
-                <!-- III. Periode Lomba -->
-                <div class="mb-12">
+            <!-- Ketentuan Video -->
+            <div class="section-item">
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover border-l-4 border-purple-500">
                     <div class="flex items-center mb-6">
-                        <div class="section-number">III</div>
-                        <h3 class="text-2xl font-bold text-blue-700">Periode Lomba</h3>
+                        <div class="section-number">3</div>
+                        <h3 class="text-2xl font-bold text-gray-800">Ketentuan Video</h3>
                     </div>
-                    <div class="space-y-6">
-                        <div class="timeline-item flex items-center bg-white p-6 sm:p-4 rounded-lg shadow-md">
-                            <div class="bg-green-500 text-white px-6 sm:px-3 py-3 sm:py-2 rounded-full font-bold text-center min-w-[120px] sm:min-w-[100px] flex-shrink-0 mr-6 sm:mr-4">
-                                1 – 15 Sept 2025
-                            </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-clock text-purple-500 mt-1 mr-3"></i>
+                            Durasi: 15 detik - 3 menit (format TikTok)
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-upload text-blue-500 mt-1 mr-3"></i>
+                            Upload di akun TikTok pribadi
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-hashtag text-green-500 mt-1 mr-3"></i>
+                            Gunakan hashtag: <strong>#Syukrontours #hajibersamasyukrontour</strong>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-eye text-orange-500 mt-1 mr-3"></i>
+                            Akun TikTok tidak boleh private
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-red-500 mt-1 mr-3"></i>
+                            Konten orisinal, tidak melanggar hak cipta & SARA
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-item">
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover border-l-4 border-yellow-500">
+                    <div class="flex items-center mb-6">
+                        <div class="section-number">4</div>
+                        <h3 class="text-2xl font-bold text-gray-800">Pengumpulan Video</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg p-6 border border-purple-200">
+                            <h4 class="text-lg font-bold text-purple-800 mb-3 flex items-center">
+                                <i class="fas fa-cloud-upload-alt mr-2"></i>
+                                Cara Upload Video
+                            </h4>
+                            <ul class="space-y-2 text-purple-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2 text-sm"></i>
+                                    Upload video ke TikTok pribadi dengan hashtag
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2 text-sm"></i>
+                                    Salin link video TikTok
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2 text-sm"></i>
+                                    Submit melalui form Google
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="text-center">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLjCovaAEEzygVV1-yjKAscpyzB_A4wS-Zrb9FpCPo7Azwvw/viewform"
+                               target="_blank"
+                               class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                <i class="fas fa-upload mr-2"></i>
+                                Upload Video Sekarang
+                            </a>
+                        </div>
+
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                             <div class="flex items-center">
-                                <i class="fas fa-edit text-green-600 text-xl sm:text-base mr-3"></i>
-                                <span class="text-lg sm:text-sm font-semibold">📝 Pendaftaran</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item flex items-center bg-white p-6 sm:p-4 rounded-lg shadow-md">
-                            <div class="bg-blue-500 text-white px-6 sm:px-3 py-3 sm:py-2 rounded-full font-bold text-center min-w-[120px] sm:min-w-[100px] flex-shrink-0 mr-6 sm:mr-4">
-                                16 – 25 Sept 2025
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-vote-yea text-blue-600 text-xl sm:text-base mr-3"></i>
-                                <span class="text-lg sm:text-sm font-semibold">🗳️ Voting</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item flex items-center bg-white p-6 sm:p-4 rounded-lg shadow-md">
-                            <div class="bg-yellow-500 text-white px-6 sm:px-3 py-3 sm:py-2 rounded-full font-bold text-center min-w-[120px] sm:min-w-[100px] flex-shrink-0 mr-6 sm:mr-4">
-                                30 Sept 2025
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-trophy text-yellow-600 text-xl sm:text-base mr-3"></i>
-                                <span class="text-lg sm:text-sm font-semibold">🏆 Pengumuman Pemenang</span>
+                                <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                                <span class="text-yellow-700 font-semibold">Pastikan akun TikTok tidak di-private hingga lomba selesai!</span>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- IV. Kriteria Video -->
-                <div class="mb-12">
+            <!-- Timeline -->
+            <div class="section-item">
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover border-l-4 border-indigo-500">
                     <div class="flex items-center mb-6">
-                        <div class="section-number">IV</div>
-                        <h3 class="text-2xl font-bold text-blue-700">Kriteria Video (Wajib Dipenuhi)</h3>
+                        <div class="section-number">5</div>
+                        <h3 class="text-2xl font-bold text-gray-800">Timeline Lomba</h3>
                     </div>
-                    <div class="space-y-6">
-                        <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
-                            <h4 class="text-xl font-bold text-blue-700 mb-4">1. Tema Konten</h4>
-                            <div class="bg-gradient-to-r from-yellow-100 to-orange-100 border-l-4 border-yellow-500 p-6 rounded-lg">
-                                <div class="text-lg font-bold text-yellow-700 mb-2">
-                                    "Pengalaman Haji Tanpa Ribet? Ini Solusinya!"
-                                </div>
-                                <p class="text-yellow-600">Format boleh: Storytelling, testimoni fiktif, atau animasi.</p>
+                    <div class="space-y-4">
+                        <div class="timeline-item flex items-center border-l-2 border-blue-200 pl-6">
+                            <div class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold mr-4 min-w-max">
+                                Tahap 1
+                            </div>
+                            <div>
+                                <i class="fas fa-user-plus text-blue-500 mr-2"></i>
+                                <span>Pendaftaran Peserta</span>
                             </div>
                         </div>
-                        <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
-                            <h4 class="text-xl font-bold text-blue-700 mb-4">2. Elemen Branding (Wajib)</h4>
-                            <ul class="space-y-3">
-                                <li class="flex items-start">
-                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Logo <strong>Syukron Tours</strong> di awal/akhir video (min. 5 detik)</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Mention akun Instagram: <strong>@SyukronTours</strong></span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
-                                    <span>Gunakan hashtag: <strong>#HajiExpressSyukron #HajiTanpaRibet</strong></span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
-                            <h4 class="text-xl font-bold text-blue-700 mb-4">3. Teknis Video</h4>
-                            <ul class="space-y-3">
-                                <li class="flex items-start">
-                                    <i class="fas fa-clock text-blue-500 mt-1 mr-3"></i>
-                                    <span>Durasi: 15 – 60 detik (optimasi TikTok/Reels)</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-mobile-alt text-blue-500 mt-1 mr-3"></i>
-                                    <span>Format: Vertikal (9:16)</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-video text-blue-500 mt-1 mr-3"></i>
-                                    <span>Kualitas: HD minimal 1080p</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="bg-red-50 rounded-xl p-6 border border-red-200 warning-pulse">
-                            <h4 class="text-xl font-bold text-red-700 mb-4 flex items-center">
-                                <i class="fas fa-exclamation-triangle mr-2"></i>
-                                4. ⚠️ Larangan
-                            </h4>
-                            <ul class="space-y-2 text-red-600">
-                                <li class="flex items-start">
-                                    <i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
-                                    <span>Konten mengandung unsur komersial kompetitor</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
-                                    <span>Mengandung musik</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
-                                    <span>Mengandung avatar AI</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- V. Mekanisme Lomba -->
-                <div class="mb-12">
-                    <div class="flex items-center mb-6">
-                        <div class="section-number">V</div>
-                        <h3 class="text-2xl font-bold text-blue-700">Mekanisme Lomba</h3>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="bg-blue-50 rounded-xl p-6 shadow-lg card-hover">
-                            <h4 class="text-xl font-bold text-blue-700 mb-4">1. Cara Ikut</h4>
-                            <ul class="space-y-3">
-                                <li class="flex items-start">
-                                    <i class="fas fa-upload text-blue-500 mt-1 mr-3"></i>
-                                    <span>Upload video ke <strong>Instagram Reels</strong> atau <strong>TikTok</strong></span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-users text-blue-500 mt-1 mr-3"></i>
-                                    <span>Follow <strong>@SyukronTours</strong> & tag <strong>3 teman</strong> di kolom komentar</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="bg-green-50 rounded-xl p-6 shadow-lg card-hover">
-                            <h4 class="text-xl font-bold text-green-700 mb-4">2. Sistem Penilaian</h4>
-                            <div class="space-y-3">
-                                <div class="flex items-center justify-between">
-                                    <span>Jumlah Like Valid</span>
-                                    <span class="font-bold text-green-600">50%</span>
-                                </div>
-                                <div class="flex items-center justify-between">
-                                    <span>Kreativitas promosi</span>
-                                    <span class="font-bold text-green-600">30%</span>
-                                </div>
-                                <div class="flex items-center justify-between">
-                                    <span>Kualitas visual & audio</span>
-                                    <span class="font-bold text-green-600">20%</span>
-                                </div>
-                                <p class="text-sm text-gray-600 mt-2">(hitung manual via tim)</p>
+                        <div class="timeline-item flex items-center border-l-2 border-green-200 pl-6">
+                            <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mr-4 min-w-max">
+                                Tahap 2
+                            </div>
+                            <div>
+                                <i class="fas fa-handshake text-green-500 mr-2"></i>
+                                <span>Technical Meeting</span>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- VI. Hadiah -->
-                <div class="mb-12">
-                    <div class="flex items-center mb-6">
-                        <div class="section-number bg-yellow-500">VI</div>
-                        <h3 class="text-2xl font-bold text-blue-700">Hadiah</h3>
-                    </div>
-                    <div class="gradient-bg rounded-2xl p-8 text-white text-center mb-8">
-                        <h4 class="text-3xl font-bold mb-4">🏆 TOTAL NILAI > Rp 3.000.000</h4>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                            <div class="prize-card bg-white/20 backdrop-blur-sm p-6 rounded-xl">
-                                <div class="text-3xl mb-2">🥇</div>
-                                <div class="text-2xl font-bold mb-2">Rp 1.000.000</div>
-                                <div class="text-lg">Juara 1</div>
+                        <div class="timeline-item flex items-center border-l-2 border-purple-200 pl-6">
+                            <div class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold mr-4 min-w-max">
+                                Tahap 3
                             </div>
-                            <div class="prize-card bg-white/20 backdrop-blur-sm p-6 rounded-xl">
-                                <div class="text-3xl mb-2">🥈</div>
-                                <div class="text-2xl font-bold mb-2">Rp 700.000</div>
-                                <div class="text-lg">Juara 2</div>
-                            </div>
-                            <div class="prize-card bg-white/20 backdrop-blur-sm p-6 rounded-xl">
-                                <div class="text-3xl mb-2">🥉</div>
-                                <div class="text-2xl font-bold mb-2">Rp 500.000</div>
-                                <div class="text-lg">Juara 3</div>
+                            <div>
+                                <i class="fas fa-video text-purple-500 mr-2"></i>
+                                <span>Upload & Pengiriman Video</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="bg-gradient-to-r from-green-100 to-emerald-100 border-4 border-dashed border-green-500 rounded-2xl p-8 text-center">
-                        <h4 class="text-2xl font-bold text-green-800 mb-4">🎁 BONUS SPESIAL</h4>
-                        <div class="text-4xl font-bold text-green-700 mb-4">Rp 10.000.000</div>
-                        <p class="text-lg text-green-600">
-                            Untuk peserta yang berhasil membawa jamaah mendaftar Haji melalui Syukron Tours
-                        </p>
-                    </div>
-                </div>
-
-                <!-- VII. Ketentuan Legal -->
-                <div class="mb-12">
-                    <div class="flex items-center mb-6">
-                        <div class="section-number">VII</div>
-                        <h3 class="text-2xl font-bold text-blue-700">Ketentuan Legal</h3>
-                    </div>
-                    <div class="space-y-6">
-                        <div class="bg-blue-50 rounded-xl p-6 shadow-lg">
-                            <h4 class="text-xl font-bold text-blue-700 mb-4">Hak dan Kewajiban</h4>
-                            <ol class="space-y-2 list-decimal list-inside text-gray-700">
-                                <li>Hak cipta video menjadi milik Syukron Tours</li>
-                                <li>Peserta menyetujui penggunaan videonya untuk iklan</li>
-                            </ol>
+                        <div class="timeline-item flex items-center border-l-2 border-orange-200 pl-6">
+                            <div class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold mr-4 min-w-max">
+                                Tahap 4
+                            </div>
+                            <div>
+                                <i class="fas fa-search text-orange-500 mr-2"></i>
+                                <span>Seleksi Video</span>
+                            </div>
                         </div>
-                        <div class="bg-red-50 rounded-xl p-6 border border-red-200">
-                            <h4 class="text-xl font-bold text-red-700 mb-4 flex items-center">
-                                <i class="fas fa-ban mr-2"></i>
-                                ⚠️ Diskualifikasi Otomatis
-                            </h4>
-                            <ul class="space-y-2 text-red-600">
-                                <li class="flex items-start">
-                                    <i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
-                                    <span>Akun privat</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i>
-                                    <span>Pembelian like/views terdeteksi</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- VIII. Strategi Viralitas -->
-                <div class="mb-12">
-                    <div class="flex items-center mb-6">
-                        <div class="section-number">VIII</div>
-                        <h3 class="text-2xl font-bold text-blue-700">Strategi Viralitas</h3>
-                    </div>
-                    <div class="space-y-6">
-                        <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
-                            <h4 class="text-xl font-bold text-purple-700 mb-4 flex items-center">
-                                <i class="fas fa-palette mr-3"></i>
-                                1. 🎨 Template Siap Pakai
-                            </h4>
-                            <p class="text-gray-600">
-                                Sediakan <em>asset pack</em> gratis di website Syukron Tours (logo animasi, soundbite azan, musik syariah)
-                            </p>
-                        </div>
-                        <div class="bg-gradient-to-r from-cyan-100 to-blue-100 border-4 border-dashed border-cyan-500 rounded-2xl p-8 text-center">
-                            <h4 class="text-2xl font-bold text-cyan-800 mb-4">
-                                <i class="fas fa-rocket mr-2"></i>
-                                2. 🚀 Challenge Boost
-                            </h4>
-                            <div class="text-3xl font-bold text-cyan-700 mb-4">Bonus Rp 100.000</div>
-                            <p class="text-lg text-cyan-600">untuk video dengan >1.000 share</p>
-                        </div>
-                        <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
-                            <h4 class="text-xl font-bold text-pink-700 mb-4 flex items-center">
-                                <i class="fas fa-tv mr-3"></i>
-                                3. 📺 Hyping Moment
-                            </h4>
-                            <ul class="space-y-3">
-                                <li class="flex items-start">
-                                    <i class="fas fa-play-circle text-pink-500 mt-1 mr-3"></i>
-                                    <span>Live "Unboxing Hadiah" di Instagram saat pengumuman pemenang</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-star text-pink-500 mt-1 mr-3"></i>
-                                    <span>Feature video peserta di website resmi Syukron Tours</span>
-                                </li>
-                            </ul>
+                        <div class="timeline-item flex items-center border-l-2 border-yellow-200 pl-6">
+                            <div class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold mr-4 min-w-max">
+                                Tahap 5
+                            </div>
+                            <div>
+                                <i class="fas fa-trophy text-yellow-500 mr-2"></i>
+                                <span>Pengumuman Pemenang</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Penilaian & Hadiah Section -->
+<section class="py-20 bg-gray-50" id="penilaian-hadiah">
+    <div class="max-w-6xl mx-auto px-4">
+        <!-- Kriteria Penilaian -->
+        <div class="mb-16 section-item">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
+                    🏆 Kriteria Penilaian
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover text-center">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lightbulb text-2xl text-white"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Kreativitas</h4>
+                    <p class="text-gray-600 text-sm">Ide & eksekusi yang kreatif dan inovatif</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover text-center">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bullseye text-2xl text-white"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Kesesuaian Tema</h4>
+                    <p class="text-gray-600 text-sm">Seberapa sesuai dengan tema yang ditentukan</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover text-center">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cut text-2xl text-white"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Kualitas Editing</h4>
+                    <p class="text-gray-600 text-sm">Teknik editing dan penyampaian pesan</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover text-center">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-2xl text-white"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Engagement</h4>
+                    <p class="text-gray-600 text-sm">Like, komentar & share (nilai tambahan)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hadiah -->
+        <div class="section-item">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent">
+                    💰 Hadiah Menarik
+                </h2>
+                <p class="text-lg text-gray-600">Total hadiah lebih dari Rp 3.000.000</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Juara 1 -->
+                <div class="prize-card bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-2xl p-8 text-center text-white shadow-2xl">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto">
+                            <i class="fas fa-trophy text-4xl text-white"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                            <span class="text-sm font-bold">1</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Juara 1</h3>
+                    <div class="text-3xl font-bold mb-2">Rp 1.000.000</div>
+                    <div class="text-yellow-100">+ Sertifikat</div>
+                </div>
+
+                <!-- Juara 2 -->
+                <div class="prize-card bg-gradient-to-br from-gray-400 to-gray-600 rounded-2xl p-8 text-center text-white shadow-2xl">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto">
+                            <i class="fas fa-medal text-4xl text-white"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                            <span class="text-sm font-bold">2</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Juara 2</h3>
+                    <div class="text-3xl font-bold mb-2">Rp 700.000</div>
+                    <div class="text-gray-100">+ Sertifikat</div>
+                </div>
+
+                <!-- Juara 3 -->
+                <div class="prize-card bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl p-8 text-center text-white shadow-2xl">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto">
+                            <i class="fas fa-award text-4xl text-white"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                            <span class="text-sm font-bold">3</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Juara 3</h3>
+                    <div class="text-3xl font-bold mb-2">Rp 300.000</div>
+                    <div class="text-orange-100">+ Sertifikat</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ketentuan Tambahan Section -->
+<section class="py-20 bg-white" id="ketentuan-tambahan">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16 section-item">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
+                📝 Ketentuan Tambahan
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Hak Cipta -->
+            <div class="section-item">
+                <div class="bg-blue-50 border border-blue-200 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-copyright text-blue-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-blue-800">Hak Cipta & Penggunaan Karya</h3>
+                    </div>
+                    <ul class="space-y-3 text-blue-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3 text-sm"></i>
+                            Hak cipta tetap milik peserta
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-share text-blue-500 mt-1 mr-3 text-sm"></i>
+                            Panitia berhak mempublikasikan ulang untuk promosi lomba
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Keputusan Juri -->
+            <div class="section-item">
+                <div class="bg-red-50 border border-red-200 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-gavel text-red-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-red-800">Keputusan Juri</h3>
+                    </div>
+                    <div class="flex items-center text-red-700">
+                        <i class="fas fa-exclamation-circle mr-3"></i>
+                        <span class="font-semibold">Keputusan juri final dan tidak dapat diganggu gugat</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Kontak Panitia Section -->
+<section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100" id="kontak">
+    <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-16 section-item">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
+                📞 Kontak Panitia
+            </h2>
+            <p class="text-lg text-gray-600">Hubungi kami jika ada pertanyaan seputar lomba</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 section-item">
+            <!-- TikTok -->
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fab fa-tiktok text-2xl text-white"></i>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">TikTok</h4>
+                <a href="https://tiktok.com/@syukrontours" target="_blank" class="text-blue-600 hover:underline font-medium">
+                    @syukrontours
+                </a>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fab fa-whatsapp text-2xl text-white"></i>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">WhatsApp</h4>
+                <a href="https://wa.me/6281372324461" target="_blank" class="text-green-600 hover:underline font-medium">
+                    081372324461
+                </a>
+            </div>
+
+            <!-- Email -->
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-envelope text-2xl text-white"></i>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">Email</h4>
+                <a href="mailto:lombavideosyukron@gmail.com" class="text-red-600 hover:underline font-medium">
+                    lombavideosyukron@gmail.com
+                </a>
+            </div>
+        </div>
+
+        <!-- Persetujuan -->
+        <div class="mt-16 section-item">
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
+                <div class="flex items-start">
+                    <i class="fas fa-info-circle text-yellow-500 text-xl mr-3 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-yellow-800 mb-2">Persetujuan Syarat & Ketentuan</h4>
+                        <p class="text-yellow-700">
+                            Dengan mengikuti lomba ini, peserta dianggap telah membaca, memahami, dan menyetujui seluruh syarat dan ketentuan yang berlaku.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Penilaian & Hadiah Section -->
+<section class="py-20 bg-gray-50" id="penilaian-hadiah">
+    <div class="max-w-6xl mx-auto px-4">
+        <!-- Kriteria Penilaian -->
+        <div class="mb-16 section-item">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
+                    🏆 Kriteria Penilaian
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover text-center">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lightbulb text-2xl text-white"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Kreativitas</h4>
+                    <p class="text-gray-600 text-sm">Ide & eksekusi yang kreatif dan inovatif</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover text-center">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bullseye text-2xl text-white"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Kesesuaian Tema</h4>
+                    <p class="text-gray-600 text-sm">Seberapa sesuai dengan tema yang ditentukan</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover text-center">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cut text-2xl text-white"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Kualitas Editing</h4>
+                    <p class="text-gray-600 text-sm">Teknik editing dan penyampaian pesan</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover text-center">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-2xl text-white"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">Engagement</h4>
+                    <p class="text-gray-600 text-sm">Like, komentar & share (nilai tambahan)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hadiah -->
+        <div class="section-item">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent">
+                    💰 Hadiah Menarik
+                </h2>
+                <p class="text-lg text-gray-600">Total hadiah lebih dari Rp 3.000.000</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Juara 1 -->
+                <div class="prize-card bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-2xl p-8 text-center text-white shadow-2xl">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto">
+                            <i class="fas fa-trophy text-4xl text-white"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                            <span class="text-sm font-bold">1</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Juara 1</h3>
+                    <div class="text-3xl font-bold mb-2">Rp 1.000.000</div>
+                    <div class="text-yellow-100">+ Sertifikat</div>
+                </div>
+
+                <!-- Juara 2 -->
+                <div class="prize-card bg-gradient-to-br from-gray-400 to-gray-600 rounded-2xl p-8 text-center text-white shadow-2xl">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto">
+                            <i class="fas fa-medal text-4xl text-white"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                            <span class="text-sm font-bold">2</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Juara 2</h3>
+                    <div class="text-3xl font-bold mb-2">Rp 700.000</div>
+                    <div class="text-gray-100">+ Sertifikat</div>
+                </div>
+
+                <!-- Juara 3 -->
+                <div class="prize-card bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl p-8 text-center text-white shadow-2xl">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto">
+                            <i class="fas fa-award text-4xl text-white"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                            <span class="text-sm font-bold">3</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Juara 3</h3>
+                    <div class="text-3xl font-bold mb-2">Rp 300.000</div>
+                    <div class="text-orange-100">+ Sertifikat</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ketentuan Tambahan Section -->
+<section class="py-20 bg-white" id="ketentuan-tambahan">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16 section-item">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
+                📝 Ketentuan Tambahan
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Hak Cipta -->
+            <div class="section-item">
+                <div class="bg-blue-50 border border-blue-200 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-copyright text-blue-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-blue-800">Hak Cipta & Penggunaan Karya</h3>
+                    </div>
+                    <ul class="space-y-3 text-blue-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3 text-sm"></i>
+                            Hak cipta tetap milik peserta
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-share text-blue-500 mt-1 mr-3 text-sm"></i>
+                            Panitia berhak mempublikasikan ulang untuk promosi lomba
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Keputusan Juri -->
+            <div class="section-item">
+                <div class="bg-red-50 border border-red-200 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-gavel text-red-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold text-red-800">Keputusan Juri</h3>
+                    </div>
+                    <div class="flex items-center text-red-700">
+                        <i class="fas fa-exclamation-circle mr-3"></i>
+                        <span class="font-semibold">Keputusan juri final dan tidak dapat diganggu gugat</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Kontak Panitia Section -->
+<section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100" id="kontak">
+    <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-16 section-item">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
+                📞 Kontak Panitia
+            </h2>
+            <p class="text-lg text-gray-600">Hubungi kami jika ada pertanyaan seputar lomba</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 section-item">
+            <!-- TikTok -->
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fab fa-tiktok text-2xl text-white"></i>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">TikTok</h4>
+                <a href="https://tiktok.com/@syukrontours" target="_blank" class="text-blue-600 hover:underline font-medium">
+                    @syukrontours
+                </a>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fab fa-whatsapp text-2xl text-white"></i>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">WhatsApp</h4>
+                <a href="https://wa.me/6281372324461" target="_blank" class="text-green-600 hover:underline font-medium">
+                    081372324461
+                </a>
+            </div>
+
+            <!-- Email -->
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+                <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-envelope text-2xl text-white"></i>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">Email</h4>
+                <a href="mailto:lombavideosyukron@gmail.com" class="text-red-600 hover:underline font-medium">
+                    lombavideosyukron@gmail.com
+                </a>
+            </div>
+        </div>
+
+        <!-- Persetujuan -->
+        <div class="mt-16 section-item">
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
+                <div class="flex items-start">
+                    <i class="fas fa-info-circle text-yellow-500 text-xl mr-3 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-yellow-800 mb-2">Persetujuan Syarat & Ketentuan</h4>
+                        <p class="text-yellow-700">
+                            Dengan mengikuti lomba ini, peserta dianggap telah membaca, memahami, dan menyetujui seluruh syarat dan ketentuan yang berlaku.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- CTA Section -->
     <section class="py-20 gradient-bg cta-section">
