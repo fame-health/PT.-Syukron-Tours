@@ -203,23 +203,23 @@
         <div class="space-y-3 text-sm">
             <div class="timeline-item flex items-center border-l-2 border-blue-200 pl-4">
                 <div class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold mr-3">Tahap 1</div>
-                <div><i class="fas fa-user-plus text-blue-500 mr-2"></i><span>Pendaftaran Peserta</span> - <span class="text-gray-500">15–25 Agustus 2025</span></div>
+                <div><i class="fas fa-user-plus text-blue-500 mr-2"></i><span>Pendaftaran Peserta</span> - <span class="text-gray-500">15–22 Agustus 2025</span></div>
             </div>
             <div class="timeline-item flex items-center border-l-2 border-green-200 pl-4">
                 <div class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold mr-3">Tahap 2</div>
-                <div><i class="fas fa-handshake text-green-500 mr-2"></i><span>Technical Meeting</span> - <span class="text-gray-500">26 Agustus 2025</span></div>
+                <div><i class="fas fa-handshake text-green-500 mr-2"></i><span>Technical Meeting</span> - <span class="text-gray-500">23 Agustus 2025</span></div>
             </div>
             <div class="timeline-item flex items-center border-l-2 border-purple-200 pl-4">
                 <div class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold mr-3">Tahap 3</div>
-                <div><i class="fas fa-video text-purple-500 mr-2"></i><span>Upload & Pengiriman Video</span> - <span class="text-gray-500">27-7 September 2025</span></div>
+                <div><i class="fas fa-video text-purple-500 mr-2"></i><span>Upload & Pengiriman Video</span> - <span class="text-gray-500">24- Agustus - 4 September 2025</span></div>
             </div>
             <div class="timeline-item flex items-center border-l-2 border-orange-200 pl-4">
                 <div class="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold mr-3">Tahap 4</div>
-                <div><i class="fas fa-search text-orange-500 mr-2"></i><span>Seleksi Video</span> - <span class="text-gray-500">8–9 September 2025</span></div>
+                <div><i class="fas fa-search text-orange-500 mr-2"></i><span>Seleksi Video</span> - <span class="text-gray-500">5–6 September 2025</span></div>
             </div>
             <div class="timeline-item flex items-center border-l-2 border-yellow-200 pl-4">
                 <div class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-semibold mr-3">Tahap 5</div>
-                <div><i class="fas fa-trophy text-yellow-500 mr-2"></i><span>Pengumuman Pemenang</span> - <span class="text-gray-500">10 September 2025</span></div>
+                <div><i class="fas fa-trophy text-yellow-500 mr-2"></i><span>Pengumuman Pemenang</span> - <span class="text-gray-500">7 September 2025</span></div>
             </div>
         </div>
     </div>
