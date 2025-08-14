@@ -136,7 +136,7 @@
                             <li class="flex items-start"><i class="fab fa-instagram text-pink-500 mt-1 mr-2"></i>Wajib follow Instagram: <strong>@syukron_tours</strong></li>
                             <li class="flex items-start"><i class="fab fa-tiktok text-black mt-1 mr-2"></i>Wajib follow TikTok: <strong>@syukrontours</strong></li>
                             <li class="flex items-start"><i class="fas fa-link text-blue-500 mt-1 mr-2"></i>Daftar di: <a href="https://bit.ly/lombavidio-syukrontour" class="text-blue-600 hover:underline font-medium" target="_blank">bit.ly/lombavidio-syukrontour</a></li>
-                            <li class="flex items-start"><i class="fas fa-cloud-upload-alt text-purple-500 mt-1 mr-2"></i>Upload video di: <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLjCovaAEEzygVV1-yjKAscpyzB_A4wS-Zrb9FpCPo7Azwvw/viewform" class="text-purple-600 hover:underline font-medium" target="_blank">Form Upload Video</a></li>
+                            <li class="flex items-start"><i class="fas fa-cloud-upload-alt text-purple-500 mt-1 mr-2"></i>Upload video di: <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGtDmlAbafWWLtxkJ9GOD3aVqu1zKLLBUXmug_HwTTmnF-Yg/viewform?usp=dialog" class="text-purple-600 hover:underline font-medium" target="_blank">Form Upload Video</a></li>
                             <li class="flex items-start"><i class="fas fa-user-friends text-green-500 mt-1 mr-2"></i>Boleh individu atau tim</li>
                             <li class="flex items-start"><i class="fas fa-video text-red-500 mt-1 mr-2"></i>Maksimal 1 video per peserta</li>
                         </ul>
@@ -188,87 +188,116 @@
                                 </ul>
                             </div>
                             <div class="text-center">
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLjCovaAEEzygVV1-yjKAscpyzB_A4wS-Zrb9FpCPo7Azwvw/viewform" target="_blank" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-sm font-semibold rounded-full transition-all hover:scale-105 shadow-md"><i class="fas fa-upload mr-2"></i>Upload Video Sekarang</a>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGtDmlAbafWWLtxkJ9GOD3aVqu1zKLLBUXmug_HwTTmnF-Yg/viewform?usp=dialog" target="_blank" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-sm font-semibold rounded-full transition-all hover:scale-105 shadow-md"><i class="fas fa-upload mr-2"></i>Upload Video Sekarang</a>
                             </div>
                             <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-3 text-sm"><div class="flex items-center"><i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i><span class="text-yellow-700 font-semibold">Pastikan akun TikTok tidak di-private hingga lomba selesai!</span></div></div>
                         </div>
                     </div>
                 </div>
                 <div class="section-item">
-                    <div class="bg-white rounded-xl shadow-md p-6 card-hover border-l-4 border-indigo-500">
-                        <div class="flex items-center mb-4">
-                            <div class="section-number">5</div>
-                            <h3 class="text-xl font-bold text-gray-800">Timeline Lomba</h3>
-                        </div>
-                        <div class="space-y-3 text-sm">
-                            <div class="timeline-item flex items-center border-l-2 border-blue-200 pl-4"><div class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold mr-3">Tahap 1</div><div><i class="fas fa-user-plus text-blue-500 mr-2"></i><span>Pendaftaran Peserta</span></div></div>
-                            <div class="timeline-item flex items-center border-l-2 border-green-200 pl-4"><div class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold mr-3">Tahap 2</div><div><i class="fas fa-handshake text-green-500 mr-2"></i><span>Technical Meeting</span></div></div>
-                            <div class="timeline-item flex items-center border-l-2 border-purple-200 pl-4"><div class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold mr-3">Tahap 3</div><div><i class="fas fa-video text-purple-500 mr-2"></i><span>Upload & Pengiriman Video</span></div></div>
-                            <div class="timeline-item flex items-center border-l-2 border-orange-200 pl-4"><div class="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold mr-3">Tahap 4</div><div><i class="fas fa-search text-orange-500 mr-2"></i><span>Seleksi Video</span></div></div>
-                            <div class="timeline-item flex items-center border-l-2 border-yellow-200 pl-4"><div class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-semibold mr-3">Tahap 5</div><div><i class="fas fa-trophy text-yellow-500 mr-2"></i><span>Pengumuman Pemenang</span></div></div>
-                        </div>
-                    </div>
-                </div>
+    <div class="bg-white rounded-xl shadow-md p-6 card-hover border-l-4 border-indigo-500">
+        <div class="flex items-center mb-4">
+            <div class="section-number">5</div>
+            <h3 class="text-xl font-bold text-gray-800">Timeline Lomba</h3>
+        </div>
+        <div class="space-y-3 text-sm">
+            <div class="timeline-item flex items-center border-l-2 border-blue-200 pl-4">
+                <div class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold mr-3">Tahap 1</div>
+                <div><i class="fas fa-user-plus text-blue-500 mr-2"></i><span>Pendaftaran Peserta</span> - <span class="text-gray-500">15–25 Agustus 2025</span></div>
+            </div>
+            <div class="timeline-item flex items-center border-l-2 border-green-200 pl-4">
+                <div class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold mr-3">Tahap 2</div>
+                <div><i class="fas fa-handshake text-green-500 mr-2"></i><span>Technical Meeting</span> - <span class="text-gray-500">26 Agustus 2025</span></div>
+            </div>
+            <div class="timeline-item flex items-center border-l-2 border-purple-200 pl-4">
+                <div class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold mr-3">Tahap 3</div>
+                <div><i class="fas fa-video text-purple-500 mr-2"></i><span>Upload & Pengiriman Video</span> - <span class="text-gray-500">27-7 September 2025</span></div>
+            </div>
+            <div class="timeline-item flex items-center border-l-2 border-orange-200 pl-4">
+                <div class="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-semibold mr-3">Tahap 4</div>
+                <div><i class="fas fa-search text-orange-500 mr-2"></i><span>Seleksi Video</span> - <span class="text-gray-500">8–9 September 2025</span></div>
+            </div>
+            <div class="timeline-item flex items-center border-l-2 border-yellow-200 pl-4">
+                <div class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-semibold mr-3">Tahap 5</div>
+                <div><i class="fas fa-trophy text-yellow-500 mr-2"></i><span>Pengumuman Pemenang</span> - <span class="text-gray-500">10 September 2025</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
             </div>
         </div>
     </section>
-    <section class="py-12 bg-gray-50" id="penilaian-hadiah">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="mb-10 section-item">
-                <div class="text-center mb-8">
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">🏆 Kriteria Penilaian</h2>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="bg-white rounded-lg shadow-md p-5 card-hover text-center">
-                        <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mx-auto mb-3"><i class="fas fa-lightbulb text-xl text-white"></i></div>
-                        <h4 class="text-base font-bold text-gray-800 mb-2">Kreativitas</h4>
-                        <p class="text-gray-600 text-sm">Ide & eksekusi yang kreatif dan inovatif</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-5 card-hover text-center">
-                        <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mx-auto mb-3"><i class="fas fa-bullseye text-xl text-white"></i></div>
-                        <h4 class="text-base font-bold text-gray-800 mb-2">Kesesuaian Tema</h4>
-                        <p class="text-gray-600 text-sm">Seberapa sesuai dengan tema yang ditentukan</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-5 card-hover text-center">
-                        <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mx-auto mb-3"><i class="fas fa-cut text-xl text-white"></i></div>
-                        <h4 class="text-base font-bold text-gray-800 mb-2">Kualitas Editing</h4>
-                        <p class="text-gray-600 text-sm">Teknik editing dan penyampaian pesan</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-5 card-hover text-center">
-                        <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mx-auto mb-3"><i class="fas fa-heart text-xl text-white"></i></div>
-                        <h4 class="text-base font-bold text-gray-800 mb-2">Engagement</h4>
-                        <p class="text-gray-600 text-sm">Like, komentar & share (nilai tambahan)</p>
-                    </div>
-                </div>
+<section class="py-12 bg-gray-50" id="penilaian-hadiah">
+    <div class="max-w-5xl mx-auto px-4">
+        <div class="mb-10 section-item">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">🏆 Kriteria Penilaian</h2>
+                <p class="text-sm text-gray-600">Penilaian lomba akan lebih banyak mempertimbangkan jumlah views</p>
             </div>
-            <div class="section-item">
-                <div class="text-center mb-8">
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent">💰 Hadiah Menarik</h2>
-                    <p class="text-sm text-gray-600">Total hadiah lebih dari Rp 3.000.000</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-5 card-hover text-center">
+                    <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mx-auto mb-3"><i class="fas fa-eye text-xl text-white"></i></div>
+                    <h4 class="text-base font-bold text-gray-800 mb-2">Jumlah Views (Bobot Terbesar)</h4>
+                    <p class="text-gray-600 text-sm">Semakin banyak views, semakin besar peluang menang</p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    <div class="prize-card bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg p-6 text-center text-white shadow-lg">
-                        <div class="relative mb-4"><div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto"><i class="fas fa-trophy text-3xl text-white"></i></div><div class="absolute -top-1 -right-1 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center"><span class="text-xs font-bold">1</span></div></div>
-                        <h3 class="text-xl font-bold mb-3">Juara 1</h3>
-                        <div class="text-2xl font-bold mb-2">Rp 1.000.000</div>
-                        <div class="text-yellow-100 text-sm">+ Sertifikat</div>
-                    </div>
-                    <div class="prize-card bg-gradient-to-br from-gray-400 to-gray-600 rounded-lg p-6 text-center text-white shadow-lg">
-                        <div class="relative mb-4"><div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto"><i class="fas fa-medal text-3xl text-white"></i></div><div class="absolute -top-1 -right-1 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center"><span class="text-xs font-bold">2</span></div></div>
-                        <h3 class="text-xl font-bold mb-3">Juara 2</h3>
-                        <div class="text-2xl font-bold mb-2">Rp 700.000</div>
-                        <div class="text-gray-100 text-sm">+ Sertifikat</div>
-                    </div>
-                    <div class="prize-card bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg p-6 text-center text-white shadow-lg">
-                        <div class="relative mb-4"><div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto"><i class="fas fa-award text-3xl text-white"></i></div><div class="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center"><span class="text-xs font-bold">3</span></div></div>
-                        <h3 class="text-xl font-bold mb-3">Juara 3</h3>
-                        <div class="text-2xl font-bold mb-2">Rp 300.000</div>
-                        <div class="text-orange-100 text-sm">+ Sertifikat</div>
-                    </div>
+                <div class="bg-white rounded-lg shadow-md p-5 card-hover text-center">
+                    <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mx-auto mb-3"><i class="fas fa-heart text-xl text-white"></i></div>
+                    <h4 class="text-base font-bold text-gray-800 mb-2">Engagement</h4>
+                    <p class="text-gray-600 text-sm">Like, komentar, dan share (nilai tambahan)</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-5 card-hover text-center">
+                    <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mx-auto mb-3"><i class="fas fa-bullseye text-xl text-white"></i></div>
+                    <h4 class="text-base font-bold text-gray-800 mb-2">Kesesuaian Tema</h4>
+                    <p class="text-gray-600 text-sm">Konten sesuai tema "Pengertian Haji dan Umroh"</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-5 card-hover text-center">
+                    <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mx-auto mb-3"><i class="fas fa-lightbulb text-xl text-white"></i></div>
+                    <h4 class="text-base font-bold text-gray-800 mb-2">Kreativitas & Editing</h4>
+                    <p class="text-gray-600 text-sm">Ide kreatif dan kualitas editing yang baik</p>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Bagian Hadiah tetap sama -->
+        <div class="section-item">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent">💰 Hadiah Menarik</h2>
+                <p class="text-sm text-gray-600">Total hadiah lebih dari Rp 3.000.000</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="prize-card bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg p-6 text-center text-white shadow-lg">
+                    <div class="relative mb-4">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto"><i class="fas fa-trophy text-3xl text-white"></i></div>
+                        <div class="absolute -top-1 -right-1 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center"><span class="text-xs font-bold">1</span></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Juara 1</h3>
+                    <div class="text-2xl font-bold mb-2">Rp 1.000.000</div>
+                    <div class="text-yellow-100 text-sm">+ Sertifikat</div>
+                </div>
+                <div class="prize-card bg-gradient-to-br from-gray-400 to-gray-600 rounded-lg p-6 text-center text-white shadow-lg">
+                    <div class="relative mb-4">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto"><i class="fas fa-medal text-3xl text-white"></i></div>
+                        <div class="absolute -top-1 -right-1 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center"><span class="text-xs font-bold">2</span></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Juara 2</h3>
+                    <div class="text-2xl font-bold mb-2">Rp 700.000</div>
+                    <div class="text-gray-100 text-sm">+ Sertifikat</div>
+                </div>
+                <div class="prize-card bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg p-6 text-center text-white shadow-lg">
+                    <div class="relative mb-4">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto"><i class="fas fa-award text-3xl text-white"></i></div>
+                        <div class="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center"><span class="text-xs font-bold">3</span></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Juara 3</h3>
+                    <div class="text-2xl font-bold mb-2">Rp 500.000</div>
+                    <div class="text-orange-100 text-sm">+ Sertifikat</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
     <section class="py-12 bg-white" id="ketentuan-tambahan">
         <div class="max-w-5xl mx-auto px-4">
             <div class="text-center mb-10 section-item">
@@ -308,7 +337,7 @@
                 <div class="bg-white rounded-lg shadow-md p-5 text-center card-hover">
                     <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3"><i class="fab fa-whatsapp text-xl text-white"></i></div>
                     <h4 class="font-bold text-gray-800 text-sm mb-2">WhatsApp</h4>
-                    <a href="https://wa.me/6281372324461" target="_blank" class="text-green-600 hover:underline text-sm font-medium">081372324461</a>
+                    <a href="https://wa.me/6281372324461" target="_blank" class="text-green-600 hover:underline text-sm font-medium">0818-0270-9111</a>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-5 text-center card-hover">
                     <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3"><i class="fas fa-envelope text-xl text-white"></i></div>
