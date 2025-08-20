@@ -113,7 +113,6 @@
                 </div>
                 <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">📖 BUKU PANDUAN SAYEMBARA VIDEO</h1>
                 <div class="text-lg sm:text-xl font-bold text-blue-700 mb-3">"HAJI EKSPRES: Capture the Luxury with Syukron Tours!"</div>
-                <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-blue-800 text-sm font-semibold mb-6">PT FARIKA WISATA ABADA - SK PPIU: 12580003521590001</div>
                 <p class="text-sm sm:text-base text-blue-600 max-w-xl mx-auto">Panduan lengkap untuk mengikuti sayembara video dengan total hadiah lebih dari Rp 3.000.000</p>
             </div>
         </div>

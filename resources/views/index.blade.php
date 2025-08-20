@@ -714,6 +714,10 @@
     </section>
 
     <!-- Paket Umroh -->
+
+<!-- Paket Umroh -->
+
+<!-- Paket Umroh -->
 <section id="paket" class="py-20 bg-white">
     <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-16 fade-in">
@@ -790,7 +794,7 @@
                     $formattedDepartureDate = $departureDate ? $departureDate->format('d M Y') : 'TBA';
 
                     // Current date and time for reference (if needed)
-                    $currentDateTime = \Carbon\Carbon::now('Asia/Jakarta'); // 11:24 PM WIB, June 29, 2025
+                    $currentDateTime = \Carbon\Carbon::now('Asia/Jakarta'); // 03:01 PM WIB, August 20, 2025
                 @endphp
 
                 <div class="card-hover bg-white rounded-3xl p-6 shadow-lg relative overflow-hidden fade-in border-2
@@ -813,7 +817,8 @@
 
                     <div class="relative flex flex-col flex-grow">
                         <!-- Image Container -->
-                        <div class="max-w-[1587px] w-full aspect-[1587/2245] mx-auto rounded-xl overflow-hidden mt-6 border shadow">
+                        <div class="max-w-[1587px] w-full aspect-[1587/2245] mx-auto rounded-xl overflow-hidden mt-6 border shadow cursor-pointer"
+                             onclick="openImagePopup('{{ asset($paket->main_image) }}', '{{ htmlspecialchars($paket->name, ENT_QUOTES) }}')">
                             <img src="{{ asset($paket->main_image) }}"
                                  alt="{{ htmlspecialchars($paket->name, ENT_QUOTES) }}"
                                  class="w-full h-full object-cover">
@@ -897,15 +902,26 @@
             </div>
         @endif
     </div>
+
+    <!-- Image Popup Modal -->
+    <div id="imagePopup" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="relative bg-white rounded-xl p-4 max-w-4xl w-full mx-4">
+            <button onclick="closeImagePopup()" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <img id="popupImage" src="" alt="" class="w-full h-auto max-h-[80vh] object-contain rounded-lg">
+            <p id="popupImageAlt" class="text-center text-gray-600 mt-2"></p>
+        </div>
+    </div>
 </section>
 
-    <script>
-        function sendWhatsApp(packageName, price, duration, hotelRating, category) {
-            // Nomor WhatsApp tujuan
-            const phoneNumber = '62818569111'; // Format internasional Indonesia
+<script>
+    function sendWhatsApp(packageName, price, duration, hotelRating, category) {
+        // Nomor WhatsApp tujuan
+        const phoneNumber = '62818569111'; // Format internasional Indonesia
 
-            // Template pesan yang akan dikirim
-            const message = `🕌 *INQUIRY PAKET UMROH* 🕌
+        // Template pesan yang akan dikirim
+        const message = `🕌 *INQUIRY PAKET UMROH* 🕌
 
 Assalamualaikum, saya tertarik dengan:
 
@@ -917,16 +933,46 @@ Assalamualaikum, saya tertarik dengan:
 
 Mohon informasi lebih lanjut, terima kasih.`;
 
-            // Encode pesan untuk URL
-            const encodedMessage = encodeURIComponent(message);
+        // Encode pesan untuk URL
+        const encodedMessage = encodeURIComponent(message);
 
-            // Buat URL WhatsApp
-            const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        // Buat URL WhatsApp
+        const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
-            // Arahkan pengguna ke WhatsApp
-            window.open(url, '_blank');
+        // Arahkan pengguna ke WhatsApp
+        window.open(url, '_blank');
+    }
+
+    function openImagePopup(imageSrc, imageAlt) {
+        const popup = document.getElementById('imagePopup');
+        const popupImage = document.getElementById('popupImage');
+        const popupImageAlt = document.getElementById('popupImageAlt');
+
+        popupImage.src = imageSrc;
+        popupImage.alt = imageAlt;
+        popupImageAlt.textContent = imageAlt;
+        popup.classList.remove('hidden');
+    }
+
+    function closeImagePopup() {
+        const popup = document.getElementById('imagePopup');
+        popup.classList.add('hidden');
+    }
+
+    // Close popup when clicking outside the image
+    document.getElementById('imagePopup').addEventListener('click', function(event) {
+        if (event.target === this) {
+            closeImagePopup();
         }
-    </script>
+    });
+
+    // Close popup with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeImagePopup();
+        }
+    });
+</script>
 
     <!-- Galeri -->
     <section id="galeri" class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
