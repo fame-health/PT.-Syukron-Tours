@@ -15,6 +15,7 @@ class Hotel extends Model
         'logo',
         'alamat',
         'bintang',
+        'kategori', // tambahkan ini
     ];
 
     /**

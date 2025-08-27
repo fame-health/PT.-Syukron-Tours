@@ -3,7 +3,6 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\HotelResource\Pages;
-use App\Filament\Resources\HotelResource\RelationManagers\KamarHotelsRelationManager;
 use App\Models\Hotel;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -58,6 +57,14 @@ class HotelResource extends Resource
                     ])
                     ->required()
                     ->label('Bintang'),
+                // ➕ Tambahkan kategori
+                Select::make('kategori')
+                    ->options([
+                        'mekah' => 'Mekah',
+                        'madinah' => 'Madinah',
+                    ])
+                    ->required()
+                    ->label('Kategori'),
             ]);
     }
 
@@ -69,10 +76,20 @@ class HotelResource extends Resource
                 TextColumn::make('slug')->label('Slug')->sortable()->searchable(),
                 ImageColumn::make('logo')->label('Logo')->circular(),
                 TextColumn::make('bintang')->label('Bintang')->sortable(),
+                TextColumn::make('kategori')->label('Kategori')->sortable()->badge()
+                    ->colors([
+                        'primary' => 'mekah',
+                        'success' => 'madinah',
+                    ]),
                 TextColumn::make('alamat')->label('Alamat')->limit(50),
             ])
             ->filters([
-                //
+                // Bisa tambahin filter kategori juga
+                Tables\Filters\SelectFilter::make('kategori')
+                    ->options([
+                        'mekah' => 'Mekah',
+                        'madinah' => 'Madinah',
+                    ]),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -87,9 +104,7 @@ class HotelResource extends Resource
 
     public static function getRelations(): array
     {
-        return [
-            
-        ];
+        return [];
     }
 
     public static function getPages(): array
