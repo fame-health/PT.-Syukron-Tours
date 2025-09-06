@@ -16,6 +16,8 @@ class KamarHotel extends Model
         'harga',
         'vendor_kategori',
         'jumlah_kamar',
+        'youtube_link',
+
     ];
 
     protected $casts = [

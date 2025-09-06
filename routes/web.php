@@ -126,4 +126,5 @@ Route::get('/buku', function () {
     SEOTools::jsonLd()->setType('WebPage');
 
     return view('buku.index');
+    
 })->name('buku.index');

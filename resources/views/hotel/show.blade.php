@@ -1,3 +1,4 @@
+```blade
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -95,7 +96,7 @@
             background: linear-gradient(135deg, #0052CC 0%, #0ea5e9 50%, #6366f1 100%);
         }
         .gradient-bg:hover {
-            background: linear-gradient(135deg, #003d99 0%, #0284c7 50 Fin%, #4f46e5 100%);
+            background: linear-gradient(135deg, #003d99 0%, #0284c7 50%, #4f46e5 100%);
         }
         .hero-gradient {
             background: linear-gradient(135deg, #dbeafe 0%, #93c5fd 50%, #60a5fa 100%);
@@ -165,6 +166,14 @@
                 font-size: 14px;
             }
             .book-now-button { width: 100%; }
+        }
+
+        /* YouTube Video Styling */
+        .youtube-iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 
@@ -436,16 +445,351 @@
         </div>
     </section>
 
-    <section class="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden" id="hotels">
-        <div class="absolute inset-0 bg-[url('https://syukrontours.com/images/pattern-bg.png')] bg-cover bg-center opacity-5"></div>
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-50/20 to-white/20"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            @foreach ($hotel->kamarHotels as $kamarHotel)
-                <div class="full-width-item bg-white rounded-2xl p-8 mb-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-                    data-nama="{{ strtolower($hotel->nama_hotel) }}"
-                    data-bintang="{{ $hotel->bintang }}">
-                    <div class="flex flex-col md:flex-row gap-6">
-                        <div class="relative overflow-hidden rounded-xl md:w-1/3">
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+    * { font-family: 'Poppins', sans-serif; }
+    /* Gradient Colors */
+    .gradient-bg {
+        background: linear-gradient(135deg, #0052CC 0%, #0ea5e9 50%, #6366f1 100%);
+    }
+    .gradient-bg:hover {
+        background: linear-gradient(135deg, #003d99 0%, #0284c7 50%, #4f46e5 100%);
+    }
+    .hero-gradient {
+        background: linear-gradient(135deg, #dbeafe 0%, #93c5fd 50%, #60a5fa 100%);
+    }
+    /* Hover Effects */
+    .card-hover {
+        transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    /* Fade-in Animation */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    /* Glassmorphism */
+    .glass-morphism {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    /* Notifications */
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 15px 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        animation: slideIn 0.3s ease-out, fadeOut 0.3s ease-in 2.7s forwards;
+    }
+    .notification.success { background-color: #10b981; color: white; }
+    .notification.error { background-color: #ef4444; color: white; }
+    .notification .icon { margin-right: 10px; }
+    .notification.show { display: flex; }
+    @keyframes slideIn {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; display: none; }
+    }
+    /* Modal Transitions */
+    #modalContent, #imageModalContent {
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    /* Image Modal Styling */
+    #imageModal img {
+        max-width: 90vw;
+        max-height: 80vh;
+        object-fit: contain;
+        border-radius: 8px;
+    }
+    /* Responsive Adjustments */
+    @media (max-width: 640px) {
+        .notification {
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+        .book-now-button { width: 100%; }
+        #imageModal img {
+            max-width: 95vw;
+            max-height: 70vh;
+        }
+    }
+    /* YouTube Video Styling */
+    .youtube-iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    /* Room Image Styling */
+    .room-image {
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .room-image:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Modal Functions for Booking
+        window.openBookingModal = function(kamarHotelId, hotelName) {
+            console.log('openBookingModal called with ID:', kamarHotelId, 'Hotel:', hotelName);
+            const modal = document.getElementById('bookingModal');
+            const modalContent = document.getElementById('modalContent');
+            const errorMessage = document.getElementById('errorMessage');
+            if (!modal || !modalContent || !errorMessage) {
+                console.error('Modal elements not found');
+                showErrorNotification('Modal elements not found. Please try again.');
+                return;
+            }
+            document.getElementById('hotel_id').value = kamarHotelId;
+            document.getElementById('modalTitle').textContent = `Book Hotel: ${hotelName}`;
+            errorMessage.classList.add('hidden');
+            const today = new Date('2025-07-01T13:12:00+07:00').toISOString().split('T')[0];
+            document.getElementById('check_in_date').min = today;
+            document.getElementById('check_out_date').min = today;
+            document.getElementById('room_quantity').value = 1;
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalContent.classList.remove('opacity-0', 'scale-95');
+                modalContent.classList.add('opacity-100', 'scale-100');
+            }, 10);
+        };
+
+        window.closeBookingModal = function() {
+            console.log('closeBookingModal called');
+            const modal = document.getElementById('bookingModal');
+            const modalContent = document.getElementById('modalContent');
+            if (!modal || !modalContent) {
+                console.error('Modal elements not found');
+                return;
+            }
+            modalContent.classList.remove('opacity-100', 'scale-100');
+            modalContent.classList.add('opacity-0', 'scale-95');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        };
+
+        // Modal Functions for Image
+        window.openImageModal = function(imageSrc) {
+            console.log('openImageModal called with src:', imageSrc);
+            const modal = document.getElementById('imageModal');
+            const modalContent = document.getElementById('imageModalContent');
+            const modalImage = document.getElementById('modalImage');
+            if (!modal || !modalContent || !modalImage) {
+                console.error('Image modal elements not found');
+                showErrorNotification('Image modal elements not found. Please try again.');
+                return;
+            }
+            modalImage.src = imageSrc;
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalContent.classList.remove('opacity-0', 'scale-95');
+                modalContent.classList.add('opacity-100', 'scale-100');
+            }, 10);
+        };
+
+        window.closeImageModal = function() {
+            console.log('closeImageModal called');
+            const modal = document.getElementById('imageModal');
+            const modalContent = document.getElementById('imageModalContent');
+            if (!modal || !modalContent) {
+                console.error('Image modal elements not found');
+                return;
+            }
+            modalContent.classList.remove('opacity-100', 'scale-100');
+            modalContent.classList.add('opacity-0', 'scale-95');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        };
+
+        // Notification Functions
+        function showSuccessNotification(message) {
+            const notification = document.getElementById('successNotification');
+            notification.querySelector('span:last-child').textContent = message;
+            notification.classList.remove('hidden', 'translate-y-[-20px]', 'opacity-0');
+            notification.classList.add('show', 'success', 'translate-y-0', 'opacity-100');
+            setTimeout(() => {
+                notification.classList.remove('show', 'translate-y-0', 'opacity-100');
+                notification.classList.add('translate-y-[-20px]', 'opacity-0');
+            }, 3000);
+        }
+
+        function showErrorNotification(message) {
+            const notification = document.getElementById('errorNotification');
+            notification.querySelector('span:last-child').textContent = message;
+            notification.classList.remove('hidden', 'translate-y-[-20px]', 'opacity-0');
+            notification.classList.add('show', 'error', 'translate-y-0', 'opacity-100');
+            setTimeout(() => {
+                notification.classList.remove('show', 'translate-y-0', 'opacity-100');
+                notification.classList.add('translate-y-[-20px]', 'opacity-0');
+            }, 3000);
+        }
+
+        // Form Submission
+        const bookingForm = document.getElementById('bookingForm');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                console.log('Booking form submitted');
+                const submitButton = document.getElementById('submitButton');
+                const errorMessage = document.getElementById('errorMessage');
+                const roomQuantity = parseInt(document.getElementById('room_quantity').value) || 1;
+                submitButton.disabled = true;
+                submitButton.innerHTML = 'Processing... <i class="fas fa-spinner fa-spin ml-2"></i>';
+                const checkIn = new Date(document.getElementById('check_in_date').value);
+                const checkOut = new Date(document.getElementById('check_out_date').value);
+                const today = new Date('2025-07-01T13:12:00+07:00');
+                if (checkIn < today.setHours(0, 0, 0, 0) || checkOut <= checkIn || roomQuantity < 1) {
+                    errorMessage.textContent = 'Check-in harus hari ini atau setelahnya, check-out harus setelah check-in, dan jumlah kamar minimal 1.';
+                    errorMessage.classList.remove('hidden');
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Complete Booking <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>';
+                    showErrorNotification('Invalid booking details. Please check your input.');
+                    return;
+                }
+                const formData = new FormData(this);
+                formData.append('room_quantity', roomQuantity);
+                try {
+                    const response = await fetch(this.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+                            'Accept': 'application/json'
+                        }
+                    });
+                    const result = await response.json();
+                    console.log('Server Response:', result);
+                    if (response.ok && result.success) {
+                        showSuccessNotification('Pemesanan berhasil! Anda akan diarahkan dalam 3 detik...');
+                        setTimeout(() => {
+                            closeBookingModal();
+                            window.location.href = '{{ route('hotel.show', $hotel->slug) }}';
+                        }, 3000);
+                    } else {
+                        errorMessage.textContent = result.message || 'Terjadi kesalahan saat memproses pemesanan.';
+                        errorMessage.classList.remove('hidden');
+                        showErrorNotification(result.message || 'Booking failed. Please try again.');
+                    }
+                } catch (error) {
+                    console.error('Network Error:', error);
+                    errorMessage.textContent = 'Terjadi kesalahan jaringan. Silakan coba lagi.';
+                    errorMessage.classList.remove('hidden');
+                    showErrorNotification('Network error. Please try again.');
+                } finally {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Complete Booking <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>';
+                }
+            });
+        } else {
+            console.error('Booking form not found');
+        }
+
+        // Update check-out min date
+        const checkInDate = document.getElementById('check_in_date');
+        if (checkInDate) {
+            checkInDate.addEventListener('change', function() {
+                document.getElementById('check_out_date').min = this.value;
+            });
+        } else {
+            console.error('Check-in date input not found');
+        }
+
+        // Close modal on outside click
+        const bookingModal = document.getElementById('bookingModal');
+        if (bookingModal) {
+            bookingModal.addEventListener('click', (e) => {
+                if (e.target === bookingModal) {
+                    closeBookingModal();
+                }
+            });
+        } else {
+            console.error('Booking modal not found');
+        }
+
+        // Close image modal on outside click
+        const imageModal = document.getElementById('imageModal');
+        if (imageModal) {
+            imageModal.addEventListener('click', (e) => {
+                if (e.target === imageModal) {
+                    closeImageModal();
+                }
+            });
+        } else {
+            console.error('Image modal not found');
+        }
+
+        // Fade-in effect for hotel items
+        const fadeElements = document.querySelectorAll('.full-width-item');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }, index * 150);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        fadeElements.forEach((el) => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-500');
+            observer.observe(el);
+        });
+
+        // Attach click event to Book Now buttons
+        document.querySelectorAll('.book-now-button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                console.log('Book Now button clicked:', button);
+                const kamarHotelId = button.dataset.kamarHotelId;
+                const hotelName = button.dataset.hotelName;
+                window.openBookingModal(kamarHotelId, hotelName);
+            });
+        });
+
+        // Attach click event to room images
+        document.querySelectorAll('.room-image').forEach(image => {
+            image.addEventListener('click', (e) => {
+                e.preventDefault();
+                console.log('Room image clicked:', image);
+                const imageSrc = image.dataset.image;
+                window.openImageModal(imageSrc);
+            });
+        });
+    });
+</script>
+
+<section class="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden" id="hotels">
+    <div class="absolute inset-0 bg-[url('https://syukrontours.com/images/pattern-bg.png')] bg-cover bg-center opacity-5"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-50/20 to-white/20"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        @foreach ($hotel->kamarHotels as $kamarHotel)
+            <div class="full-width-item bg-white rounded-2xl p-8 mb-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                data-nama="{{ strtolower($hotel->nama_hotel) }}"
+                data-bintang="{{ $hotel->bintang }}">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <!-- Main Hotel Image -->
+                        <div class="relative overflow-hidden rounded-xl mb-4">
                             <img src="{{ asset('storage/' . $hotel->logo) }}"
                                 alt="{{ $hotel->nama_hotel }}"
                                 class="w-full h-64 md:h-80 object-cover rounded-xl transition-transform duration-500 hover:scale-110"
@@ -457,112 +801,166 @@
                                 From Rp {{ number_format($kamarHotel->harga ?? 1000000, 0, ',', '.') }}
                             </div>
                         </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl md:text-2xl font-semibold text-gray-900 mb-3">{{ $hotel->nama_hotel }}</h3>
-                            <p class="text-gray-500 text-sm md:text-base mb-4 leading-relaxed">{{ $hotel->deskripsi }}</p>
-                            <div class="flex items-center text-gray-500 text-sm mb-4">
-                                <i class="fas fa-map-marker-alt mr-2"></i>
-                                <span>{{ $hotel->alamat }}</span>
+                        <!-- Room Images -->
+                        @if (!empty($kamarHotel->images) && is_array($kamarHotel->images))
+                            <div class="grid grid-cols-2 gap-4 mb-4">
+                                @foreach ($kamarHotel->images as $image)
+                                    <img src="{{ asset('storage/' . $image) }}"
+                                        alt="Kamar {{ $kamarHotel->nama_kamar }}"
+                                        class="w-full h-32 object-cover rounded-lg room-image"
+                                        data-image="{{ asset('storage/' . $image) }}"
+                                        loading="lazy">
+                                @endforeach
                             </div>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="text-xs bg-blue-50 text-blue-700 px-2.5 py-1 rounded-full flex items-center">
-                                    <i class="fas fa-wifi mr-1"></i> Free Wi-Fi
-                                </span>
-                                <span class="text-xs bg-blue-50 text-blue-700 px-2.5 py-1 rounded-full flex items-center">
-                                    <i class="fas fa-utensils mr-1"></i> Breakfast
-                                </span>
-                                @if ($hotel->bintang >= 4)
-                                    <span class="text-xs bg-blue-50 text-blue-700 px-2.5 py-1 rounded-full flex items-center">
-                                        <i class="fas fa-swimming-pool mr-1"></i> Swimming Pool
-                                    </span>
-                                @endif
+                        @else
+                            <p class="text-gray-500 text-sm mb-4">Tidak ada gambar kamar tersedia.</p>
+                        @endif
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl md:text-2xl font-semibold text-gray-900 mb-3">{{ $hotel->nama_hotel }}</h3>
+                        <h4 class="text-lg font-medium text-gray-700 mb-2">{{ $kamarHotel->nama_kamar }}</h4>
+                        <p class="text-gray-500 text-sm md:text-base mb-4 leading-relaxed">{{ $kamarHotel->deskripsi }}</p>
+                        @if (!empty($kamarHotel->youtube_link))
+                            @php
+                                // Handle different YouTube URL formats
+                                $videoId = '';
+                                if (str_contains($kamarHotel->youtube_link, 'youtube.com/watch?v=')) {
+                                    $videoId = \Illuminate\Support\Str::after($kamarHotel->youtube_link, 'v=');
+                                } elseif (str_contains($kamarHotel->youtube_link, 'youtu.be/')) {
+                                    $videoId = \Illuminate\Support\Str::after($kamarHotel->youtube_link, 'youtu.be/');
+                                } else {
+                                    // Assume it's already a video ID
+                                    $videoId = $kamarHotel->youtube_link;
+                                }
+                                // Remove any query parameters after the video ID
+                                $videoId = strtok($videoId, '?');
+                            @endphp
+                            <div class="mb-6">
+                                <iframe class="youtube-iframe"
+                                    src="https://www.youtube.com/embed/{{ $videoId }}"
+                                    frameborder="0" allowfullscreen loading="lazy">
+                                </iframe>
                             </div>
-                            <button
-                                class="book-now-button inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-lg font-medium text-sm md:text-base hover:from-blue-600 hover:to-indigo-600 transition-all duration-300"
-                                data-kamar-hotel-id="{{ $kamarHotel->id }}"
-                                data-hotel-name="{{ $hotel->nama_hotel }}"
-                                aria-label="Book hotel {{ $hotel->nama_hotel }}">
-                                Book Now
-                                <i class="fas fa-arrow-right ml-2"></i>
-                            </button>
+                        @else
+                            <p class="text-gray-500 text-sm mb-4">Video tidak tersedia untuk kamar ini.</p>
+                        @endif
+                        <div class="flex items-center text-gray-500 text-sm mb-4">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>{{ $hotel->alamat }}</span>
                         </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-blue-50 text-blue-700 px-2.5 py-1 rounded-full flex items-center">
+                                <i class="fas fa-wifi mr-1"></i> Free Wi-Fi
+                            </span>
+                            <span class="text-xs bg-blue-50 text-blue-700 px-2.5 py-1 rounded-full flex items-center">
+                                <i class="fas fa-utensils mr-1"></i> Breakfast
+                            </span>
+                            @if ($hotel->bintang >= 4)
+                                <span class="text-xs bg-blue-50 text-blue-700 px-2.5 py-1 rounded-full flex items-center">
+                                    <i class="fas fa-swimming-pool mr-1"></i> Swimming Pool
+                                </span>
+                            @endif
+                        </div>
+                        <button
+                            class="book-now-button inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-lg font-medium text-sm md:text-base hover:from-blue-600 hover:to-indigo-600 transition-all duration-300"
+                            data-kamar-hotel-id="{{ $kamarHotel->id }}"
+                            data-hotel-name="{{ $hotel->nama_hotel }}"
+                            aria-label="Book hotel {{ $hotel->nama_hotel }}">
+                            Book Now
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
                     </div>
                 </div>
-            @endforeach
-
-            <!-- Booking Modal -->
-            <div id="bookingModal" class="fixed inset-0 bg-black/60 flex items-center justify-center p-4 hidden z-50 transition-opacity duration-300">
-                <div class="bg-white rounded-2xl max-w-lg w-full mx-auto shadow-2xl transform transition-all duration-300 scale-95 opacity-0" id="modalContent">
-                    <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-gray-600 hover:text-gray-800 transition-colors duration-200" aria-label="Close booking modal">
+            </div>
+        @endforeach
+        <!-- Booking Modal -->
+        <div id="bookingModal" class="fixed inset-0 bg-black/60 flex items-center justify-center p-4 hidden z-50 transition-opacity duration-300">
+            <div class="bg-white rounded-2xl max-w-lg w-full mx-auto shadow-2xl transform transition-all duration-300 scale-95 opacity-0" id="modalContent">
+                <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-gray-600 hover:text-gray-800 transition-colors duration-200" aria-label="Close booking modal">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <div class="p-6 md:p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-2 rounded-lg mr-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h2 id="modalTitle" class="text-2xl font-bold text-gray-900">Book Your Stay</h2>
+                    </div>
+                    <div id="errorMessage" class="hidden text-red-500 text-sm mb-4 font-medium"></div>
+                    <form id="bookingForm" method="POST" action="{{ route('bookings.store') }}">
+                        @csrf
+                        <input type="hidden" name="kamar_hotel_id" id="hotel_id">
+                        <div class="space-y-5">
+                            <div>
+                                <label for="guest_name" class="block text-sm font-medium text-gray-700 mb-1.5">Full Name *</label>
+                                <input type="text" name="guest_name" id="guest_name" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200" required>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="guest_email" class="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                                    <input type="email" name="guest_email" id="guest_email" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200" required>
+                                </div>
+                                <div>
+                                    <label for="guest_phone" class="block text-sm font-medium text-gray-700 mb-1.5">Phone *</label>
+                                    <input type="text" name="guest_phone" id="guest_phone" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200" required>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="check_in_date" class="block text-sm font-medium text-gray-700 mb-1.5">Check-in *</label>
+                                    <input type="date" name="check_in_date" id="check_in_date" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200" required>
+                                </div>
+                                <div>
+                                    <label for="check_out_date" class="block text-sm font-medium text-gray-700 mb-1.5">Check-out *</label>
+                                    <input type="date" name="check_out_date" id="check_out_date" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200" required>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="room_quantity" class="block text-sm font-medium text-gray-700 mb-1.5">Number of Rooms *</label>
+                                <input type="number" name="room_quantity" id="room_quantity" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200" min="1" value="1" required>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <button type="submit" id="submitButton" class="w-full bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center">
+                                Complete Booking
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Image Modal -->
+            <div id="imageModal" class="fixed inset-0 bg-black/80 flex items-center justify-center p-4 hidden z-50 transition-opacity duration-300">
+                <div class="bg-white rounded-2xl max-w-4xl w-full mx-auto shadow-2xl transform transition-all duration-300 scale-95 opacity-0" id="imageModalContent">
+                    <button onclick="closeImageModal()" class="absolute top-4 right-4 text-gray-600 hover:text-gray-800 transition-colors duration-200" aria-label="Close image modal">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
                     </button>
-                    <div class="p-6 md:p-8">
-                        <div class="flex items-center mb-6">
-                            <div class="bg-blue-100 p-2 rounded-lg mr-4">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                                </svg>
-                            </div>
-                            <h2 id="modalTitle" class="text-2xl font-bold text-gray-900">Book Your Stay</h2>
-                        </div>
-                        <div id="errorMessage" class="hidden text-red-500 text-sm mb-4 font-medium"></div>
-                        <form id="bookingForm" method="POST" action="{{ route('bookings.store') }}">
-                            @csrf
-                            <input type="hidden" name="kamar_hotel_id" id="hotel_id">
-                            <div class="space-y-5">
-                                <div>
-                                    <label for="guest_name" class="block text-sm font-medium text-gray-700 mb-1.5">Full Name *</label>
-                                    <input type="text" name="guest_name" id="guest_name" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200" required>
-                                </div>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div>
-                                        <label for="guest_email" class="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
-                                        <input type="email" name="guest_email" id="guest_email" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200" required>
-                                    </div>
-                                    <div>
-                                        <label for="guest_phone" class="block text-sm font-medium text-gray-700 mb-1.5">Phone *</label>
-                                        <input type="text" name="guest_phone" id="guest_phone" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200" required>
-                                    </div>
-                                </div>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div>
-                                        <label for="check_in_date" class="block text-sm font-medium text-gray-700 mb-1.5">Check-in *</label>
-                                        <input type="date" name="check_in_date" id="check_in_date" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200" required>
-                                    </div>
-                                    <div>
-                                        <label for="check_out_date" class="block text-sm font-medium text-gray-700 mb-1.5">Check-out *</label>
-                                        <input type="date" name="check_out_date" id="check_out_date" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200" required>
-                                    </div>
-                                </div>
-                                <div>
-                                    <label for="room_quantity" class="block text-sm font-medium text-gray-700 mb-1.5">Number of Rooms *</label>
-                                    <input type="number" name="room_quantity" id="room_quantity" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all duration-200" min="1" value="1" required>
-                                </div>
-                            </div>
-                            <div class="mt-8">
-                                <button type="submit" id="submitButton" class="w-full bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center">
-                                    Complete Booking
-                                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </form>
+                    <div class="p-4">
+                        <img id="modalImage" src="" alt="Room Image" class="mx-auto" loading="lazy">
                     </div>
                 </div>
-                <div id="successNotification" class="notification hidden">
-                    <span class="icon"><i class="fas fa-check-circle mr-2"></i></span>
-                    <span>Pemesanan berhasil! Anda akan diarahkan dalam 3 detik...</span>
-                </div>
-                <div id="errorNotification" class="notification hidden">
-                    <span class="icon"><i class="fas fa-exclamation-circle mr-2"></i></span>
-                    <span>Error occurred. Please try again.</span>
-                </div>
+            </div>
+            <div id="successNotification" class="notification hidden">
+                <span class="icon"><i class="fas fa-check-circle mr-2"></i></span>
+                <span>Pemesanan berhasil! Anda akan diarahkan dalam 3 detik...</span>
+            </div>
+            <div id="errorNotification" class="notification hidden">
+                <span class="icon"><i class="fas fa-exclamation-circle mr-2"></i></span>
+                <span>Error occurred. Please try again.</span>
             </div>
         </div>
     </section>
+
+
+
 
     <section class="py-20 gradient-bg">
         <div class="max-w-4xl mx-auto px-4 text-center">

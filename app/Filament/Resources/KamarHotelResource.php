@@ -3,7 +3,6 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\KamarHotelResource\Pages;
-use App\Filament\Resources\KamarHotelResource\RelationManagers;
 use App\Models\KamarHotel;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -31,6 +30,7 @@ class KamarHotelResource extends Resource
                     ->relationship('hotel', 'nama_hotel')
                     ->required()
                     ->label('Hotel'),
+
                 FileUpload::make('images')
                     ->multiple()
                     ->image()
@@ -39,13 +39,16 @@ class KamarHotelResource extends Resource
                     ->maxFiles(5)
                     ->nullable()
                     ->label('Slide Images'),
+
                 TextInput::make('nama_kamar')
                     ->required()
                     ->maxLength(255)
                     ->label('Nama Kamar'),
+
                 Textarea::make('deskripsi')
                     ->required()
                     ->label('Deskripsi'),
+
                 Select::make('bintang')
                     ->options([
                         1 => '1 Bintang',
@@ -56,17 +59,20 @@ class KamarHotelResource extends Resource
                     ])
                     ->required()
                     ->label('Bintang'),
+
                 TextInput::make('harga')
                     ->numeric()
                     ->required()
                     ->prefix('Rp')
                     ->label('Harga'),
+
                 TextInput::make('vendor_kategori')
                     ->required()
                     ->maxLength(255)
                     ->label('Kategori Vendor')
                     ->placeholder('Contoh: Standard, Premium'),
-                TextInput::make('jumlah_kamar') // Ditambahkan
+
+                TextInput::make('jumlah_kamar')
                     ->numeric()
                     ->required()
                     ->minValue(1)
@@ -74,6 +80,15 @@ class KamarHotelResource extends Resource
                     ->default(1)
                     ->label('Jumlah Kamar')
                     ->helperText('Masukkan jumlah kamar yang tersedia untuk tipe ini.'),
+
+                // ✅ Tambahkan input untuk link YouTube
+                TextInput::make('youtube_link')
+                    ->url()
+                    ->maxLength(255)
+                    ->nullable()
+                    ->label('YouTube Link')
+                    ->placeholder('https://www.youtube.com/watch?v=xxxxx')
+                    ->helperText('Masukkan link video YouTube untuk kamar ini.'),
             ]);
     }
 
@@ -87,7 +102,14 @@ class KamarHotelResource extends Resource
                 TextColumn::make('bintang')->label('Bintang')->sortable(),
                 TextColumn::make('harga')->money('IDR')->label('Harga')->sortable(),
                 TextColumn::make('vendor_kategori')->label('Kategori Vendor')->sortable(),
-                TextColumn::make('jumlah_kamar')->label('Jumlah Kamar')->sortable(), // Ditambahkan
+                TextColumn::make('jumlah_kamar')->label('Jumlah Kamar')->sortable(),
+
+                // ✅ Tambahkan kolom YouTube
+                TextColumn::make('youtube_link')
+                    ->label('YouTube')
+                    ->url(fn ($record) => $record->youtube_link, true)
+                    ->limit(30)
+                    ->placeholder('-'),
             ])
             ->filters([
                 //
@@ -119,3 +141,4 @@ class KamarHotelResource extends Resource
         ];
     }
 }
+
